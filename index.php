@@ -110,7 +110,7 @@ body{
     </div>
     <div class="sidenav">
         <hr style="width:100%;text-align:left;margin-left:0">
-        <a href="#"><i class="fas fa-calendar-alt"></i><span style="padding-left: 26px;">ดูประกาศ</span></a>
+        <a href="?controller=announce&action=index"><i class="fas fa-calendar-alt"></i><span style="padding-left: 26px;">ดูประกาศ</span></a>
         <a href="#"><i class="fas fa-book-reader"></i><span style="padding-left: 26px;">สถานประกอบการ</span></a>
         <a href="#"><i class="fas fa-th"></i><span style="padding-left: 26px;">เอกสารการฝึกงาน</span></a>
         <a href="#"><i class="fas fa-dollar-sign"></i><span style="padding-left: 31px;">คำร้องฝึกงาน</span></a>
