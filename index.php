@@ -43,7 +43,7 @@ body{
     padding: 14px 8px 14px 35px;
     text-decoration: none;
     font-size: 15px;
-    color: #818181;
+    color: #f1f1f1;
     display: flex;
     transition: 0.3ss;
     white-space: nowrap;  /* ไม่ขึ้นบรรทัดใหม่ */
@@ -92,6 +92,46 @@ body{
 .content-main h1{
     padding: 8px 8px 10px 150px;
 }
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 20px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #C97B84;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 </style>
 <!DOCTYPE html>
 <html lang="en">
@@ -113,12 +153,27 @@ body{
     <div class="sidenav">
         <hr style="width:100%;text-align:left;margin-left:0">
         <a href="?controller=announce&action=index"><i class="fas fa-calendar-alt"></i><span style="padding-left: 26px;">ดูประกาศ</span></a>
-        <a href="#"><i class="fas fa-book-reader"></i><span style="padding-left: 26px;">สถานประกอบการ</span></a>
-        <a href="#"><i class="fas fa-th"></i><span style="padding-left: 26px;">เอกสารการฝึกงาน</span></a>
-        <a href="#"><i class="fas fa-dollar-sign"></i><span style="padding-left: 31px;">คำร้องฝึกงาน</span></a>
+        <a href="#"><i class="fas fa-book-reader"></i><span style="padding-left: 26px;">สถานประกอบการ</span></a>   
+        <div class="dropdown"><a href="#"><i class="fas fa-dollar-sign"></i><span style="padding: 0px 70px 0px 26px;">คำร้องฝึกงาน</span><i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content">
+            <a href="?controller=item&action=index"><span style="padding: 0px 70px 0px 26px;">ยื่นคำร้องฝึกงาน</span></a>
+            <a href="?controller=itemlist&action=index"><span style="padding: 0px 70px 0px 26px;">เสนอสถานที่ฝึกงานใหม่</span></a>
+            <a href="?controller=necessities&action=index"><span style="padding: 0px 70px 0px 26px;">อนุมัติคำร้องขอฝึกงาน</span></a>
+            <a href="?controller=videocall&action=index"><span style="padding: 0px 70px 0px 26px;">ผลการอนุมัติฝึกงาน</span></a>
+            <a href="?controller=videocall&action=index"><span style="padding: 0px 70px 0px 26px;">รายงานสรุปการ อนุมัติฝึกงาน</span></a>
+            </div>
+        </div>
         <a href="#"><i class="fas fa-th-list"></i><span style="padding-left: 26px;">อัพโหลดรายงาน</span></a>
         <a href="#"><i class="fas fa-list-ul"></i><span style="padding-left: 26px;">ประวัติการฝึกงาน</span></a>
         <a href="#"><i class="fas fa-graduation-cap"></i><span style="padding-left: 26px;">ผลการฝึกงาน</span></a>
+        <div class="dropdown"><a href="#"><i class="fas fa-dollar-sign"></i><span style="padding: 0px 40px 0px 26px;">เอกสารการฝึกงาน</span><i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content">
+            <a href="?controller=item&action=index"><span style="padding: 0px 70px 0px 18px;">โหลดเอกสารการฝึกงาน</span></a>
+            <a href="?controller=itemlist&action=index"><span style="padding: 0px 0px 0px 18px;">โหลดหนังสือขอความอนุเคราะห์</span></a>
+            <a href="?controller=necessities&action=index"><span style="padding: 0px 70px 0px 18px;">อัพโหลดเอกสารฝึกงาน</span></a>
+            </div>
+        </div>  
+        
   </div>
   <div class="content-main">
         <br>
