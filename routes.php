@@ -1,5 +1,7 @@
 <?php
-    $controllers =array('pages'=>['home','error'],'anime'=>['index','newAnime','addAnime','search','updateForm','update']);
+    $controllers =array('pages'=>['home','error'],
+    'anime'=>['index','newAnime','addAnime','search','updateForm','update'],
+    'annouce'=>['index']);
     function call($controller,$action){
         //echo "routes to".$controller."-".$action."<br>";
         require_once("controllers/".$controller."_controller.php");
@@ -9,6 +11,8 @@
             case "anime": require_once("models/animeModels.php");
                             require_once("models/studioModels.php");
                             $controller=new AnimeController();
+                        break;
+            case "annouce": $controller=new AnnouceController();
                         break;
         }
         $controller->{$action}();
