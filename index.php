@@ -76,6 +76,7 @@ body{
     text-align: center;
     justify-content: center;
     align-items: center;
+    display: flex;
     margin: auto;
     padding-top: 10px;
     font-size: 16px;
@@ -120,8 +121,6 @@ body{
         <a href="#"><i class="fas fa-graduation-cap"></i><span style="padding-left: 26px;">ผลการฝึกงาน</span></a>
   </div>
   <div class="content-main">
-      
-           
         <br>
         <!-- <a href="?controller=pages&action=home">Home</a>
         <a href="?controller=anime&action=index">Anime</a> -->
@@ -129,7 +128,6 @@ body{
         <?php
             echo "controller=".$controller.",action= ".$action;
         ?>
-     
   </div>
         <!-- <form method="POST" action="page2.php">
             <div>
