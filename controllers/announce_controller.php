@@ -2,7 +2,7 @@
      class AnnounceController{
         public function index(){
             //$anime_list=Anime::getAll();
-            require_once('./view/announce/index_announce.php');
+            require_once("./view/announce/index_announce.php");
         }
         // public function newAnime(){
         //     $studio_list=Studio::getAll();
