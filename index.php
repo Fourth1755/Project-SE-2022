@@ -153,7 +153,7 @@ body{
     <div class="sidenav">
         <hr style="width:100%;text-align:left;margin-left:0">
         <a href="?controller=announce&action=index"><i class="fas fa-calendar-alt"></i><span style="padding-left: 26px;">ดูประกาศ</span></a>
-        <a href="#"><i class="fas fa-book-reader"></i><span style="padding-left: 26px;">สถานประกอบการ</span></a>   
+        <a href="?controller=company&action=index"><i class="fas fa-book-reader"></i><span style="padding-left: 26px;">สถานประกอบการ</span></a>   
         <div class="dropdown"><a href="#"><i class="fas fa-dollar-sign"></i><span style="padding: 0px 70px 0px 26px;">คำร้องฝึกงาน</span><i class="fa fa-caret-down"></i></a>
             <div class="dropdown-content">
             <a href="?controller=item&action=index"><span style="padding: 0px 70px 0px 26px;">ยื่นคำร้องฝึกงาน</span></a>
@@ -163,8 +163,8 @@ body{
             <a href="?controller=videocall&action=index"><span style="padding: 0px 70px 0px 26px;">รายงานสรุปการ อนุมัติฝึกงาน</span></a>
             </div>
         </div>
-        <a href="#"><i class="fas fa-th-list"></i><span style="padding-left: 26px;">อัพโหลดรายงาน</span></a>
-        <a href="#"><i class="fas fa-list-ul"></i><span style="padding-left: 26px;">ประวัติการฝึกงาน</span></a>
+        <a href="?controller=uploadreport&action=index"><i class="fas fa-th-list"></i><span style="padding-left: 26px;">อัพโหลดรายงาน</span></a>
+        <a href="?controller=internshiphistory&action=index"><i class="fas fa-list-ul"></i><span style="padding-left: 26px;">ประวัติการฝึกงาน</span></a>
         <a href="#"><i class="fas fa-graduation-cap"></i><span style="padding-left: 26px;">ผลการฝึกงาน</span></a>
         <div class="dropdown"><a href="#"><i class="fas fa-dollar-sign"></i><span style="padding: 0px 40px 0px 26px;">เอกสารการฝึกงาน</span><i class="fa fa-caret-down"></i></a>
             <div class="dropdown-content">
