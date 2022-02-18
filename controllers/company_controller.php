@@ -1,9 +1,8 @@
 <?php
-     class AnnounceController{
+     class CompanyController{
         public function index(){
             //$anime_list=Anime::getAll();
-            require_once("./view/announce/index_announce.php");
+            require_once("./view/company/index_company.php");
         }
-
     }
 ?>
