@@ -36,7 +36,9 @@
 img {
   border-radius: 5px;
   float: left;
-  padding-left: 250px
+  padding-left: 250px;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 </style>
 </head>
