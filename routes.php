@@ -6,13 +6,13 @@
         //echo "routes to".$controller."-".$action."<br>";
         require_once("controllers/".$controller."_controller.php");
         switch($controller){
-            case "pages": $controller=new PagesController();
+            case "pages": $controller = new PagesController();
                         break;
             case "anime": require_once("models/animeModels.php");
                             require_once("models/studioModels.php");
-                            $controller=new AnimeController();
+                            $controller = new AnimeController();
                         break;
-            case "annouce": $controller=new AnnouceController();
+            case "announce": $controller = new AnnounceController();
                         break;
         }
         $controller->{$action}();
