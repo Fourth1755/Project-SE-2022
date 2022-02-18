@@ -98,6 +98,7 @@ body{
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
     <title>Internship Management System</title>
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -109,7 +110,7 @@ body{
        
     </div>
     <div class="sidenav">
-        <hr style="width:100%;text-align:left;margin-left:0">
+        <hr style="width:100%;text-align:left;margin-left:0;">
         <a href="#"><i class="fas fa-calendar-alt"></i><span style="padding-left: 26px;">ดูประกาศ</span></a>
         <a href="#"><i class="fas fa-book-reader"></i><span style="padding-left: 26px;">สถานประกอบการ</span></a>
         <a href="#"><i class="fas fa-th"></i><span style="padding-left: 26px;">เอกสารการฝึกงาน</span></a>
