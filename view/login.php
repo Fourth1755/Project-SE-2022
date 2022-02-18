@@ -7,16 +7,16 @@
     <head>
     <style>
         p   {
-            padding: 10px;
+            padding-left: 10px;
             border: 1px solid #4CAF50;
             }
 
         p2  {
-            padding: 50px;
+            padding-left: 50px;
             border: 1px solid #4CAF50;
             }
-        p3 {
-            padding: 90px;
+        p3  {
+            padding-left: 90px;
             border: 1px solid #4CAF50;
             }
 </style>
