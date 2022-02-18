@@ -1,7 +1,8 @@
 <?php
     $controllers =array('pages'=>['home','error'],
     'anime'=>['index','newAnime','addAnime','search','updateForm','update'],
-    'announce'=>['index']);
+    'announce'=>['index'],
+    'company'=>['index']);
     function call($controller,$action){
         //echo "routes to".$controller."-".$action."<br>";
         require_once("controllers/".$controller."_controller.php");
@@ -14,6 +15,8 @@
                         break;
             case "announce": $controller = new AnnounceController();
                         break;
+            case "company": $controller = new CompanyController();
+                        break;           
         }
         $controller->{$action}();
     }
