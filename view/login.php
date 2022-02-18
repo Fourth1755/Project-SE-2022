@@ -7,7 +7,6 @@
     <title>ระบบจัดการการฝึกงาน</title>
 </head>
 <body>
-    <p>Wellcome to our homepage</p>
     <p>     CPE</p>
     <p>         KU</p>
     <p>            KPS</p>
