@@ -2,7 +2,9 @@
     $controllers =array('pages'=>['home','error'],
     'anime'=>['index','newAnime','addAnime','search','updateForm','update'],
     'announce'=>['index'],
-    'company'=>['index']);
+    'company'=>['index'],
+    'uploadreport'=>['index'],
+    'internshiphistory'=>['index']);
     function call($controller,$action){
         //echo "routes to".$controller."-".$action."<br>";
         require_once("controllers/".$controller."_controller.php");
@@ -16,7 +18,11 @@
             case "announce": $controller = new AnnounceController();
                         break;
             case "company": $controller = new CompanyController();
-                        break;           
+                        break; 
+            case "uploadreport": $controller = new UploadreportController();
+                        break; 
+            case "internshiphistory": $controller = new InternshiphistoryController();
+                        break;                      
         }
         $controller->{$action}();
     }

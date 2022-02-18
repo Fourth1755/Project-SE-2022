@@ -116,8 +116,8 @@ body{
         <a href="?controller=company&action=index"><i class="fas fa-book-reader"></i><span style="padding-left: 26px;">สถานประกอบการ</span></a>
         <a href="#"><i class="fas fa-th"></i><span style="padding-left: 26px;">เอกสารการฝึกงาน</span></a>
         <a href="#"><i class="fas fa-dollar-sign"></i><span style="padding-left: 31px;">คำร้องฝึกงาน</span></a>
-        <a href="#"><i class="fas fa-th-list"></i><span style="padding-left: 26px;">อัพโหลดรายงาน</span></a>
-        <a href="#"><i class="fas fa-list-ul"></i><span style="padding-left: 26px;">ประวัติการฝึกงาน</span></a>
+        <a href="?controller=uploadreport&action=index"><i class="fas fa-th-list"></i><span style="padding-left: 26px;">อัพโหลดรายงาน</span></a>
+        <a href="?controller=internshiphistory&action=index"><i class="fas fa-list-ul"></i><span style="padding-left: 26px;">ประวัติการฝึกงาน</span></a>
         <a href="#"><i class="fas fa-graduation-cap"></i><span style="padding-left: 26px;">ผลการฝึกงาน</span></a>
   </div>
   <div class="content-main">
