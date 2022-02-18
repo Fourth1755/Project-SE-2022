@@ -1,6 +1,7 @@
 <?php
     $controllers =array('pages'=>['home','error'],
     'anime'=>['index','newAnime','addAnime','search','updateForm','update'],
+    'profile'=>['index'],
     'announce'=>['index'],
     'company'=>['index'],
     'uploadreport'=>['index'],
@@ -14,6 +15,8 @@
             case "anime": require_once("models/animeModels.php");
                             require_once("models/studioModels.php");
                             $controller = new AnimeController();
+                        break;
+            case "profile" : $controller =new ProfileController();
                         break;
             case "announce": $controller = new AnnounceController();
                         break;

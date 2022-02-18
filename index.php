@@ -27,7 +27,7 @@ body{
     left: 0;
     background-color: #171738;
     overflow-x: hidden;
-    padding-top: 50px;
+    padding-top: 20px;
     transition: 0.5s;
     display: flexbox;
 }
@@ -73,18 +73,26 @@ body{
     top: 0;
     left: 0;
     position: sticky;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
     display: flex;
-    margin: auto;
-    padding-top: 10px;
+    justify-content: space-around;
+    
+    padding: 30px;
     font-size: 16px;
     color: #f1f1f1;
 }
+.navbar a{
+    text-decoration: none;
+    color: #f1f1f1;
+    font-size: 18px;
+    background-color: #171738;
+}
+.navbar a:hover{
+    background-color: #000000;
+    color: #C97B84;
+}
 .content-main{
     width:  100%;
-    padding: 8px 8px 10px 100px;
+    padding: 8px 50px 10px 120px;
     top: 0;
     left: 0;
     
@@ -102,11 +110,6 @@ body{
   font-family: inherit;
   margin: 0;
 }
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
-}
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -147,10 +150,14 @@ body{
 </head>
 <body>
     <div class="navbar">
-      ระบบบริหารจัดการการฝึกงาน
-       
+        <div><p></p></div>
+        <div><p>ระบบบริหารจัดการการฝึกงาน</p></div>
+        <a class="btn" href="#">LOGIN</a>
     </div>
     <div class="sidenav">
+        <a href="?controller=profile&action=index">
+            <img src="https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2021/12/mydressupdarling_pv2screenshot.png"style="width:25px;border-radius:50%;">
+            <span style="padding-left: 20px;">Fname Lname</span></a>
         <hr style="width:100%;text-align:left;margin-left:0">
         <a href="?controller=announce&action=index"><i class="fas fa-calendar-alt"></i><span style="padding-left: 26px;">ดูประกาศ</span></a>
         <a href="?controller=company&action=index"><i class="fas fa-book-reader"></i><span style="padding-left: 26px;">สถานประกอบการ</span></a>   
