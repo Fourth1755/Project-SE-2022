@@ -78,13 +78,12 @@ div {
         <label for="username">บัญชีผู้ใช้เครือข่ายนนทรี</label>
         <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
         <label for="password">รหัสผ่าน</label>
-        <input type="text" name="password" class="form-control" placeholder="Password" required>
+        <input type="text" name="password" class="form-control" placeholder="Password">
         <input type="hidden" name="controller" value="user">
         <button class="btn btn-lg btn-primary btn-block" type="submit" name="action" value="signIn">เข้าสู่ระบบ</button>
-        <button class="btn btn-lg btn-primary btn-block" type="submit" href="?controller=announce&action=home">กลับสู่หน้าหลัก</button>
+        <button class="btn btn-danger" type="submit" href="?controller=announce&action=home">กลับสู่หน้าหลัก</button>
     </form>
 
- 
 </div>
 
 </body>
