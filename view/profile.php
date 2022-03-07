@@ -40,7 +40,7 @@
     text-decoration: none;
 }
 </style>
-<div>
+<?php require_once("menuTop.php") ?>
       <h3>My Profile</h3>
       <hr style="width:100%;text-align:left;margin-left:0">
       <div class="profilecontent">
@@ -64,8 +64,6 @@
                 </ul>
                     
             </div>
-       
       </div>
-
       <hr style="width:100%;text-align:left;margin-left:0">
-</div>
+<?php require_once("menuDown.php") ?>

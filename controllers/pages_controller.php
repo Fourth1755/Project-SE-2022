@@ -6,5 +6,8 @@
         public function error(){
             require_once('view/error.php');
         }
+        public function login(){
+            require_once('view/login.php');
+        }
     }
 ?>
