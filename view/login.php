@@ -27,9 +27,6 @@
 </head>
 <body>
 <h2>ระบบจัดการการฝึกงาน</h2>
-<p>CPE</p>
-<p2>KU</p2>
-<p3>KPS</p3>
 <html>
 <head>
 <style>
@@ -83,6 +80,8 @@ div {
 
 <div>
   <form action="/action_page.php">
+  <div><div><div><div><div><div>
+  </div></div><div></div></div></div></div></div>
   <div>
     <label for="username">บัญชีผู้ใช้เครือข่ายนนทรี</label>
     <input type="text" id="Username" name="username" placeholder="622xxxxxxx">
@@ -91,8 +90,10 @@ div {
     <input type="text" id="Password" name="password" placeholder="รหัสผ่าน">
 
   
-    <input type="submit" value="เข้าสู่ระบบ">
-    <input type="submit" value="กลับสู่หน้าหลัก">
+    
+    <a href="?controller=announce&action=index"><span style="padding: 0px 70px 0px 26px;">เข้าสู่ระบบ</span></a>
+    <a href="?controller=announce&action=index"><span style="padding: 0px 70px 0px 26px;">กลับสู่หน้าหลัก</span></a>
+
   </form>
 </div>
 
