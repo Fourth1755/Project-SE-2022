@@ -1,7 +1,6 @@
 <style>
   /* The side navigation menu */
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
-
 body{
     font-family:'Prompt', sans-serif;
     margin:0;
@@ -136,7 +135,7 @@ body{
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </head>
-<body>
+<body style="font-family: 'Prompt', sans-serif;">
     <div class="navbar">
         <div><p></p></div>
         <div><p>ระบบบริหารจัดการการฝึกงาน</p></div>
@@ -152,7 +151,7 @@ body{
         <div class="dropdown"><a href="#"><i class="fas fa-dollar-sign"></i><span style="padding: 0px 70px 0px 26px;">คำร้องฝึกงาน</span><i class="fa fa-caret-down"></i></a>
             <div class="dropdown-content">
             <a href="?controller=petition&action=index"><span style="padding: 0px 70px 0px 26px;">ผลการอนุมัติฝึกงาน</span></a>
-            <a href="?controller=item&action=index"><span style="padding: 0px 70px 0px 26px;">ยื่นคำร้องฝึกงาน</span></a>
+            <a href="?controller=petition&action=newpetition"><span style="padding: 0px 70px 0px 26px;">ยื่นคำร้องฝึกงาน</span></a>
             <a href="?controller=itemlist&action=index"><span style="padding: 0px 70px 0px 26px;">เสนอสถานที่ฝึกงานใหม่</span></a>
             <a href="?controller=necessities&action=index"><span style="padding: 0px 70px 0px 26px;">อนุมัติคำร้องขอฝึกงาน</span></a>
             <a href="?controller=videocall&action=index"><span style="padding: 0px 70px 0px 26px;">รายงานสรุปการ อนุมัติฝึกงาน</span></a>

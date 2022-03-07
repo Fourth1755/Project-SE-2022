@@ -4,5 +4,8 @@
             //$anime_list=Anime::getAll();
             require_once("./view/petition/index_petition.php");
         }
+        public function newpetition(){
+            require_once("./view/petition/newpetition_petition.php");
+        }
     }
 ?>

@@ -8,7 +8,6 @@
     border-radius: 20px;
     width: 300px;
     padding: 7px;
-    background-color: #E5E5E5;
 }
 #table-header{
     padding-top: 20px;

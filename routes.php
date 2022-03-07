@@ -6,7 +6,7 @@
     'company'=>['index'],
     'uploadreport'=>['index'],
     'internshiphistory'=>['index'],
-    'petition'=>['index']);
+    'petition'=>['index','newpetition','addpetition']);
     function call($controller,$action){
         //echo "routes to".$controller."-".$action."<br>";
         require_once("controllers/".$controller."_controller.php");
