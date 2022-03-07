@@ -27,7 +27,9 @@
                         break; 
             case "internshiphistory": $controller = new InternshiphistoryController();
                         break;
-            case "petition": $controller = new PetitionController();
+            case "petition":
+                            require_once("models/requestformModels.php");
+                            $controller = new PetitionController();
                         break;          
         
         }

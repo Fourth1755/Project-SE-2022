@@ -30,7 +30,7 @@
       <div class="search">
           <input type="search" />
       </div>
-      <table class="table" id="table-header" >
+      <table class="table" id="table-header" >    
     <tr>
       <th>ลำดับ</th>
       <th>รหัสนิสิต</th>
@@ -38,6 +38,14 @@
       <th>ชั้นปี</th>
       <th>สถานะ</th>
     </tr>
+    <?php 
+            foreach($requestform_List as $requestform){
+            echo "<tr><td>$requestform->id</td>
+                <td>$requestform->status</td>"?>
+                <td><a class="btn btn-danger">Delete</a></td></tr>
+            <?php 
+            };
+        ?>
     <tr>
       <td scope="row">1</td>
       <td>622xxxxxx</td>
