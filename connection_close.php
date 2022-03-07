@@ -2,7 +2,7 @@
     $severname = "localhost";
     $username = "root";
     $password ="";
-    $dbname = "animedb";
+    $dbname = "se_project";
 
     $conn = mysqli_connect($severname,$username,$password);
     $conn->close();
