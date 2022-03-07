@@ -152,7 +152,7 @@ body{
     <div class="navbar">
         <div><p></p></div>
         <div><p>ระบบบริหารจัดการการฝึกงาน</p></div>
-        <a class="btn" href="#">LOGIN</a>
+        <a class="btn" href="/login">LOGIN</a>
     </div>
     <div class="sidenav">
         <a href="?controller=profile&action=index">

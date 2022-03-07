@@ -1,5 +1,5 @@
 <?php
-    $controllers =array('pages'=>['home','error'],
+    $controllers =array('pages'=>['home','error','login'],
     'anime'=>['index','newAnime','addAnime','search','updateForm','update'],
     'profile'=>['index'],
     'announce'=>['index'],
@@ -25,7 +25,8 @@
             case "uploadreport": $controller = new UploadreportController();
                         break; 
             case "internshiphistory": $controller = new InternshiphistoryController();
-                        break;                      
+                        break;            
+        
         }
         $controller->{$action}();
     }
