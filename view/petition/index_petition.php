@@ -39,16 +39,12 @@
       <th>สถานะ</th>
     </tr>
     <?php 
-            foreach($anime_list as $anime){
-            echo "<tr><td>$anime->id</td>
-                <td>$anime->name</td>
-                <td>$anime->studioName</td>"?>
-                <td><a class="btn btn-primary" href=?controller=anime&action=updateForm&<?php echo "animeID=$anime->id";?>>Update</a></td>
+            foreach($requestform_List as $requestform){
+            echo "<tr><td>$requestform->id</td>
+                <td>$requestform->status</td>"?>
                 <td><a class="btn btn-danger">Delete</a></td></tr>
-                
             <?php 
-            }    
-            echo "</table>";
+            };
         ?>
     <tr>
       <td scope="row">1</td>

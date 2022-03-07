@@ -56,7 +56,7 @@
                 $startDate=$my_row["startDate"];
                 $endDate=$my_row["endDate"];
                 $approverID=$my_row["approverID"];
-                $companyID==$my_row["companyID"];
+                $companyID=$my_row["companyID"];
                 $requestformList[]=new Requestform($id,$requestID,$status,$createDate,$phoneNumber,$facebookName,$positionRequest,
                 $agentName,$agentPosition,$HR_Name,$HR_PhoneNamber,$HR_Email,$startDate,$endDate,$approverID,$companyID);
             }
