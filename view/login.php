@@ -19,14 +19,10 @@
             padding-left: 90px;
             font-size: 64px
             }
-        h2 	{
-  			font-size: 48px;
-			}
 
 </style>
 </head>
 <body>
-<h2>ระบบจัดการการฝึกงาน</h2>
 <html>
 <head>
 <style>
@@ -40,6 +36,7 @@ img {
 </style>
 </head>
 <body>
+    <h2>ระบบจัดการการฝึกงาน</h2>
     <img src="https://upload.wikimedia.org/wikipedia/th/a/a4/%E0%B8%84%E0%B8%93%E0%B8%B0%E0%B8%A7%E0%B8%B4%E0%B8%A8%E0%B8%A7%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C_%E0%B8%81%E0%B8%B3%E0%B9%81%E0%B8%9E%E0%B8%87%E0%B9%81%E0%B8%AA%E0%B8%99_%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B9%80%E0%B8%81%E0%B8%A9%E0%B8%95%E0%B8%A3%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C.png" alt="Cinque Terre" width="400" height="300">
   </a>
 </div>
@@ -51,50 +48,42 @@ input[type=text], select {
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
   box-sizing: border-box;
+  background-color: #FFCFCF;
 }
 
-input[type=submit] {
+input[type=submit], select {
   width: 100%;
-  background-color: #171738;
-  color: white;
+  color: #171738;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #171738;
 }
 
 div {
   border-radius: 5px;
-  background-color: #f2f2f2;
   padding: 20px;
 }
 </style>
 <body>
 
 <div>
-  <form action="/action_page.php">
-  <div><div><div><div><div><div>
-  </div></div><div></div></div></div></div></div>
-  <div>
-    <label for="username">บัญชีผู้ใช้เครือข่ายนนทรี</label>
-    <input type="text" id="Username" name="username" placeholder="622xxxxxxx">
-
-    <label for="password">รหัสผ่าน</label>
-    <input type="text" id="Password" name="password" placeholder="รหัสผ่าน">
-
   
-    
-    <a href="?controller=announce&action=index"><span style="padding: 0px 70px 0px 26px;">เข้าสู่ระบบ</span></a>
-    <a href="?controller=announce&action=index"><span style="padding: 0px 70px 0px 26px;">กลับสู่หน้าหลัก</span></a>
+    <form class="form-signin">
+        <div><div><div><div><div><div>
+        <div></div></div></div></div></div></div></div>
+        <label for="username">บัญชีผู้ใช้เครือข่ายนนทรี</label>
+        <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
+        <label for="password">รหัสผ่าน</label>
+        <input type="text" name="password" class="form-control" placeholder="Password">
+        <input type="hidden" name="controller" value="user">
+        <button class="btn btn-lg btn-primary btn-block" type="submit" name="action" value="signIn">เข้าสู่ระบบ</button>
+        <button class="btn btn-danger" type="submit" href="?controller=announce&action=home">กลับสู่หน้าหลัก</button>
+    </form>
 
-  </form>
 </div>
 
 </body>

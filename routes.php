@@ -2,7 +2,7 @@
     $controllers =array('pages'=>['home','error','login'],
     'anime'=>['index','newAnime','addAnime','search','updateForm','update'],
     'profile'=>['index'],
-    'announce'=>['index'],
+    'announce'=>['index','addAnnounce'],
     'company'=>['index'],
     'uploadreport'=>['index'],
     'internshiphistory'=>['index'],
