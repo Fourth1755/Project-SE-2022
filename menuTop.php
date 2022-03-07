@@ -81,10 +81,9 @@ body{
 }
 .content-main{
     width:  100%;
-    padding: 8px 50px 10px 120px;
+    padding: 8px 100px 10px 180px;
     top: 0;
     left: 0;
-    
 }
 .content-main h1{
     padding: 8px 8px 10px 150px;
@@ -152,10 +151,10 @@ body{
         <a href="?controller=company&action=index"><i class="fas fa-book-reader"></i><span style="padding-left: 26px;">สถานประกอบการ</span></a>   
         <div class="dropdown"><a href="#"><i class="fas fa-dollar-sign"></i><span style="padding: 0px 70px 0px 26px;">คำร้องฝึกงาน</span><i class="fa fa-caret-down"></i></a>
             <div class="dropdown-content">
+            <a href="?controller=petition&action=index"><span style="padding: 0px 70px 0px 26px;">ผลการอนุมัติฝึกงาน</span></a>
             <a href="?controller=item&action=index"><span style="padding: 0px 70px 0px 26px;">ยื่นคำร้องฝึกงาน</span></a>
             <a href="?controller=itemlist&action=index"><span style="padding: 0px 70px 0px 26px;">เสนอสถานที่ฝึกงานใหม่</span></a>
             <a href="?controller=necessities&action=index"><span style="padding: 0px 70px 0px 26px;">อนุมัติคำร้องขอฝึกงาน</span></a>
-            <a href="?controller=videocall&action=index"><span style="padding: 0px 70px 0px 26px;">ผลการอนุมัติฝึกงาน</span></a>
             <a href="?controller=videocall&action=index"><span style="padding: 0px 70px 0px 26px;">รายงานสรุปการ อนุมัติฝึกงาน</span></a>
             </div>
         </div>
@@ -171,4 +170,5 @@ body{
         </div>
   </div>
   <div class="content-main">
+      
       

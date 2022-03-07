@@ -10,8 +10,6 @@
             </div>
             <br>
             <button type="submit" name="action" value="login" class="btn btn-success">Login</button>
-        </form> -->
-        
-       
+        </form> -->   
 </body>
 </html>

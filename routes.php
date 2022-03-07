@@ -5,7 +5,8 @@
     'announce'=>['index'],
     'company'=>['index'],
     'uploadreport'=>['index'],
-    'internshiphistory'=>['index']);
+    'internshiphistory'=>['index'],
+    'petition'=>['index']);
     function call($controller,$action){
         //echo "routes to".$controller."-".$action."<br>";
         require_once("controllers/".$controller."_controller.php");
@@ -25,7 +26,9 @@
             case "uploadreport": $controller = new UploadreportController();
                         break; 
             case "internshiphistory": $controller = new InternshiphistoryController();
-                        break;            
+                        break;
+            case "petition": $controller = new PetitionController();
+                        break;          
         
         }
         $controller->{$action}();
