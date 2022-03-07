@@ -4,24 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <head>
-    <style>
-        p   {
-            padding-left: 10px;
-            font-size: 64px
-            }
-
-        p2  {
-            padding-left: 50px;
-            font-size: 64px
-            }
-        p3  {
-            padding-left: 90px;
-            font-size: 64px
-            }
-
-</style>
-</head>
 <body>
 <html>
 <head>
@@ -42,6 +24,40 @@ img {
 </div>
 <html>
 <style>
+.container {
+  padding: 16px;
+}
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #171738;
+  border-radius: 15px;
+
+}
+button {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #171738;
+  color: white;
+  border-radius: 15px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
 input[type=text], select {
   width: 100%;
   padding: 12px 20px;
@@ -61,30 +77,37 @@ input[type=submit], select {
   border: none;
   border-radius: 20px;
   cursor: pointer;
+  
 }
 
 div {
   border-radius: 5px;
   padding: 20px;
+  background-color: white;
 }
 </style>
+
 <body>
 
 <div>
   
-    <form class="form-signin">
-        <div><div><div><div><div><div>
-        <div></div></div></div></div></div></div></div>
-        <label for="username">บัญชีผู้ใช้เครือข่ายนนทรี</label>
-        <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
-        <label for="password">รหัสผ่าน</label>
-        <input type="text" name="password" class="form-control" placeholder="Password">
-        <input type="hidden" name="controller" value="user">
-        <button class="btn btn-lg btn-primary btn-block" type="submit" name="action" value="signIn">เข้าสู่ระบบ</button>
-        <button class="btn btn-danger" type="submit" href="?controller=announce&action=home">กลับสู่หน้าหลัก</button>
-    </form>
+<div class="container">
+  <div><div><div><div><div><div><div></div></div></div></div></div></div></div>
+    <label for="uname"><b>บัญชีผู้ใช้เครือข่ายนนทรี</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
 
+    <label for="psw"><b>รหัสผ่าน</b></label>
+    <input type="text" placeholder="Enter Password" name="psw" required>
+        
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me <span class="psw">ลืมรหัสผ่าน<a href="?controller=singup&action=index"> password?</a></span>
+    </label>
+  </div>
+
+  <div class="container">
+  <button type="submit" href="?controller=announce&action=index">เข้าสู่ระบบ</button>
+  <button type="button" class="cancelbtn" href="?controller=announce&action=index">กลับหน้าหลัก</button>
+</form>
 </div>
-
 </body>
 </html>
