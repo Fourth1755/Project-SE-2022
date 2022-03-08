@@ -14,15 +14,18 @@
     <div class="content">
         <form>
             <br>
-            <span style="font-size:25px; margin-left: 60px;">ชื่อประกาศ:</span>
-            <input placeholder="กรอกชื่อประกาศ" type="text" style="margin-left: 95px;" /><br><br>
-            <span style="font-size:25px; margin-left: 60px;">เนื้อหาประกาศ:</span><br>
+            <div class="form-group pb-4 col-md-4">
+            <label style="font-size:25px; margin-left: 60px;">ชื่อประกาศ:</label>
+            <input class="form-control"  placeholder="กรอกชื่อประกาศ" type="tel" style="margin-left: 275px;"/><br><br>
+            </div>
+
+            <label style="font-size:25px; margin-left: 60px;">เนื้อหาประกาศ:</label><br>
             <div class="mb-3">
-                <textarea placeholder="กรอกเนื้อหาประกาศ" name="Condition" type="text" rows="3" style="width: 1000px; height: 238px; margin-left: 275px;"></textarea>
+                <textarea class="form-control" placeholder="กรอกเนื้อหาประกาศ" name="Condition" type="tel" rows="3" style="width: 1000px; height: 238px; margin-left: 275px;"></textarea>
             </div><br><br>
-            <span style="font-size:25px; margin-left: 60px;">แนบเอกสาร:</span>
-            <a type="button" class="btn" style="margin-left: 80px; background-color: black; border-radius: 35px; color: #FFFFFF;" >เลือกไฟล์</a><br><br>
-            <a type="button" class="btn" style="margin-left: 700px; background-color: black; border-radius: 35px; color: #FFFFFF;" >อัพโหลด</a>
+            <label style="font-size:25px; margin-left: 60px;">แนบเอกสาร:</label>
+            <a type="button" class="btn" style="margin-left: 80px; background-color: #171738; border-radius: 35px; color: #FFFFFF;  width:130px; font-size:20px;" >เลือกไฟล์</a><br><br>
+            <a type="button" class="btn" style="margin-left: 700px; background-color: #171738; border-radius: 35px; color: #FFFFFF; width:150px; font-size:20px;" >อัพโหลด</a>
 
         </form>
     </div>
