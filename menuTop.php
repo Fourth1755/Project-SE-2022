@@ -164,7 +164,7 @@ body{
             <div class="dropdown-content">
             <a href="?controller=document&action=IndexdownloadDocument"><span style="padding: 0px 70px 0px 18px;">โหลดเอกสารการฝึกงาน</span></a>
             <a href="?controller=document&action=IndexdownloadRequestInternship"><span style="padding: 0px 0px 0px 18px;">โหลดหนังสือขอความอนุเคราะห์</span></a>
-            <a href="?controller=necessities&action=index"><span style="padding: 0px 70px 0px 18px;">อัพโหลดเอกสารฝึกงาน</span></a>
+            <a href="?controller=document&action=IndexuploadDocument"><span style="padding: 0px 70px 0px 18px;">อัพโหลดเอกสารฝึกงาน</span></a>
             </div>
         </div>
   </div>
