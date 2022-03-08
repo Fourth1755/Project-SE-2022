@@ -154,7 +154,7 @@ body{
             <a href="?controller=petition&action=newpetition"><span style="padding: 0px 70px 0px 26px;">ยื่นคำร้องฝึกงาน</span></a>
             <a href="?controller=itemlist&action=index"><span style="padding: 0px 70px 0px 26px;">เสนอสถานที่ฝึกงานใหม่</span></a>
             <a href="?controller=necessities&action=index"><span style="padding: 0px 70px 0px 26px;">อนุมัติคำร้องขอฝึกงาน</span></a>
-            <a href="?controller=videocall&action=index"><span style="padding: 0px 70px 0px 26px;">รายงานสรุปการ อนุมัติฝึกงาน</span></a>
+            <a href="?controller=petition&action=indexSummaryPetition"><span style="padding: 0px 70px 0px 26px;">รายงานสรุปการอนุมัติฝึกงาน</span></a>
             </div>
         </div>
         <a href="?controller=uploadreport&action=index"><i class="fas fa-th-list"></i><span style="padding-left: 26px;">อัพโหลดรายงาน</span></a>
