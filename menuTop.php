@@ -162,7 +162,7 @@ body{
         <a href="#"><i class="fas fa-graduation-cap"></i><span style="padding-left: 26px;">ผลการฝึกงาน</span></a>
         <div class="dropdown"><a href="#"><i class="fas fa-dollar-sign"></i><span style="padding: 0px 40px 0px 26px;">เอกสารการฝึกงาน</span><i class="fa fa-caret-down"></i></a>
             <div class="dropdown-content">
-            <a href="?controller=item&action=index"><span style="padding: 0px 70px 0px 18px;">โหลดเอกสารการฝึกงาน</span></a>
+            <a href="?controller=document&action=IndexdownloadDocument"><span style="padding: 0px 70px 0px 18px;">โหลดเอกสารการฝึกงาน</span></a>
             <a href="?controller=document&action=IndexdownloadRequestInternship"><span style="padding: 0px 0px 0px 18px;">โหลดหนังสือขอความอนุเคราะห์</span></a>
             <a href="?controller=necessities&action=index"><span style="padding: 0px 70px 0px 18px;">อัพโหลดเอกสารฝึกงาน</span></a>
             </div>

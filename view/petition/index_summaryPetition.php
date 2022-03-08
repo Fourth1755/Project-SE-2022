@@ -47,7 +47,7 @@
       <td>นางสาวมาริน คิตะกาวะ</td>
       <td>3</td>
       <td> Drone Academy Thailand</td>
-      <td><button type="button" class="btn btn-success" style="background: #4BCE35; border-radius: 5px;" ><i class="far fa-thumbs-up"></i></button></td>
+      <td><a type="button" class="btn btn-success" style="background: #4BCE35; border-radius: 5px;" ><i class="far fa-check-circle"></i></a></td>
       <td><a><img src="https://sv1.picz.in.th/images/2022/03/08/rCjxEW.png" width=30/></a></td>
     </tr>
     <tr>
@@ -56,7 +56,7 @@
       <td>นางสาวคุรุมิ โทคิซากิ</td>
       <td>3</td>
       <td>บริษัท โกไฟว์ จำกัด</td>
-      <td><button type="button" class="btn btn-success" style="background: #EB2626; border-radius: 5px;" ><i class="far fa-thumbs-down"></i></button></td>
+      <td><a type="button" class="btn btn-success" style="background: #EB2626; border-radius: 5px;" ><i class="far fa-times-circle"></i></a></td>
       <td><a><img src="https://sv1.picz.in.th/images/2022/03/08/rCjxEW.png" width=30/></a></td>
     </tr>
     

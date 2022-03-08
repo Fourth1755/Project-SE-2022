@@ -7,7 +7,7 @@
     'uploadreport'=>['index'],
     'internshiphistory'=>['index'],
     'petition'=>['index','newpetition','addpetition','indexSummaryPetition'],
-    'document'=>['IndexdownloadRequestInternship']);
+    'document'=>['IndexdownloadRequestInternship','IndexdownloadDocument']);
     function call($controller,$action){
         //echo "routes to".$controller."-".$action."<br>";
         require_once("controllers/".$controller."_controller.php");
