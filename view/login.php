@@ -106,7 +106,7 @@ div {
 
   <div class="container">
   <button type="submit" href="?controller=announce&action=index">เข้าสู่ระบบ</button>
-  <button type="button" class="cancelbtn" href="?controller=announce&action=index">กลับหน้าหลัก</button>
+  <a type="submit" class="cancelbtn" href="?controller=announce&action=index" style="color : #FFF;">กลับหน้าหลัก</a>
 </form>
 </div>
 </body>
