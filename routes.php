@@ -5,7 +5,7 @@
     'announce'=>['index','addAnnounce'],
     'company'=>['index'],
     'uploadreport'=>['index'],
-    'internshiphistory'=>['index'],
+    'internshiphistory'=>['index','detailInternshiphistory'],
     'petition'=>['index','newpetition','addpetition','indexSummaryPetition'],
     'document'=>['IndexdownloadRequestInternship','IndexdownloadDocument','IndexuploadDocument']);
     function call($controller,$action){
