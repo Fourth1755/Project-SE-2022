@@ -14,7 +14,7 @@
       <div class="content">
             <h5>ส่วนของการฝึกงาน</h5>
             <form method="get" action="">
-                  <input name="requestID" value="<?php //echo $user->id;?>">
+                  <input name="requestID" >
                   <div class="form-group pb-4 col-md-4">
                   <label>เบอร์โทร</label>
                   <input type="tel" class="form-control" name="phoneNumber" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="กรอกเบอร์โทร">
@@ -28,8 +28,12 @@
                   <input type="text" class="form-control" name="positionRequest" id="exampleInputPassword1" placeholder="กรอกตำแหน่ง">
                   </div>
                   <div class="form-group pb-4 col-md-4">
+                  <label>ชื่อของหัวหน้างาน/หัวหน้าโปรเจกต์</label>
+                  <input type="text" class="form-control" name="agentName" id="exampleInputPassword1" placeholder="กรอกชื่อ">
+                  </div>
+                  <div class="form-group pb-4 col-md-4">
                   <label>ตำแหน่งของหัวหน้างาน/หัวหน้าโปรเจกต์</label>
-                  <input type="text" class="form-control" name="agentName" id="exampleInputPassword1" placeholder="กรอกตำแหน่ง">
+                  <input type="text" class="form-control" name="agentPosition" id="exampleInputPassword1" placeholder="กรอกตำแหน่ง">
                   </div>
                   <label>สถานประกอบการ</label>
                   <div class="form-group pb-4 col-md-4">
@@ -67,7 +71,7 @@
                   </div>
                   <br>
                   <button type="submit" class="btn btn-light" name="action" value="index">Back</button>
-                  <button type="submit" class="btn" style="background-color: #171738;color: #FFF;" value="index" name="action">Add new</button>
+                  <button type="submit" class="btn" style="background-color: #171738;color: #FFF;" value="addpetition" name="action">Add new</button>
             </form>
       </div>
 </div>

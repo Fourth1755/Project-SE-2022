@@ -72,5 +72,17 @@
             require("connection_close.php");
             return $requestformList;
         }
+        public static function add($requestID,$phoneNumber,$facebookName,$positionRequest,
+        $agentName,$agentPosition,$HR_Name,$HR_PhoneNamber,$HR_Email,$startDate,$endDate,$approverID){
+            require("connection_connect.php");
+            //$sql ="INSERT INTO requestform (requestID,phoneNumber,facebookName,positionRequest,
+            //agentName,agentPosition,HR_Name,HR_PhoneNamber,HR_Email,startDate,endDate,approverID)
+            //VALUES('$requestID','$phoneNumber','$facebookName','$positionRequest','$agentName','$agentPosition','$HR_Name','$HR_PhoneNamber',
+            //'$HR_Email','$startDate','$endDate','$approverID')";
+            $sql="INSERT INTO `requestform` (ID, requestID, `status`, `createDate`, `phoneNumber`, `facebookName`, `positionRequest`, `agentName`, `agentPosition`, `HR_Name`, `HR_PhoneNamber`, `HR_Email`, `startDate`, `endDate`, `approverID`, `companyID`) VALUES (NULL, 'b6220503201', 'waiting', current_timestamp(), '0922525835', 'wretew', 'wert', 'wey', 'wef', 'ew', 'wef', 'wef', '2022-03-23', '2022-03-16', NULL, '3');";
+            $result=$conn->query($sql);
+            require("connection_close.php");
+            return "Add success $result rows";
+        }
     }
 ?>
