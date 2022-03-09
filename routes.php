@@ -36,6 +36,7 @@
                         $controller = new InternshiphistoryController();
                         break;
             case "petition":
+                        require_once("models/companyModel.php");
                         require_once("models/requestformModels.php");
                         $controller = new PetitionController();
                         break;  

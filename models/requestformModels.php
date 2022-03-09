@@ -16,8 +16,11 @@
         public $endDate;
         public $approverID;
         public $companyID;
+        public $firstName;
+        public $lastName;
+        public $position;
         public function __construct($id,$requestID,$status,$createDate,$phoneNumber,$facebookName,$positionRequest,
-        $agentName,$agentPosition,$HR_Name,$HR_PhoneNamber,$HR_Email,$startDate,$endDate,$approverID,$companyID){
+        $agentName,$agentPosition,$HR_Name,$HR_PhoneNamber,$HR_Email,$startDate,$endDate,$approverID,$companyID,$firstName,$lastName,$position){
             $this->id=$id;
             $this->requestID=$requestID;
             $this->status=$status;
@@ -34,11 +37,14 @@
             $this->endDate=$endDate;
             $this->approverID=$approverID;
             $this->companyID=$companyID;
+            $this->firstName=$firstName;
+            $this->lastName=$lastName;
+            $this->position=$position;
         }
         public static function getAll(){
             $requestformList=[];
             require("connection_connect.php");
-            $sql="SELECT * FROM requestform";
+            $sql="SELECT * FROM requestform LEFT JOIN user ON username=requestID";
             $result=$conn->query($sql);
             while($my_row = $result->fetch_assoc()){
                 $id=$my_row["ID"];
@@ -57,8 +63,11 @@
                 $endDate=$my_row["endDate"];
                 $approverID=$my_row["approverID"];
                 $companyID=$my_row["companyID"];
+                $firstName=$my_row["firstName"];
+                $lastName=$my_row["lastName"];
+                $position=$my_row["position"];
                 $requestformList[]=new Requestform($id,$requestID,$status,$createDate,$phoneNumber,$facebookName,$positionRequest,
-                $agentName,$agentPosition,$HR_Name,$HR_PhoneNamber,$HR_Email,$startDate,$endDate,$approverID,$companyID);
+                $agentName,$agentPosition,$HR_Name,$HR_PhoneNamber,$HR_Email,$startDate,$endDate,$approverID,$companyID,$firstName,$lastName,$position);
             }
             require("connection_close.php");
             return $requestformList;

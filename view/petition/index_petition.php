@@ -35,14 +35,16 @@
       <th>ลำดับ</th>
       <th>รหัสนิสิต</th>
       <th>ชื่อ</th>
-      <th>ชั้นปี</th>
+      <th>นามสกุล</th>
       <th>สถานะ</th>
     </tr>
     <?php 
             foreach($requestform_List as $requestform){
             echo "<tr><td>$requestform->id</td>
-                <td>$requestform->status</td>"?>
-                <td><a class="btn btn-danger">Delete</a></td></tr>
+                  <td>$requestform->requestID</td>
+                  <td>$requestform->firstName</td>
+                  <td>$requestform->lastName</td>
+                  <td>$requestform->status</td>"?>
             <?php 
             };
         ?>

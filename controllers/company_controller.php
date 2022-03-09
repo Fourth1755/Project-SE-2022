@@ -1,7 +1,7 @@
 <?php
      class CompanyController{
         public function index(){
-            //$anime_list=Anime::getAll();
+            //$company_list=Company::getAll();
             require_once("./view/company/index_company.php");
         }
     }

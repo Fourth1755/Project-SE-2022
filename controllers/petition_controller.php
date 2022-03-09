@@ -6,7 +6,7 @@
             require_once("./view/petition/index_petition.php");
         }
         public function newpetition(){
-            
+            $company_list=Company::getAll();
             require_once("./view/petition/newpetition_petition.php");
         }
         public function indexSummaryPetition(){
