@@ -24,18 +24,12 @@
             <br><br>
             <div style="display: flex;">
                 <label style="font-size:25px; margin-left: 100px;">ประเภท:</label>
-                <div class="btn-group" style="margin-left: 90px; width: 150px;">
-                    <button style="background-color: #FFFF; color: #000;" class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">ประเภทเอกสาร</button>
-                    <ul class="dropdown-menu" style="margin: 0px;">
-                        <li>
-                            <a class="dropdown-item" href="#">หนังสือขอความอนุเคราะห์</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">เอกสาร...</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">เอกสาร...</a>
-                        </li>
+                <div  style="margin-left: 90px; ">
+                    <select style=" color: #000; height: 40px;">
+                        <option >หนังสือขอความอนุเคราะห์</option>
+                        <option >อื่นๆ</option>
+                
+                    </select>
 
                 </div>
             </div>
