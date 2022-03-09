@@ -25,7 +25,7 @@
 
             </div>
             <div style="margin-left: 25px; margin-top: 20px;">
-                <a href="?controller=company&action=indexcompanyDetail" type="button" class="btn" style="margin-left: 250px; background-color: #171738; border-radius: 10px; color: #FFFFFF;  font-size:20px; width: 100px;">แก้ไข </a><br><br><br>
+                <a href="?controller=company&action=updatecompanyDetailPage1" type="button" class="btn" style="margin-left: 250px; background-color: #171738; border-radius: 10px; color: #FFFFFF;  font-size:20px; width: 100px;">แก้ไข </a><br><br><br>
                 <a type="button" class="btn" style="margin-left: 250px; background-color: #EB2626; border-radius: 10px; color: #FFFFFF;  font-size:20px; width: 100px;">ลบ </a>
                 
             </div>

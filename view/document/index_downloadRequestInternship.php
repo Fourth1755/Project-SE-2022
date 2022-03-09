@@ -28,7 +28,9 @@
       <h3>รายการสรุปการอนุมัติฝึกงาน</h3>
       <hr style="width:100%;text-align:left;margin-left:0;">
       <div class="search">
-          <input type="search" />
+          <input type="search" placeholder="ค้นหารายชื่อนิสิต" style="background-color: #E5E5E5;"/>
+          <a href=''><img src=https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/500px-Search_Icon.svg.png width=35 /></a>
+          
       </div>
       <table class="table" id="table-header" >    
     <tr>
