@@ -21,9 +21,9 @@
             $HR_Email=$_GET['HR_Email'];
             $startDate=$_GET['startDate'];
             $endDate=$_GET['endDate'];
-            $approverID=$_GET['approverID'];
+            $companyID=$_GET['companyID'];
             Requestform::add($requestID,$phoneNumber,$facebookName,$positionRequest,
-            $agentName,$agentPosition,$HR_Name,$HR_PhoneNamber,$HR_Email,$startDate,$endDate,$approverID);
+            $agentName,$agentPosition,$HR_Name,$HR_PhoneNamber,$HR_Email,$startDate,$endDate,$companyID);
             PetitionController::index();
         }
         public function indexSummaryPetition(){

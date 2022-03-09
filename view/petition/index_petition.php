@@ -48,27 +48,6 @@
             <?php 
             };
         ?>
-    <tr>
-      <td scope="row">1</td>
-      <td>622xxxxxx</td>
-      <td>นางสาวมาริน คิตะกาวะ</td>
-      <td>3</td>
-      <td><button type="button" class="btn btn-success">Approve</button></td>
-    </tr>
-    <tr>
-      <td scope="row">2</td>
-      <td>622xxxxxx</td>
-      <td>นางสาวคุรุมิ โทคิซากิ</td>
-      <td>3</td>
-      <td><button type="button" class="btn btn-danger">Disapproved</button></td>
-    </tr>
-    <tr>
-      <td scope="row">3</td>
-      <td>622xxxxxx</td>
-      <td>นายเคน คาเนกิ</td>
-      <td>3</td>
-      <td><button type="button" class="btn btn-success">Approve</button></td>
-    </tr>
 </table>
 
 </div>

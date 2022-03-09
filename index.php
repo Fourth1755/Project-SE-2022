@@ -4,10 +4,7 @@
         $controller = $_GET['controller'];
         $action =$_GET['action'];
     }
-    else{
-        $controller='pages';
-        $action='home';
-    }
+   
     ?>
         <!-- <a href="?controller=pages&action=home">Home</a>
         <a href="?controller=anime&action=index">Anime</a> -->
