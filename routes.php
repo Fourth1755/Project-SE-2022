@@ -3,7 +3,7 @@
     'anime'=>['index','newAnime','addAnime','search','updateForm','update'],
     'profile'=>['index'],
     'announce'=>['index','addAnnounce'],
-    'company'=>['index'],
+    'company'=>['index','indexcompanyDetail'],
     'uploadreport'=>['index'],
     'internshiphistory'=>['index','detailInternshiphistory'],
     'petition'=>['index','newpetition','addpetition','indexSummaryPetition'],
