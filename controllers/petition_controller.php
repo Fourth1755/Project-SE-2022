@@ -42,10 +42,14 @@
         public function approve(){
             $year=$_GET['year'];
             $season=$_GET['season'];
-            AnimeController::index();
+            PetitionController::index();
         }
         public function newcompany(){
+            
             require_once('./view/petition/newcompany_petition.php');
+        }
+        public function addcompany(){
+
         }
     }
 ?>
