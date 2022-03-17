@@ -5,11 +5,11 @@
             $requestform_List=Requestform::getAll();
             require_once("./view/petition/index_petition.php");
         }
-        public function newpetition(){
+        public function newPetition(){
             $company_list=Company::getAll();
             require_once("./view/petition/newpetition_petition.php");
         }
-        public function addpetition(){
+        public function addPetition(){
             $requestID=$_GET['requestID'];
             $phoneNumber=$_GET['phoneNumber'];
             $facebookName=$_GET['facebookName'];
@@ -30,25 +30,32 @@
             
             require_once("./view/petition/index_summaryPetition.php");
         }
-        public function approvepetition(){
+        public function approvePetition(){
             $requestform_List=Requestform::getAll();
             require_once("./view/petition/approve_petition.php");
         }
-        public function approveview(){
+        public function approveView(){
             $id=$_GET['ID'];
             $requestform=Requestform::get($id);
             require_once('./view/petition/approveview_petition.php');
         }
-        public function approve(){
-            $year=$_GET['year'];
-            $season=$_GET['season'];
+        public function approveApprove(){
+            $id=$_GET['ID'];
+            $status="approve";
+            $approverID=$_GET['approverID'];
             PetitionController::index();
         }
-        public function newcompany(){
-            
+        public function approveReject(){
+            $id=$_GET['ID'];
+            $status="reject";
+            $approverID=$_GET['approverID'];
+            PetitionController::index();
+        }
+        public function newCompany(){
+
             require_once('./view/petition/newcompany_petition.php');
         }
-        public function addcompany(){
+        public function addCompany(){
 
         }
     }

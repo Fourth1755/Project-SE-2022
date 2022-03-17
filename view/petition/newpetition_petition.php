@@ -72,7 +72,7 @@
                   <input name="controller" value="petition" type="hidden"/>
                   <br>
                   <button type="submit" class="btn btn-light" name="action" value="index">Back</button>
-                  <button type="submit" class="btn" style="background-color: #171738;color: #FFF;" value="addpetition" name="action">Add new</button>
+                  <button type="submit" class="btn" style="background-color: #171738;color: #FFF;" value="addPetition" name="action">Add new</button>
             </form>
       </div>
 </div>

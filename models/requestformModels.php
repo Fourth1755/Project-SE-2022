@@ -2,7 +2,7 @@
     class Requestform{
         public $id;
         public $requestID;
-        public $status;
+        public $statusName;
         public $createDate;
         public $phoneNumber;
         public $facebookName;
@@ -19,11 +19,11 @@
         public $firstName;
         public $lastName;
         public $position;
-        public function __construct($id,$requestID,$status,$createDate,$phoneNumber,$facebookName,$positionRequest,
+        public function __construct($id,$requestID,$statusName,$createDate,$phoneNumber,$facebookName,$positionRequest,
         $agentName,$agentPosition,$HR_Name,$HR_PhoneNamber,$HR_Email,$startDate,$endDate,$approverID,$companyID,$firstName,$lastName,$position){
             $this->id=$id;
             $this->requestID=$requestID;
-            $this->status=$status;
+            $this->statusName=$statusName;
             $this->createDate=$createDate;
             $this->phoneNumber=$phoneNumber;
             $this->facebookName=$facebookName;
@@ -48,7 +48,7 @@
             $my_row=$result->fetch_assoc();
             $id=$my_row["ID"];
             $requestID=$my_row["requestID"];
-            $status=$my_row["status"];
+            $statusName=$my_row["statusName"];
             $createDate=$my_row["createDate"];
             $phoneNumber=$my_row["phoneNumber"];
             $facebookName=$my_row["facebookName"];
@@ -77,7 +77,7 @@
             while($my_row = $result->fetch_assoc()){
                 $id=$my_row["ID"];
                 $requestID=$my_row["requestID"];
-                $status=$my_row["status"];
+                $statusName=$my_row["statusName"];
                 $createDate=$my_row["createDate"];
                 $phoneNumber=$my_row["phoneNumber"];
                 $facebookName=$my_row["facebookName"];
@@ -94,7 +94,7 @@
                 $firstName=$my_row["firstName"];
                 $lastName=$my_row["lastName"];
                 $position=$my_row["position"];
-                $requestformList[]=new Requestform($id,$requestID,$status,$createDate,$phoneNumber,$facebookName,$positionRequest,
+                $requestformList[]=new Requestform($id,$requestID,$statusName,$createDate,$phoneNumber,$facebookName,$positionRequest,
                 $agentName,$agentPosition,$HR_Name,$HR_PhoneNamber,$HR_Email,$startDate,$endDate,$approverID,$companyID,$firstName,$lastName,$position);
             }
             require("connection_close.php");
@@ -112,8 +112,12 @@
             require("connection_close.php");
             return "Add success $result rows";
         }
-        public static function approve(){
-            
+        public static function approve($id,$requestID,$approverID,$statusName){
+            require("connection_connect.php");
+            $sql="UPDATE anime SET requestID='$requestID',approverID='$approverID',statusName='$statusName' WHERE ID='$id' ";
+            $result=$conn->query($sql);
+            require("connection_close.php");
+            return "Update success $result rows";
         }
     }
 ?>

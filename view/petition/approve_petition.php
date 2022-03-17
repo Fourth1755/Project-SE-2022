@@ -31,7 +31,7 @@
       </div>
       <table class="table" id="table-header" >    
     <tr>
-      <th>ลำดับ</th>
+      <th>วันที่</th>
       <th>รหัสนิสิต</th>
       <th>ชื่อ</th>
       <th>นามสกุล</th>
@@ -40,12 +40,12 @@
     </tr>
     <?php 
             foreach($requestform_List as $requestform){
-            echo "<tr><td>$requestform->id</td>
+            echo "<tr><td>$requestform->createDate</td>
                   <td>$requestform->requestID</td>
                   <td>$requestform->firstName</td>
                   <td>$requestform->lastName</td>
-                  <td>$requestform->status</td>"?>
-                  <td><a type="button" class="btn btn-primary"href=?controller=petition&action=approveview&<?php echo "ID=$requestform->id";?>><i class="material-icons">build</i></a></td>
+                  <td>$requestform->statusName</td>"?>
+                  <td><a type="button" class="btn btn-primary"href=?controller=petition&action=approveView&<?php echo "ID=$requestform->id";?>><i class="material-icons">build</i></a></td>
             <?php 
             };
         ?>
