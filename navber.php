@@ -9,18 +9,14 @@
         <ul class="navbar-nav">
           <?php
           if (isset($_SESSION['token'])) {
-            if ($_SESSION['token'] == "1") {
+            if ($_SESSION['token'] == "0") {
               echo "
                 <li class='nav-item'>
-                  <a class='nav-link px-lg-3 py-lg-4' href='?controller=center&action=updateCenterIndex' style='color: #ffffff;  margin-right: 5px; width: 119px;'>Edit centers</a>
-                </li>
-                <li class='nav-item'>
-                  <a class='nav-link px-lg-3 py-lg-4' href='?controller=vaccine&action=index' style='color: #ffffff;  width: 119px; margin-left: -17px;'>Edit Vaccine</a>
+                  <a class='nav-link px-lg-3 py-lg-4' href='?controller=login&action=index' </a>
                 </li>
                 ";
             }
           }
-
           ?>
           <li class="nav-item">
           </li>
@@ -36,7 +32,7 @@
           echo $_SESSION['firstName'];
           echo "</b>";
         ?>
-          <a class="btn btn-light ms-lg-auto ps-4 pe-4 rounded-pill" href="?controller=login&action=signOut">Sign Out</a>
+          <a class="btn btn-light ms-lg-auto ps-4 pe-4 rounded-pill" href="?controller=login&action=signOut">Log Out</a>
         <?php
         } else {
           echo "<a class='btn btn-light ms-lg-auto ps-4 pe-4 rounded-pill' href='?controller=login&action=index'>Admin</a>";
