@@ -152,8 +152,8 @@ body{
             <div class="dropdown-content">
             <a href="?controller=petition&action=index"><span style="padding: 0px 70px 0px 26px;">ผลการอนุมัติฝึกงาน</span></a>
             <a href="?controller=petition&action=newpetition"><span style="padding: 0px 70px 0px 26px;">ยื่นคำร้องฝึกงาน</span></a>
-            <a href="?controller=itemlist&action=index"><span style="padding: 0px 70px 0px 26px;">เสนอสถานที่ฝึกงานใหม่</span></a>
-            <a href="?controller=necessities&action=index"><span style="padding: 0px 70px 0px 26px;">อนุมัติคำร้องขอฝึกงาน</span></a>
+            <a href="?controller=petition&action=approvepetition"><span style="padding: 0px 70px 0px 26px;">อนุมัติคำร้องขอฝึกงาน</span></a>
+            <a href="?controller=petition&action=index"><span style="padding: 0px 70px 0px 26px;">เสนอสถานที่ฝึกงานใหม่</span></a>
             <a href="?controller=petition&action=indexSummaryPetition"><span style="padding: 0px 70px 0px 26px;">รายงานสรุปการอนุมัติฝึกงาน</span></a>
             </div>
         </div>

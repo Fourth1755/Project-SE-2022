@@ -41,6 +41,34 @@
             $this->lastName=$lastName;
             $this->position=$position;
         }
+        public static function get($id){
+            require("connection_connect.php");
+            $sql="SELECT * FROM requestform LEFT JOIN user ON username=requestID WHERE ID='$id'";
+            $result=$conn->query($sql);
+            $my_row=$result->fetch_assoc();
+            $id=$my_row["ID"];
+            $requestID=$my_row["requestID"];
+            $status=$my_row["status"];
+            $createDate=$my_row["createDate"];
+            $phoneNumber=$my_row["phoneNumber"];
+            $facebookName=$my_row["facebookName"];
+            $positionRequest=$my_row["positionRequest"];
+            $agentName=$my_row["agentName"];
+            $agentPosition=$my_row["agentPosition"];
+            $HR_Name=$my_row["HR_Name"];
+            $HR_PhoneNamber=$my_row["HR_PhoneNamber"];
+            $HR_Email=$my_row["HR_Email"];
+            $startDate=$my_row["startDate"];
+            $endDate=$my_row["endDate"];
+            $approverID=$my_row["approverID"];
+            $companyID=$my_row["companyID"];
+            $firstName=$my_row["firstName"];
+            $lastName=$my_row["lastName"];
+            $position=$my_row["position"];
+            require("connection_close.php");
+            return new Requestform($id,$requestID,$status,$createDate,$phoneNumber,$facebookName,$positionRequest,
+            $agentName,$agentPosition,$HR_Name,$HR_PhoneNamber,$HR_Email,$startDate,$endDate,$approverID,$companyID,$firstName,$lastName,$position);
+        }
         public static function getAll(){
             $requestformList=[];
             require("connection_connect.php");

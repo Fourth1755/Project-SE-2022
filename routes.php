@@ -6,7 +6,7 @@
     'company'=>['index','indexcompanyDetail','updatecompanyDetailPage1','updatecompanyDetailPage2','updatecompanyDetailPage3'],
     'uploadreport'=>['index'],
     'internshiphistory'=>['index','detailInternshiphistory'],
-    'petition'=>['index','newpetition','addpetition','indexSummaryPetition'],
+    'petition'=>['index','newpetition','addpetition','indexSummaryPetition','approvepetition','approveview'],
     'document'=>['IndexdownloadRequestInternship','IndexdownloadDocument','IndexuploadDocument']);
     function call($controller,$action){
         //echo "routes to".$controller."-".$action."<br>";
