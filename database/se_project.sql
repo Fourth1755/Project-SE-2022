@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 17, 2022 at 04:03 PM
+-- Generation Time: Mar 17, 2022 at 05:14 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -65,7 +65,7 @@ INSERT INTO `company` (`ID`, `name`, `address`, `type`, `phoneNumber`, `faxNumbe
 CREATE TABLE `requestform` (
   `ID` int(5) NOT NULL,
   `requestID` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
-  `status` enum('waiting','approve','reject') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'waiting',
+  `statusName` enum('waiting','approve','reject') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'waiting',
   `createDate` date NOT NULL DEFAULT current_timestamp(),
   `phoneNumber` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `facebookName` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
@@ -86,7 +86,7 @@ CREATE TABLE `requestform` (
 -- Dumping data for table `requestform`
 --
 
-INSERT INTO `requestform` (`ID`, `requestID`, `status`, `createDate`, `phoneNumber`, `facebookName`, `positionRequest`, `agentName`, `agentPosition`, `HR_Name`, `HR_PhoneNamber`, `HR_Email`, `startDate`, `endDate`, `approverID`, `companyID`, `reasonReject`) VALUES
+INSERT INTO `requestform` (`ID`, `requestID`, `statusName`, `createDate`, `phoneNumber`, `facebookName`, `positionRequest`, `agentName`, `agentPosition`, `HR_Name`, `HR_PhoneNamber`, `HR_Email`, `startDate`, `endDate`, `approverID`, `companyID`, `reasonReject`) VALUES
 (10001, 'b6220503201', 'waiting', '2022-03-07', '0321234567', 'Bie Juntawong', 'Network Engineer', 'อดิศักดิ์ วิชชุปัญญาพาณิชย์', 'Head of Engineer', 'อรชพร กอหามะ', '0856498531', 'bitsolution@gmail.com', '2022-04-18', '2022-06-10', NULL, 2, NULL),
 (10002, 'b6220504666', 'waiting', '2022-03-07', '0321234567', 'Dream Wongtungjaroensuk', 'Mobile Developer', 'อดิศร จรัสโยธินนุวัฒน์', 'Human Resources Department Manager', 'Supanida Ouamprathum', '0836516795', 'internship@gofive.co.th', '2022-04-18', '2022-06-10', NULL, 1, NULL),
 (10003, 'b6220504771', 'waiting', '2022-03-07', '0891684952', 'Meaw Apirakausanee', 'Data Engineer', 'ชัยวัฒน์ ประสิทธิพิพัฒน์', 'senior data engineer', 'ภูผา อธิษฐ์โภคิน', '0984561237', 'droneacademy@gmail.com', '2022-04-18', '2022-06-10', NULL, 3, NULL);
