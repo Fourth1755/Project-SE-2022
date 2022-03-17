@@ -40,16 +40,12 @@
             require_once('./view/petition/approveview_petition.php');
         }
         public function approve(){
-            $id=$_GET['animeID'];
-            $name=$_GET['name'];
-            $episode=$_GET['episode'];
-            $aried=$_GET['aried'];
-            $studioID=$_GET['studioID'];
-            $rating=$_GET['rating'];
             $year=$_GET['year'];
             $season=$_GET['season'];
-            Anime::update($id,$name,$episode,$aried,$studioID,$rating,$year,$season);
             AnimeController::index();
+        }
+        public function newcompany(){
+            require_once('./view/petition/newcompany_petition.php');
         }
     }
 ?>
