@@ -12,7 +12,7 @@
         <!-- <a href="?controller=pages&action=home">Home</a>
         <a href="?controller=anime&action=index">Anime</a> -->
         <?php require_once("routes.php") ?>
-        <div class="container">
+        <div>
             <?php
             echo "controller=".$controller.",action= ".$action;
             ?>

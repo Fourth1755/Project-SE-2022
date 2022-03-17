@@ -44,7 +44,7 @@
                   <td>$requestform->requestID</td>
                   <td>$requestform->firstName</td>
                   <td>$requestform->lastName</td>
-                  <td>$requestform->status</td>"?>
+                  <td>$requestform->statusName</td>"?>
             <?php 
             };
         ?>

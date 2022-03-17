@@ -12,6 +12,7 @@
 body{
   margin: 0;
   font-family:'Prompt', sans-serif;
+  background-color: #FFCFCF;
 }
 .logo-img {
   align-items: center;
@@ -20,8 +21,8 @@ body{
   padding: 20px;
 }
 .logo-img img{
-  width: 280px;
-  height: 260px;
+  width: 220px;
+  height: 200px;
 }
 .container {
   padding: 16px;
@@ -63,10 +64,10 @@ input[type=submit], select {
 }
 .form-login{
   width: 500px;
-  padding: 40px;
+  height: 100%;
+  padding: 50px;
   background-color: #FFCFCF;
-  margin: 30px;
-  border-radius: 20px;
+  
 }
 .content-login{
   display: flex;
@@ -83,14 +84,6 @@ input[type=submit], select {
   background-color: #000;
   border-radius: 15px;
 }
-.form-bigimage{
-  border-right: 400px solid transparent;
-  height: 0;
-  border-bottom: 800px solid #171738;
-  width: 70%;
-  color: #FFF;
-  z-index: -1;
-}
 .logo-bigimg{
   z-index: 1;
 }
@@ -98,15 +91,71 @@ input[type=submit], select {
   height: 600px;
   width: 600px;
 }
+.announce-content{
+  width: 75%;
+  padding: 20px 70px 20px 70px;
+  height: 720px;
+  background-image: url("background.jpg");
+  background-size: 1100px;
+}
+.announce-content-main{
+  background-color: rgb(23, 23, 56,0.3);
+  width: 100%;
+  border-radius: 20px;
+  
+}
+.announce-content-in{
+  width: 100%;
+  height: 600px;
+  padding: 40px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border-radius: 20px;
+  opacity:100%
+}
+.announce-header{
+  padding:  10px 20px 6px 30px;
+}
+.announce-header h4{
+  color: #FFF;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #FFFF; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: DarkGrey; 
+}
+
 </style>
 </head>
 <body>
   <div class="content-login">
-    <div class="form-bigimage">
-    <h2>ระบบจัดการการฝึกงาน</h2>
-    <div class="logo-bigimg">
-    <img src="https://www.pngmart.com/files/5/Gears-PNG-Pic.png" alt="Cinque Terre">
-    </div>
+    <div class="announce-content">
+      <div class="announce-content-main">
+        
+        <div class="announce-header">
+          <h4>ข่าวสารการฝึกงาน</h4>
+        </div>
+        <div class="announce-content-in">
+          <?php require_once("announce_announce.php") ?>
+        </div>
+      </div>
+    
     </div>
     <div class="form-login">  
     <div class="logo-img">
@@ -130,7 +179,20 @@ input[type=submit], select {
   </div>
   </div>
  
-  
+  <script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
 </body>
 </html>
 
