@@ -18,9 +18,9 @@
         <div style=" margin-left: 500px;"> 
             <br>
             <label style="font-size: 25px; margin-left: 100px;">ข้อมูลทั่วไปของหัวหน้างาน/ผู้ประสานงาน</label><br><br>
-            <label style="font-size: 20px; ">ข้อมูลทั่วไปของหัวหน้างาน/ผู้ประสานงาน</label><br>
+            <label style="font-size: 20px; ">ชื่อของหัวหน้างาน/ผู้อนุมัติฝึกงาน</label><br>
             <input class="form-control"  type="tel" style="font-size: 20px; width: 500px; margin-top: 10px;" value="นายลูลูช วี บริทาเนีย"/><br>
-            <label style="font-size: 20px; ">ตำแหน่งของผู้จัดการ/หัวหน้าหน่วยงาน</label><br>
+            <label style="font-size: 20px; ">ตำแหน่งของหัวหน้างาน/ผู้อนุมัติฝึกงาน</label><br>
             <input class="form-control"  type="tel" style="font-size: 20px; width: 500px; margin-top: 10px;" value="หัวหน้าแผนก"/><br>
             <label style="font-size: 20px; ">ชื่อผู้ประสานงานของสถานประกอบการ/หน่วยงาน</label><br>
             <input class="form-control"  type="tel" style="font-size: 20px; width: 500px; margin-top: 10px;" value="นายมังกี้ ดี ลูฟี่"/><br>
