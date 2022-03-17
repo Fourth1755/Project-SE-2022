@@ -112,5 +112,8 @@
             require("connection_close.php");
             return "Add success $result rows";
         }
+        public static function approve(){
+            
+        }
     }
 ?>

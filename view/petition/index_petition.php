@@ -32,7 +32,7 @@
       </div>
       <table class="table" id="table-header" >    
     <tr>
-      <th>ลำดับ</th>
+      <th>วันที่</th>
       <th>รหัสนิสิต</th>
       <th>ชื่อ</th>
       <th>นามสกุล</th>
@@ -40,7 +40,7 @@
     </tr>
     <?php 
             foreach($requestform_List as $requestform){
-            echo "<tr><td>$requestform->id</td>
+            echo "<tr><td>$requestform->createDate</td>
                   <td>$requestform->requestID</td>
                   <td>$requestform->firstName</td>
                   <td>$requestform->lastName</td>
