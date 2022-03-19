@@ -35,10 +35,18 @@
         }
 
         public function searchPetitionDate(){
-            $requestform_List = Requestform::searchDate();
+            $requestform_List = Requestform::SortDate();
             //echo "search:".$key;
             require_once("./view/petition/index_petition.php");
         }
+
+        public function searchApprove(){
+            $key = $_GET['key'];
+            $requestform_List = Requestform::searchApprove($key);
+            //echo "search:".$key;
+            require_once("./view/petition/approve_petition.php");
+        }
+
 
 
         public function indexSummaryPetition(){
