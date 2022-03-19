@@ -38,16 +38,19 @@
       <th>วันที่</th>
       <th>รหัสนิสิต</th>
       <th>ชื่อ</th>
-      <th>นามสกุล</th>
+      <th>สถานประกอบการ</th>
       <th>สถานะ</th>
       <th>รายละเอียด</th>
     </tr>
     <?php 
             foreach($requestform_List as $requestform){
-            echo "<tr><td>$requestform->createDate</td>
+              $timestamp = strtotime($requestform->createDate);
+              $new_dateformat = date("d-m-Y", $timestamp);
+
+            echo "<tr><td>$new_dateformat</td>
                   <td>$requestform->requestID</td>
+                  <td>$requestform->firstName $requestform->lastName</td>
                   <td>$requestform->firstName</td>
-                  <td>$requestform->lastName</td>
                   <td>$requestform->statusName</td>"?>
                   <td><a type="button" class="btn btn-primary"href=?controller=petition&action=approveView&<?php echo "ID=$requestform->id";?>><i class="material-icons">build</i></a></td>
             <?php 

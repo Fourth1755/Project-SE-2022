@@ -47,7 +47,6 @@
         <th>ปีการศึกษา</th>
         <th>รหัสนิสิต</th>
         <th>ชื่อ</th>
-        <th>นามสกุล</th>
         <th>สถานะ</th>
       </tr>
       <?php
@@ -59,8 +58,7 @@
         echo "<tr><td>$new_dateformat</td>
                   <td>$requestform->academicYear</td>
                   <td>$requestform->requestID</td>
-                  <td>$requestform->firstName</td>
-                  <td>$requestform->lastName</td>
+                  <td>$requestform->firstName $requestform->lastName</td>
                   <td>$requestform->statusName</td>" ?>
       <?php
       };
