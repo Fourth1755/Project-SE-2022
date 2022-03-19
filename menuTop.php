@@ -153,7 +153,7 @@ body{
             <a href="?controller=petition&action=index"><span style="padding: 0px 70px 0px 26px;">ผลการอนุมัติฝึกงาน</span></a>
             <a href="?controller=petition&action=newPetition"><span style="padding: 0px 70px 0px 26px;">ยื่นคำร้องฝึกงาน</span></a>
             <a href="?controller=petition&action=approvePetition"><span style="padding: 0px 70px 0px 26px;">อนุมัติคำร้องขอฝึกงาน</span></a>
-            <a href="?controller=petition&action=newCompany"><span style="padding: 0px 70px 0px 26px;">เสนอสถานที่ฝึกงานใหม่</span></a>
+            <a href="?controller=company&action=newCompany"><span style="padding: 0px 70px 0px 26px;">เสนอสถานที่ฝึกงานใหม่</span></a>
             <a href="?controller=petition&action=indexSummaryPetition"><span style="padding: 0px 70px 0px 26px;">รายงานสรุปการอนุมัติฝึกงาน</span></a>
             </div>
         </div>

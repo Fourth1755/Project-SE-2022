@@ -48,7 +48,7 @@
                   </select>
                   </label>
                   </div>
-                  <a class="btn" style="background-color: #171738;color: #FFF;"><i class="fa fa-plus" style="padding: 7px;"></i>เสนอสถานประกอบการใหม่</a>
+                  <a href="?controller=company&action=newCompany" class="btn" style="background-color: #171738;color: #FFF;"><i class="fa fa-plus" style="padding: 7px;"></i>เสนอสถานประกอบการใหม่</a>
                   <br>
                   <label>ระยะเวลาการฝึกงาน</label>
                   <div class="form-group pb-4 col-md-4" style="display: flex;">

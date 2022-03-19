@@ -43,10 +43,10 @@
 <?php require_once("menuTop.php") ?>
       <h3>อนุมัติคำร้องการฝึกงาน</h3>
       <hr style="width:100%;text-align:left;margin-left:0">
-      <form method="get" action="">
+      
       <div class="profilecontent">
             <div class="image-big">
-                <img src="https://i.pinimg.com/564x/bd/12/97/bd1297fcc9c4b9921ea235ba219821eb.jpg"/>
+                <img src="<?php echo "$requestform->imagePath";?>"/>
             </div>
             <div class="content">
                 <h4>คำร้องฝึกงาน</h4>
@@ -73,21 +73,23 @@
                 </ul>
                     
             </div>
-            <div class="content">
-                <h4>การอนุมัติคำร้อง</h4><br>
-                <button type="button" class="btn btn-success">Approve</button><br><br>
-                <button type="button" class="btn btn-danger">Reject</button>
-                
-            </div>
       </div>
       <hr style="width:100%;text-align:left;margin-left:0">
+      <h3>การอนุมัติคำร้อง</h3>
+<form method="get" action="">
+<input type="text" name="approverID" value="T9043000001"/>
+<input type="hidden" name="controller" value="petition" class="form-control">
+<button type="submit" class="btn btn-danger" value="approveReject" name="action">Reject</button>
+<button type="submit" class="btn btn-success" value="approveApprove" name="action">Approve</button>
+     </form>
+     <hr style="width:100%;text-align:left;margin-left:0">
       <h3>รายละเอียด</h3>
       <div class="content-detail">
       <table class="table">
     <tbody>
     <tr>
       <th scope="row">สถานประกอบการ:</th>
-      <td>Mark</td>
+      <td><?php echo "$requestform->companyName";?></td>
     </tr>
     <tr>
       <th scope="row">ชื่อหัวหน้างาน/หัวหน้าโปรเจกต:์</th>
@@ -111,11 +113,6 @@
     </tr>
   </tbody>
 </table>
-<input type="text" name="approverID" value="T9043000001"/>
-<input type="hidden" name="controller" value="petition" class="form-control">
+</div>
 <a href="?controller=petition&action=index" class="btn btn-outline-dark">Back</a>
-<button type="submit" class="btn btn-danger" value="approveReject" name="action">Reject</button>
-<button type="submit" class="btn btn-success" value="approveApprove" name="action">Approve</button>
-      </div>
-     </form>
 <?php require_once("menuDown.php") ?>

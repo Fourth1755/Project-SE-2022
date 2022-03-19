@@ -21,7 +21,8 @@ class Requestform
     public $lastName;
     public $position;
     public $academicYear;
-
+    public $imagePath;
+    public $companyName;
     public function __construct(
         $id,
         $requestID,
@@ -42,8 +43,9 @@ class Requestform
         $firstName,
         $lastName,
         $position,
-        $academicYear
-
+        $academicYear,
+        $imagePath,
+        $companyName
     ) {
         $this->id = $id;
         $this->requestID = $requestID;
@@ -65,11 +67,17 @@ class Requestform
         $this->lastName = $lastName;
         $this->position = $position;
         $this->academicYear = $academicYear;
+        $this->imagePath=$imagePath;
+        $this->companyName=$companyName;
     }
     public static function get($id)
     {
         require("connection_connect.php");
-        $sql = "SELECT * FROM requestform LEFT JOIN user ON username=requestID WHERE ID='$id'";
+        $sql = "SELECT requestform.ID AS ID,requestID,statusName,createDate,requestform.phoneNumber AS phoneNumber,facebookName,positionRequest,
+        requestform.agentName AS agentName,requestform.agentPosition AS agentPosition,requestform.HR_Name AS 
+        HR_Name,requestform.HR_PhoneNamber AS HR_PhoneNamber,requestform.HR_Email AS HR_Email,requestform.startDate AS 
+        startDate,requestform.endDate AS endDate,approverID,companyID,reasonReject,firstName,lastName,position,academicYear,imagePath,company.name 
+        AS companyName FROM requestform LEFT JOIN user ON user.username=requestform.requestID LEFT JOIN company ON companyID=company.ID WHERE requestform.ID='$id'";
         $result = $conn->query($sql);
         $my_row = $result->fetch_assoc();
         $id = $my_row["ID"];
@@ -91,11 +99,14 @@ class Requestform
         $firstName = $my_row["firstName"];
         $lastName = $my_row["lastName"];
         $position = $my_row["position"];
+        $academicYear= $my_row["academicYear"];
+        $imagePath=$my_row["imagePath"];
+        $companyName=$my_row["companyName"];
         require("connection_close.php");
         return new Requestform(
             $id,
             $requestID,
-            $status,
+            $statusName,
             $createDate,
             $phoneNumber,
             $facebookName,
@@ -112,14 +123,20 @@ class Requestform
             $firstName,
             $lastName,
             $position,
-            $academicYear
+            $academicYear,
+            $imagePath,
+            $companyName
         );
     }
     public static function getAll()
     {
         $requestformList = [];
         require("connection_connect.php");
-        $sql = "SELECT * FROM requestform LEFT JOIN user ON username=requestID";
+        $sql = "SELECT requestform.ID AS ID,requestID,statusName,createDate,requestform.phoneNumber AS phoneNumber,facebookName,positionRequest,
+        requestform.agentName AS agentName,requestform.agentPosition AS agentPosition,requestform.HR_Name AS 
+        HR_Name,requestform.HR_PhoneNamber AS HR_PhoneNamber,requestform.HR_Email AS HR_Email,requestform.startDate AS 
+        startDate,requestform.endDate AS endDate,approverID,companyID,reasonReject,firstName,lastName,position,academicYear,imagePath,company.name 
+        AS companyName FROM requestform LEFT JOIN user ON user.username=requestform.requestID LEFT JOIN company ON companyID=company.ID;";
         $result = $conn->query($sql);
         while ($my_row = $result->fetch_assoc()) {
             $id = $my_row["ID"];
@@ -142,6 +159,8 @@ class Requestform
             $lastName = $my_row["lastName"];
             $position = $my_row["position"];
             $academicYear = $my_row["academicYear"];
+            $imagePath=$my_row["imagePath"];
+            $companyName=$my_row["companyName"];
             $requestformList[] = new Requestform(
                 $id,
                 $requestID,
@@ -162,7 +181,9 @@ class Requestform
                 $firstName,
                 $lastName,
                 $position,
-                $academicYear
+                $academicYear,
+                $imagePath,
+                $companyName
             );
         }
         require("connection_close.php");
@@ -205,7 +226,14 @@ class Requestform
     {
         $requestformList = [];
         require("connection_connect.php");
-        $sql = "SELECT * FROM requestform NATURAL JOIN user WHERE requestform.requestID=user.username AND (requestform.createDate LIKE '%$key%' OR requestform.requestID LIKE '%$key%' OR user.firstName LIKE '%$key%' OR user.lastName LIKE '%$key%' OR requestform.statusName LIKE '%$key%'OR user.academicYear LIKE '%$key%')";
+        $sql = "SELECT requestform.ID AS ID,requestID,statusName,createDate,requestform.phoneNumber AS phoneNumber,facebookName,positionRequest,
+        requestform.agentName AS agentName,requestform.agentPosition AS agentPosition,requestform.HR_Name AS 
+        HR_Name,requestform.HR_PhoneNamber AS HR_PhoneNamber,requestform.HR_Email AS HR_Email,requestform.startDate AS 
+        startDate,requestform.endDate AS endDate,approverID,companyID,reasonReject,firstName,lastName,position,academicYear,imagePath,company.name 
+        AS companyName FROM requestform LEFT JOIN user ON user.username=requestform.requestID LEFT JOIN company ON companyID=company.ID 
+        WHERE requestform.requestID=user.username AND (requestform.createDate LIKE '%$key%' OR requestform.requestID LIKE '%$key%' 
+        OR user.firstName LIKE '%$key%' OR user.lastName LIKE '%$key%' OR requestform.statusName LIKE '%$key%'OR user.academicYear LIKE '%$key%'
+        OR company.name LIKE '%$key%')";
         $result = $conn->query($sql);
         while ($my_row = $result->fetch_assoc()) {
             $id = $my_row["ID"];
@@ -228,7 +256,8 @@ class Requestform
             $lastName = $my_row["lastName"];
             $position = $my_row["position"];
             $academicYear = $my_row["academicYear"];
-
+            $imagePath=$my_row["imagePath"];
+            $companyName=$my_row["companyName"];
             $requestformList[] = new Requestform(
                 $id,
                 $requestID,
@@ -249,7 +278,9 @@ class Requestform
                 $firstName,
                 $lastName,
                 $position,
-                $academicYear
+                $academicYear,
+                $imagePath,
+                $companyName
             );
         }
         require("connection_close.php");
@@ -259,7 +290,12 @@ class Requestform
     {
         $requestformList = [];
         require("connection_connect.php");
-        $sql = "SELECT * FROM requestform NATURAL JOIN user WHERE requestform.requestID=user.username ORDER BY requestform.createDate DESC";
+        $sql = "SELECT requestform.ID AS ID,requestID,statusName,createDate,requestform.phoneNumber AS phoneNumber,facebookName,positionRequest,
+        requestform.agentName AS agentName,requestform.agentPosition AS agentPosition,requestform.HR_Name AS 
+        HR_Name,requestform.HR_PhoneNamber AS HR_PhoneNamber,requestform.HR_Email AS HR_Email,requestform.startDate AS 
+        startDate,requestform.endDate AS endDate,approverID,companyID,reasonReject,firstName,lastName,position,academicYear,imagePath,company.name 
+        AS companyName FROM requestform LEFT JOIN user ON user.username=requestform.requestID LEFT JOIN company ON companyID=company.ID 
+        WHERE requestform.requestID=user.username ORDER BY requestform.createDate DESC";
         $result = $conn->query($sql);
         while ($my_row = $result->fetch_assoc()) {
             $id = $my_row["ID"];
@@ -282,7 +318,8 @@ class Requestform
             $lastName = $my_row["lastName"];
             $position = $my_row["position"];
             $academicYear = $my_row["academicYear"];
-
+            $imagePath=$my_row["imagePath"];
+            $companyName=$my_row["companyName"];
             $requestformList[] = new Requestform(
                 $id,
                 $requestID,
@@ -303,7 +340,10 @@ class Requestform
                 $firstName,
                 $lastName,
                 $position,
-                $academicYear
+                $academicYear,
+                $imagePath,
+                $companyName
+                
             );
         }
         require("connection_close.php");
@@ -313,7 +353,14 @@ class Requestform
     {
         $requestformList = [];
         require("connection_connect.php");
-        $sql = "SELECT * FROM requestform NATURAL JOIN user WHERE requestform.requestID=user.username AND (requestform.createDate LIKE '%$key%' OR requestform.requestID LIKE '%$key%' OR user.firstName LIKE '%$key%' OR user.lastName LIKE '%$key%' OR requestform.statusName LIKE '%$key%'OR user.academicYear LIKE '%$key%')";
+        $sql = "SELECT requestform.ID AS ID,requestID,statusName,createDate,requestform.phoneNumber AS phoneNumber,facebookName,positionRequest,
+        requestform.agentName AS agentName,requestform.agentPosition AS agentPosition,requestform.HR_Name AS 
+        HR_Name,requestform.HR_PhoneNamber AS HR_PhoneNamber,requestform.HR_Email AS HR_Email,requestform.startDate AS 
+        startDate,requestform.endDate AS endDate,approverID,companyID,reasonReject,firstName,lastName,position,academicYear,imagePath,company.name 
+        AS companyName FROM requestform LEFT JOIN user ON user.username=requestform.requestID LEFT JOIN company ON companyID=company.ID 
+        WHERE requestform.requestID=user.username AND (requestform.createDate LIKE '%$key%' OR requestform.requestID LIKE '%$key%' 
+        OR user.firstName LIKE '%$key%' OR user.lastName LIKE '%$key%' OR requestform.statusName LIKE '%$key%'OR user.academicYear LIKE '%$key%' 
+        OR company.name LIKE '%$key%')";
         $result = $conn->query($sql);
         while ($my_row = $result->fetch_assoc()) {
             $id = $my_row["ID"];
@@ -336,7 +383,8 @@ class Requestform
             $lastName = $my_row["lastName"];
             $position = $my_row["position"];
             $academicYear = $my_row["academicYear"];
-
+            $imagePath=$my_row["imagePath"];
+            $companyName=$my_row["companyName"];
             $requestformList[] = new Requestform(
                 $id,
                 $requestID,
@@ -357,7 +405,9 @@ class Requestform
                 $firstName,
                 $lastName,
                 $position,
-                $academicYear
+                $academicYear,
+                $imagePath,
+                $companyName
             );
         }
         require("connection_close.php");
