@@ -4,7 +4,7 @@
                               <div class="bg-white mb-4 p-3">
                                     <div class="row">
                                           <div class="col-md-4">
-                                                <a href="https://scontent.fkdt1-1.fna.fbcdn.net/v/t39.30808-6/273891996_2572277182906000_5806471558993993101_n.png?_nc_cat=101&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeGXXszHUKgpy5bPmnwjo3Hiv74hBz3jcMu_viEHPeNwy2hkvZUV3EvXNi2ExYEPP48I6eXMd_GxWi0KHAH8Isf7&_nc_ohc=9gHCQu-Zh8IAX-33S8X&tn=qzu4uSkD5olgL9B5&_nc_ht=scontent.fkdt1-1.fna&oh=00_AT-Yr5k3HeIII6-WP5oncZuMSFdxUvWcucuJ58NiC0v29g&oe=622D9F43" class="d-block mb-3 mb-md-0"><img src="https://scontent.fkdt1-1.fna.fbcdn.net/v/t39.30808-6/273891996_2572277182906000_5806471558993993101_n.png?stp=dst-png_s720x720&_nc_cat=101&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeGXXszHUKgpy5bPmnwjo3Hiv74hBz3jcMu_viEHPeNwy2hkvZUV3EvXNi2ExYEPP48I6eXMd_GxWi0KHAH8Isf7&_nc_ohc=9gHCQu-Zh8IAX-33S8X&tn=qzu4uSkD5olgL9B5&_nc_ht=scontent.fkdt1-1.fna&oh=00_AT8aAA8U9b0BnC8g5ymE3VmKdHEXjSnMYXte5kQTfXSmiQ&oe=622D9F43" class="img-fluid w-50" alt="..." width="700" height="480"></a>
+                                                <a href="https://sv1.picz.in.th/images/2022/03/19/ryq9Xl.png" class="d-block mb-3 mb-md-0"><img src="https://sv1.picz.in.th/images/2022/03/19/ryq9Xl.png" class="img-fluid w-50" alt="..." height="480" width="700"></a>
                                           </div>
                                           <div class="col-md-8">
                                                 <h3 class="fw-bold h4">บริษัท เมืองไทยประกันภัย จำกัด (มหาชน) </h3>
@@ -17,7 +17,7 @@
                               <div class="bg-white mb-4 p-3">
                                     <div class="row">
                                           <div class="col-md-4">
-                                                <a href="https://scontent.fkdt1-1.fna.fbcdn.net/v/t39.30808-6/273877377_2572266719573713_488162670143671464_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeH4ZrtC0pGg_9AJQTA6vQMQY_JUWnGBNsRj8lRacYE2xOuZqDtisXk5o8oTzT6Kmmm7tDOtWZ5vxtZw6sGY8QeI&_nc_ohc=xZXyVUmNYNQAX8icNwF&_nc_ht=scontent.fkdt1-1.fna&oh=00_AT99CmYq1enIu6ag845f0d7KYNlPJcoMBje-ZbNoltNNqA&oe=622D9E66" class="d-block mb-3 mb-md-0"><img src="https://scontent.fkdt1-1.fna.fbcdn.net/v/t39.30808-6/273877377_2572266719573713_488162670143671464_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeH4ZrtC0pGg_9AJQTA6vQMQY_JUWnGBNsRj8lRacYE2xOuZqDtisXk5o8oTzT6Kmmm7tDOtWZ5vxtZw6sGY8QeI&_nc_ohc=xZXyVUmNYNQAX8icNwF&_nc_ht=scontent.fkdt1-1.fna&oh=00_AT99CmYq1enIu6ag845f0d7KYNlPJcoMBje-ZbNoltNNqA&oe=622D9E66" class="img-fluid w-50" alt="..." height="480" width="700"></a>
+                                                <a href="https://sv1.picz.in.th/images/2022/03/19/ry5KNq.jpg" class="d-block mb-3 mb-md-0"><img src="https://sv1.picz.in.th/images/2022/03/19/ry5KNq.jpg" class="img-fluid w-50" alt="..." height="480" width="700"></a>
                                           </div>
                                           <div class="col-md-8">
                                                 <h3 class="fw-bold h4">Advanced Information Technology PCL.,</h3>
@@ -30,7 +30,7 @@
                               <div class="bg-white mb-4 p-3">
                                     <div class="row">
                                           <div class="col-md-4">
-                                                <a href="https://scontent.fkdt1-1.fna.fbcdn.net/v/t39.30808-6/273683592_2569727576494294_558860284397618644_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeGNwjVmU3X3IGabwd-lv5Vjy9pTVHXK4JXL2lNUdcrglW2U8PEqSjRUlHal2shAejZLxfRlPZPQDKwbp5GmrLtl&_nc_ohc=IAhvJV4aCJ8AX_Z2KiR&_nc_ht=scontent.fkdt1-1.fna&oh=00_AT9_Agip9pYU1Vw1DfCkKTiup07YWweuvG1RUw6KAwyoPQ&oe=622D1F2E" class="d-block mb-3 mb-md-0"><img src="https://scontent.fkdt1-1.fna.fbcdn.net/v/t39.30808-6/273683592_2569727576494294_558860284397618644_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeGNwjVmU3X3IGabwd-lv5Vjy9pTVHXK4JXL2lNUdcrglW2U8PEqSjRUlHal2shAejZLxfRlPZPQDKwbp5GmrLtl&_nc_ohc=IAhvJV4aCJ8AX_Z2KiR&_nc_ht=scontent.fkdt1-1.fna&oh=00_AT9_Agip9pYU1Vw1DfCkKTiup07YWweuvG1RUw6KAwyoPQ&oe=622D1F2E" class="img-fluid w-50" alt="..." width="700" height="480"></a>
+                                                <a href="https://sv1.picz.in.th/images/2022/03/19/ry5i0R.jpg" class="d-block mb-3 mb-md-0"><img src="https://sv1.picz.in.th/images/2022/03/19/ry5i0R.jpg" class="img-fluid w-50" alt="..." width="700" height="480"></a>
                                           </div>
                                           <div class="col-md-8">
                                                 <h3 class="fw-bold h4">ฟังสัมมนา เรื่อง "AWS Serverless Modernize Web Application" ซึ่งจัดโดยบริษัท ไทย เอ็นเอส โซลูชั่นส์ จำกัด</h3>
