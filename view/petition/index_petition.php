@@ -54,8 +54,6 @@
       foreach ($requestform_List as $requestform) {
         $timestamp = strtotime($requestform->createDate);
         $new_dateformat = date("d-m-Y", $timestamp);
-
-
         echo "<tr><td>$new_dateformat</td>
                   <td>$requestform->academicYear</td>
                   <td>$requestform->requestID</td>

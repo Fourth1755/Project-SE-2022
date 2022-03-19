@@ -53,7 +53,10 @@
     </tr>
     <?php 
             foreach($requestform_List as $requestform){
-            echo "<tr><td>$requestform->createDate</td>
+              $timestamp = strtotime($requestform->createDate);
+              $new_dateformat = date("d-m-Y", $timestamp);
+
+            echo "<tr><td>$new_dateformat</td>
                   <td>$requestform->requestID</td>
                   <td>$requestform->firstName  $requestform->lastName</td>
                   <td>$requestform->companyName</td>
