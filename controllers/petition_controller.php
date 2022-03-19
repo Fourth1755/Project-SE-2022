@@ -26,6 +26,15 @@
             $agentName,$agentPosition,$HR_Name,$HR_PhoneNamber,$HR_Email,$startDate,$endDate,$companyID);
             PetitionController::index();
         }
+
+        public function searchPetition(){
+            $key = $_GET['key'];
+            $requestform_List = Requestform::search($key);
+            //echo "search:".$key;
+            require_once("./view/petition/index_petition.php");
+        }
+
+
         public function indexSummaryPetition(){
             
             require_once("./view/petition/index_summaryPetition.php");
