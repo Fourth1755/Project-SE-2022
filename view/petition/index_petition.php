@@ -36,6 +36,17 @@
         <button class="btn btn-light float-none rounded-pill" type="submit" name="action" value="searchPetition"><img src=https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/500px-Search_Icon.svg.png width=35 /></button>
       </form>
     </div>
+    <br>
+    <div style="display: flex;">
+        
+    </div>
+
+
+
+
+
+
+
     <table class="table" id="table-header">
       <tr>
         <th>วันที่ยื่นขอ</th>
@@ -49,26 +60,10 @@
       foreach ($requestform_List as $requestform) {
         $timestamp = strtotime($requestform->createDate);
         $new_dateformat = date("d-m-Y", $timestamp);
-        $Year = date("Y", $timestamp);
-        $date1=date_create($requestform->createDate);
-        $date2=date_create("2022-05-10");
-        $diff=date_diff($date2,$date1);
-        echo $diff->format("%R%a");
-        
-        if($diff->format("%R%a") < 0){
-          $intYear = (int)$Year;
-          $intYear = $intYear + 542;
-          $Year = (string)$intYear;
-        }
-        else{
-          $intYear = (int)$Year;
-          $intYear = $intYear + 543;
-          $Year = (string)$intYear;
-        }
 
 
         echo "<tr><td>$new_dateformat</td>
-                  <td>$Year</td>
+                  <td>$requestform->academicYear</td>
                   <td>$requestform->requestID</td>
                   <td>$requestform->firstName</td>
                   <td>$requestform->lastName</td>

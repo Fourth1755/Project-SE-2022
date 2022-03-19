@@ -20,6 +20,8 @@ class Requestform
     public $firstName;
     public $lastName;
     public $position;
+    public $academicYear;
+
     public function __construct(
         $id,
         $requestID,
@@ -39,7 +41,9 @@ class Requestform
         $companyID,
         $firstName,
         $lastName,
-        $position
+        $position,
+        $academicYear
+
     ) {
         $this->id = $id;
         $this->requestID = $requestID;
@@ -60,6 +64,7 @@ class Requestform
         $this->firstName = $firstName;
         $this->lastName = $lastName;
         $this->position = $position;
+        $this->academicYear = $academicYear;
     }
     public static function get($id)
     {
@@ -106,7 +111,8 @@ class Requestform
             $companyID,
             $firstName,
             $lastName,
-            $position
+            $position,
+            $academicYear
         );
     }
     public static function getAll()
@@ -135,6 +141,7 @@ class Requestform
             $firstName = $my_row["firstName"];
             $lastName = $my_row["lastName"];
             $position = $my_row["position"];
+            $academicYear = $my_row["academicYear"];
             $requestformList[] = new Requestform(
                 $id,
                 $requestID,
@@ -154,7 +161,8 @@ class Requestform
                 $companyID,
                 $firstName,
                 $lastName,
-                $position
+                $position,
+                $academicYear
             );
         }
         require("connection_close.php");
@@ -197,7 +205,7 @@ class Requestform
     {
         $requestformList = [];
         require("connection_connect.php");
-        $sql = "SELECT * FROM requestform NATURAL JOIN user WHERE requestform.requestID=user.username AND (requestform.createDate LIKE '%$key%' OR requestform.requestID LIKE '%$key%' OR user.firstName LIKE '%$key%' OR user.lastName LIKE '%$key%' OR requestform.statusName LIKE '%$key%') ";
+        $sql = "SELECT * FROM requestform NATURAL JOIN user WHERE requestform.requestID=user.username AND (requestform.createDate LIKE '%$key%' OR requestform.requestID LIKE '%$key%' OR user.firstName LIKE '%$key%' OR user.lastName LIKE '%$key%' OR requestform.statusName LIKE '%$key%'OR user.academicYear LIKE '%$key%')";
         $result = $conn->query($sql);
         while ($my_row = $result->fetch_assoc()) {
             $id = $my_row["ID"];
@@ -219,6 +227,7 @@ class Requestform
             $firstName = $my_row["firstName"];
             $lastName = $my_row["lastName"];
             $position = $my_row["position"];
+            $academicYear = $my_row["academicYear"];
 
             $requestformList[] = new Requestform(
                 $id,
@@ -239,7 +248,8 @@ class Requestform
                 $companyID,
                 $firstName,
                 $lastName,
-                $position
+                $position,
+                $academicYear
             );
         }
         require("connection_close.php");
