@@ -1,7 +1,10 @@
 <?php require_once("menuTop.php") ?>
 <style>
 .search{
-    padding: 20px 0px 40px 0px;
+    padding: 20px 20px 40px 0px;
+}
+.selecttag{
+  padding: 20px 20px 40px 0px;
 }
 .search input{
     border-radius: 20px;
@@ -21,7 +24,6 @@
   color: #000;
 }
 </style>
-
 <body>
     <div>
       <h3>อนุมัติคำร้องการฝึกงาน</h3>
@@ -30,18 +32,23 @@
       <form class="search" method="get" action="">
         <input type="text" name="key" placeholder="ค้นหา" style="background-color: #E5E5E5;" />
         <input type="hidden" name="controller" value="petition">
-        <button class="btn btn-light" type="submit" name="action" value="searchApprove"><img src=https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/500px-Search_Icon.svg.png width=35 /></button>
+        <button class="btn" type="submit" name="action" value="searchApprove"><i class="fas fa-search"></i></button>
       </form>
-      <label for="formGroupExampleInput2" class="form-label">
-                  <select name="companyID" class="form-select" aria-label="Default select example">
-                        <option selected disabled hidden>Open this select Company</option>
-                              <?php
-                                    foreach($company_list as $com){
-                                          echo"<option value=$com->id>$com->name</option>";
-                                    }    
-                              ?>
-                  </select>
+      <div class="selecttag">
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+  Open this select Company
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="?key=waiting&controller=petition&action=searchApprove">waiting</a></li>
+    <li><a class="dropdown-item" href="?key=approve&controller=petition&action=searchApprove">approve</a></li>
+    <li><a class="dropdown-item" href="?key=reject&controller=petition&action=searchApprove">reject</a></li>
+  </ul>
+</div>
+      </div>
+      
     </div>
+    
       <table class="table" id="table-header" >    
     <tr>
       <th>วันที่</th>
