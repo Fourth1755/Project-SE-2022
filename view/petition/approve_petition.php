@@ -26,9 +26,13 @@
     <div>
       <h3>อนุมัติคำร้องการฝึกงาน</h3>
       <hr style="width:100%;text-align:left;margin-left:0;">
-      <div class="search">
-          <input type="search" />
-      </div>
+      <div>
+      <form class="search" method="get" action="">
+        <input type="text" name="key" placeholder="ค้นหา" style="background-color: #E5E5E5;" />
+        <input type="hidden" name="controller" value="petition">
+        <button class="btn btn-light" type="submit" name="action" value="searchApprove"><img src=https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/500px-Search_Icon.svg.png width=35 /></button>
+      </form>
+    </div>
       <table class="table" id="table-header" >    
     <tr>
       <th>วันที่</th>
