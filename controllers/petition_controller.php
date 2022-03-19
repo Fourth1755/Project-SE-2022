@@ -34,7 +34,7 @@
             require_once("./view/petition/index_petition.php");
         }
 
-        public function searchPetitionDate(){
+        public function SortDate(){
             $requestform_List = Requestform::SortDate();
             //echo "search:".$key;
             require_once("./view/petition/index_petition.php");
