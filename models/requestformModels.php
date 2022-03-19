@@ -255,4 +255,60 @@ class Requestform
         require("connection_close.php");
         return $requestformList;
     }
+
+
+    public static function searchDate()
+    {
+        $requestformList = [];
+        require("connection_connect.php");
+        $sql = "SELECT * FROM requestform NATURAL JOIN user WHERE requestform.requestID=user.username ORDER BY requestform.createDate DESC";
+        $result = $conn->query($sql);
+        while ($my_row = $result->fetch_assoc()) {
+            $id = $my_row["ID"];
+            $requestID = $my_row["requestID"];
+            $statusName = $my_row["statusName"];
+            $createDate = $my_row["createDate"];
+            $phoneNumber = $my_row["phoneNumber"];
+            $facebookName = $my_row["facebookName"];
+            $positionRequest = $my_row["positionRequest"];
+            $agentName = $my_row["agentName"];
+            $agentPosition = $my_row["agentPosition"];
+            $HR_Name = $my_row["HR_Name"];
+            $HR_PhoneNamber = $my_row["HR_PhoneNamber"];
+            $HR_Email = $my_row["HR_Email"];
+            $startDate = $my_row["startDate"];
+            $endDate = $my_row["endDate"];
+            $approverID = $my_row["approverID"];
+            $companyID = $my_row["companyID"];
+            $firstName = $my_row["firstName"];
+            $lastName = $my_row["lastName"];
+            $position = $my_row["position"];
+            $academicYear = $my_row["academicYear"];
+
+            $requestformList[] = new Requestform(
+                $id,
+                $requestID,
+                $statusName,
+                $createDate,
+                $phoneNumber,
+                $facebookName,
+                $positionRequest,
+                $agentName,
+                $agentPosition,
+                $HR_Name,
+                $HR_PhoneNamber,
+                $HR_Email,
+                $startDate,
+                $endDate,
+                $approverID,
+                $companyID,
+                $firstName,
+                $lastName,
+                $position,
+                $academicYear
+            );
+        }
+        require("connection_close.php");
+        return $requestformList;
+    }
 }

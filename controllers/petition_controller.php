@@ -34,6 +34,12 @@
             require_once("./view/petition/index_petition.php");
         }
 
+        public function searchPetitionDate(){
+            $requestform_List = Requestform::searchDate();
+            //echo "search:".$key;
+            require_once("./view/petition/index_petition.php");
+        }
+
 
         public function indexSummaryPetition(){
             
