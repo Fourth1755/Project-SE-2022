@@ -78,7 +78,7 @@
                   <td>$requestform->firstName  $requestform->lastName</td>
                   <td>$requestform->companyName</td>
                   <td>$requestform->statusName</td>"?>
-                  <td><a type="button" class="btn btn-primary"href=?controller=petition&action=approveView&<?php echo "ID=$requestform->id";?>><i class="material-icons">build</i></a></td>
+                  <td><a type="button" class="btn btn-primary"href=?controller=petition&action=approveView&<?php echo "ID=$requestform->id";?>><i class="fas fa-angle-double-right"></i></a></td>
             <?php 
               }
             };

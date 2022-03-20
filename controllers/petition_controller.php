@@ -3,6 +3,7 @@
         public function index(){
             //$anime_list=Anime::getAll();
             $requestform_List=Requestform::getAll();
+            $company_list=Company::getAll();
             require_once("./view/petition/index_petition.php");
         }
         public function newPetition(){
@@ -29,11 +30,13 @@
 
         public function searchPetition(){
             $key = $_GET['key'];
+            $company_list=Company::getAll();
             $requestform_List = Requestform::search($key);
             //echo "search:".$key;
             require_once("./view/petition/index_petition.php");
         }
         public function SortDate(){
+            $company_list=Company::getAll();
             $requestform_List = Requestform::SortDate();
             //echo "search:".$key;
             require_once("./view/petition/index_petition.php");
@@ -52,6 +55,7 @@
         }
         public function approvePetition(){
             $requestform_List=Requestform::getAll();
+            $company_list=Company::getAll();
             require_once("./view/petition/approve_petition.php");
         }
         public function approveView(){

@@ -5,10 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Internship Management System</title>
+  <link href="./fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
 body{
   margin: 0;
   font-family:'Prompt', sans-serif;
@@ -43,17 +45,18 @@ button:hover {
      width: 100%;
   }
 }
-input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
+.login-input{
+  background-color:#FFFF;
+  display: flex;
+  border-radius: 10px;  
 }
-
-input[type=submit], select {
+.login-input input{
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+input[type=submit]{
   width: 100%;
   color: #171738;
   padding: 14px 20px;
@@ -161,15 +164,21 @@ input[type=submit], select {
     <div class="logo-img">
     <img src="https://upload.wikimedia.org/wikipedia/th/a/a4/%E0%B8%84%E0%B8%93%E0%B8%B0%E0%B8%A7%E0%B8%B4%E0%B8%A8%E0%B8%A7%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C_%E0%B8%81%E0%B8%B3%E0%B9%81%E0%B8%9E%E0%B8%87%E0%B9%81%E0%B8%AA%E0%B8%99_%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B9%80%E0%B8%81%E0%B8%A9%E0%B8%95%E0%B8%A3%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C.png" alt="Cinque Terre" width="400" height="300">
     </div>
-    <form>
-      <label for="uname"><b>บัญชีผู้ใช้เครือข่ายนนทรี</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
-    <label for="psw"><b>รหัสผ่าน</b></label>
-    <input type="text" placeholder="Enter Password" name="psw" required>
+    <form form method="get" action="">
+    <label for="uname"><b>บัญชีผู้ใช้เครือข่ายนนทรี</b></label>
+    <div class="login-input">
+      <input type="email" placeholder="เช่น b63xxxxxxxx หรือ regxxx" name="uname" required>
+    </div>
+    <br>
     
+    <label for="psw"><b>รหัสผ่าน</b></label>
+    <div class="login-input">
+      <input type="password" id="myInput" placeholder="Enter Password" name="psw" required>
+      <button type="button" class="btn" onclick="myFunctionPass()">
+      <i class="fas fa-eye-slash" id="togglePassword"></i></button>
+    </div>
     <div style="padding: 20px;display: flex;justify-content: space-between;">
       <div><input type="checkbox" checked="checked" name="remember"> Remember me</div>
-       <div>ลืมรหัสผ่าน<a href="?controller=singup&action=index" style="text-decoration: none;"> password?</a></div>
     </div>
     <div style="padding: 5px;display: flex;justify-content: space-around;">
       <div><a class="btn" href="?controller=announce&action=index" id="button-black">กลับหน้าหลัก</a></div>
@@ -180,17 +189,18 @@ input[type=submit], select {
   </div>
  
   <script>
-var video = document.getElementById("myVideo");
-var btn = document.getElementById("myBtn");
-
-function myFunction() {
-  if (video.paused) {
-    video.play();
-    btn.innerHTML = "Pause";
+function myFunctionPass() {
+  var togglePassword = document.getElementById("togglePassword");
+  var x = document.getElementById("myInput");
+  togglePassword.classList.toggle('fa-eye');
+  if (x.type === "password") {
+    x.type = "text";
+    
   } else {
-    video.pause();
-    btn.innerHTML = "Play";
+    x.type = "password";
+    
   }
+  togglePassword.classList.toggle('fa-eye-slash');
 }
 </script>
 </body>
