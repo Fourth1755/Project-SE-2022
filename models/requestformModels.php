@@ -351,70 +351,6 @@ class Requestform
         return $requestformList;
     }
 
-    public static function  chooseYear()
-    {
-        $requestformList = [];
-        require("connection_connect.php");
-        $sql = "SELECT requestform.ID AS ID,requestID,statusName,createDate,requestform.phoneNumber AS phoneNumber,facebookName,positionRequest,
-        requestform.agentName AS agentName,requestform.agentPosition AS agentPosition,requestform.HR_Name AS 
-        HR_Name,requestform.HR_PhoneNamber AS HR_PhoneNamber,requestform.HR_Email AS HR_Email,requestform.startDate AS 
-        startDate,requestform.endDate AS endDate,approverID,companyID,reasonReject,firstName,lastName,position,user.academicYear AS userAcademicYear,requestform.academicYear AS academicYear,imagePath,company.name 
-        AS companyName FROM requestform LEFT JOIN user ON user.username=requestform.requestID LEFT JOIN company ON companyID=company.ID 
-        WHERE requestform.requestID=user.username ORDER BY requestform.createDate DESC";
-        $result = $conn->query($sql);
-        while ($my_row = $result->fetch_assoc()) {
-            $id = $my_row["ID"];
-            $requestID = $my_row["requestID"];
-            $statusName = $my_row["statusName"];
-            $createDate = $my_row["createDate"];
-            $phoneNumber = $my_row["phoneNumber"];
-            $facebookName = $my_row["facebookName"];
-            $positionRequest = $my_row["positionRequest"];
-            $agentName = $my_row["agentName"];
-            $agentPosition = $my_row["agentPosition"];
-            $HR_Name = $my_row["HR_Name"];
-            $HR_PhoneNamber = $my_row["HR_PhoneNamber"];
-            $HR_Email = $my_row["HR_Email"];
-            $startDate = $my_row["startDate"];
-            $endDate = $my_row["endDate"];
-            $approverID = $my_row["approverID"];
-            $companyID = $my_row["companyID"];
-            $firstName = $my_row["firstName"];
-            $lastName = $my_row["lastName"];
-            $position = $my_row["position"];
-            $academicYear = $my_row["academicYear"];
-            $imagePath=$my_row["imagePath"];
-            $companyName=$my_row["companyName"];
-            $requestformList[] = new Requestform(
-                $id,
-                $requestID,
-                $statusName,
-                $createDate,
-                $phoneNumber,
-                $facebookName,
-                $positionRequest,
-                $agentName,
-                $agentPosition,
-                $HR_Name,
-                $HR_PhoneNamber,
-                $HR_Email,
-                $startDate,
-                $endDate,
-                $approverID,
-                $companyID,
-                $firstName,
-                $lastName,
-                $position,
-                $academicYear,
-                $imagePath,
-                $companyName
-                
-            );
-        }
-        require("connection_close.php");
-        return $requestformList;
-    }
-
     public static function searchApprove($key)
     {
         $requestformList = [];
@@ -426,7 +362,7 @@ class Requestform
         AS companyName FROM requestform LEFT JOIN user ON user.username=requestform.requestID LEFT JOIN company ON companyID=company.ID 
         WHERE requestform.requestID=user.username AND (requestform.createDate LIKE '%$key%' OR requestform.requestID LIKE '%$key%' 
         OR user.firstName LIKE '%$key%' OR user.lastName LIKE '%$key%' OR requestform.statusName LIKE '%$key%'OR user.academicYear LIKE '%$key%' 
-        OR company.name LIKE '%$key%')";
+        OR company.name LIKE '%$key%' OR requestform.academicYear LIKE '%$key%')";
         $result = $conn->query($sql);
         while ($my_row = $result->fetch_assoc()) {
             $id = $my_row["ID"];
