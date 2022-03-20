@@ -3,7 +3,7 @@
         {
             public function index()
             {
-                require_once('views/admin/index.php');
+                require_once('views/login.php');
             }
         
             public function signIn()
@@ -24,7 +24,7 @@
             public function signOut()
             {
                 session_destroy();
-                header("Location: index.php");
+                header("Location: login.php");
             }
         }
         
