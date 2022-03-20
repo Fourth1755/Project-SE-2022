@@ -35,7 +35,7 @@
 
       </div>
       <br>
-      <a type="button" class="btn" style="margin-left: 700px; background-color: #171738; border-radius: 10px; color: #FFFFFF;  font-size:20px;">Edit submissions </a>
+      <a type="button" class="btn" style="margin-left: 500px; background-color: #171738; border-radius: 10px; color: #FFFFFF;  font-size:20px;">Edit submissions </a>
       <br><br>
       <div class="content">
             <br>
@@ -66,7 +66,7 @@
       <br>
 
      
-      <div style="display: flex; margin-left: 650px;" >
+      <div style="display: flex; margin-left: 440px;" >
             <a type="button" class="btn" style=" background-color: #EB2626; border-radius: 10px; color: #FFFFFF;  font-size:20px;">ยกเลิก </a>
             <a type="button" class="btn" style="margin-left: 40px; background-color: #171738; border-radius: 10px; color: #FFFFFF;  font-size:20px;">บันทึกการเปลี่ยนแปลง </a>
       </div>
