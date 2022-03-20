@@ -9,7 +9,7 @@
     border-radius: 10px;
   }
   .search{
-    padding: 10px 30px 10px 0px;
+    padding: 10px 0px 10px 0px;
   }
   .search input {
     border-radius: 10px;
@@ -45,8 +45,8 @@
         </div>
       
       </div>
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+<div class="dropdown" style="padding-left: 40px;">
+  <button class="btn dropdown-toggle" style="background-color:#171738;color: #FFF;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
   Select Status
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -55,7 +55,20 @@
     <li><a class="dropdown-item" href="?key=reject&controller=petition&action=searchPetition">reject</a></li>
   </ul>
   </div>
-    
+  <div class="dropdown" style="padding-left: 40px;">
+  <button class="btn dropdown-toggle" style="background-color:#171738;color: #FFF;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+  Select Company
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <?php
+      foreach($company_list as $company){
+          echo "<li>";?>
+          <a class="dropdown-item" href="?key=<?php echo "$company->name";?>&controller=petition&action=searchPetition"><?php echo "$company->name";?></a></li>
+          <?php
+      }
+    ?>
+  </ul>
+  </div>
     </div>
   </form>
     <table class="table" id="table-header">
