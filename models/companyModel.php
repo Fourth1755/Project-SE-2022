@@ -1,13 +1,14 @@
 <?php
     class Company{
-        public $id,$name,$address,$type,$phoneNumber,$faxNumber;
-        public function __construct($id,$name,$address,$type,$phoneNumber,$faxNumber){
+        public $id,$name,$address,$type,$phoneNumber,$faxNumber,$requiredSkill;
+        public function __construct($id,$name,$address,$type,$phoneNumber,$faxNumber,$requiredSkill){
             $this->id=$id;
             $this->name=$name;
             $this->address=$address;
             $this->type=$type;
-            $this->nphoneNumber=$phoneNumber;
+            $this->phoneNumber=$phoneNumber;
             $this->faxNumber=$faxNumber;
+            $this->requiredSkill=$requiredSkill;
         }
         public static function getAll(){
             $companyList=[];
@@ -21,7 +22,8 @@
                 $type=$my_row["type"];
                 $phoneNumber=$my_row["phoneNumber"];
                 $faxNumber=$my_row["faxNumber"];
-                $companyList[]=new Company($id,$name,$address,$type,$phoneNumber,$faxNumber);
+                $requiredSkill=$my_row["requiredSkill"];
+                $companyList[]=new Company($id,$name,$address,$type,$phoneNumber,$faxNumber,$requiredSkill);
             }
             require("connection_close.php");
             return $companyList;

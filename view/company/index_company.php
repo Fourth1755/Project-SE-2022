@@ -1,5 +1,5 @@
-
 <?php require_once("menuTop.php") ?>
+<title>สถานประกอบการ</title>
 <style>
 .search{
     padding: 20px 0px 40px 0px;
@@ -40,25 +40,19 @@
       <th>ตำแหน่งที่รับ</th>
       <th>เพิ่มเติม</th>
     </tr>
-   
-    <tr>
-      <td scope="row">1</td>
-      <td> Drone Academy Thailand</td>
-      <td>1</td>
-      <td>Computer Programmer </td>
-      <td><a  href='?controller=company&action=indexcompanyDetail'><img src=http://cdn.onlinewebfonts.com/svg/img_159305.png style="width: 35px;" /></a></td>
-    </tr>
-    <tr>
-      <td scope="row">2</td>
-      <td>บริษัท โกไฟว์จำกัด</td>
-      <td>4</td>
-      <td>Developer, System Analyst</td>
-      <td><a  href='?controller=company&action=indexcompanyDetail'><img src=http://cdn.onlinewebfonts.com/svg/img_159305.png style="width: 35px;" /></a></td>
-    </tr>
-    
-    
+   <?php
+        foreach($company_list as $company){
+          echo "<tr>
+            <td>1</td>
+            <td> $company->name</td>
+      <td>0</td>
+      <td>$company->requiredSkill</td>";?>
+      <td><a class ="btn btn-primary"href='?controller=company&action=indexcompanyDetail'>Detail</a></td>
+    <?php
+     echo"</tr>";
+        }
+   ?>
 </table>
-
 </div>
 </body>
 

@@ -3,10 +3,10 @@
     'anime'=>['index','newAnime','addAnime','search','updateForm','update'],
     'profile'=>['index'],
     'announce'=>['index','addAnnounce'],
-    'company'=>['index','indexcompanyDetail','updatecompanyDetailPage1','updatecompanyDetailPage2','updatecompanyDetailPage3'],
+    'company'=>['index','newCompany','addCompany','indexcompanyDetail','updatecompanyDetailPage1','updatecompanyDetailPage2','updatecompanyDetailPage3'],
     'uploadreport'=>['index'],
     'internshiphistory'=>['index','detailInternshiphistory'],
-    'petition'=>['index','newPetition','addPetition','indexSummaryPetition','approvePetition','approveView','approveApprove','newCompany','addCompany'],
+    'petition'=>['index','newPetition','addPetition','indexSummaryPetition','approvePetition','approveView','approveApprove','searchPetition','SortDate','searchApprove'],
     'document'=>['IndexdownloadRequestInternship','IndexdownloadDocument','IndexuploadDocument']);
     function call($controller,$action){
         //echo "routes to".$controller."-".$action."<br>";
@@ -27,6 +27,7 @@
                         $controller = new AnnounceController();
                         break;
             case "company": 
+                        require_once("models/companyModel.php");
                         $controller = new CompanyController();
                         break; 
             case "uploadreport": 
@@ -38,6 +39,7 @@
             case "petition":
                         require_once("models/companyModel.php");
                         require_once("models/requestformModels.php");
+                        require_once("models/accountModel.php");
                         $controller = new PetitionController();
                         break;  
             case "document":

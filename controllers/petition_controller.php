@@ -26,6 +26,26 @@
             $agentName,$agentPosition,$HR_Name,$HR_PhoneNamber,$HR_Email,$startDate,$endDate,$companyID);
             PetitionController::index();
         }
+
+        public function searchPetition(){
+            $key = $_GET['key'];
+            $requestform_List = Requestform::search($key);
+            //echo "search:".$key;
+            require_once("./view/petition/index_petition.php");
+        }
+        public function SortDate(){
+            $requestform_List = Requestform::SortDate();
+            //echo "search:".$key;
+            require_once("./view/petition/index_petition.php");
+        }
+
+        public function searchApprove(){
+            $key = $_GET['key'];
+            $requestform_List = Requestform::searchApprove($key);
+            //echo "search:".$key;
+            require_once("./view/petition/approve_petition.php");
+        }
+
         public function indexSummaryPetition(){
             
             require_once("./view/petition/index_summaryPetition.php");
@@ -41,22 +61,20 @@
         }
         public function approveApprove(){
             $id=$_GET['ID'];
-            $status="approve";
+            $requestID=$_GET['requestID'];
+            $statusName="approve";
             $approverID=$_GET['approverID'];
-            PetitionController::index();
+            Requestform::approve($id, $requestID, $approverID, $statusName);
+            PetitionController::approvePetition();
         }
         public function approveReject(){
             $id=$_GET['ID'];
-            $status="reject";
+            $requestID=$_GET['requestID'];
+            $statusName="reject";
             $approverID=$_GET['approverID'];
-            PetitionController::index();
+            Requestform::approve($id, $requestID, $approverID, $statusName);
+            PetitionController::approvePetition();
         }
-        public function newCompany(){
-
-            require_once('./view/petition/newcompany_petition.php');
-        }
-        public function addCompany(){
-
-        }
+        
     }
 ?>

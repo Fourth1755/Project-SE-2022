@@ -1,3 +1,4 @@
+<title>My Profile</title>
 <style>
 .profilecontent{
     height: 400px;
