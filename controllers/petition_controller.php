@@ -4,6 +4,7 @@
             //$anime_list=Anime::getAll();
             $requestform_List=Requestform::getAll();
             $company_list=Company::getAll();
+            $requestchooseyear_List=Requestform::chooseYear();
             require_once("./view/petition/index_petition.php");
         }
         public function newPetition(){
