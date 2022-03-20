@@ -1,9 +1,6 @@
 <?php require_once("menuTop.php") ?>
 <title>ผลการอนุมัติการฝึกงาน</title>
 <style>
-  .selecttag{
-    
-  }
   .search-box {
     margin:10px 0px 30px 0px;
     background-color: #E5E5E5;
@@ -48,7 +45,6 @@
         </div>
       
       </div>
-      <div class="selecttag">
 <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
   Select Status
@@ -59,7 +55,7 @@
     <li><a class="dropdown-item" href="?key=reject&controller=petition&action=searchPetition">reject</a></li>
   </ul>
   </div>
-  </div>  
+    
     </div>
   </form>
     <table class="table" id="table-header">
