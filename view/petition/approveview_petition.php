@@ -1,3 +1,4 @@
+<title>อนุมัติคำร้องการฝึกงาน</title>
 <style>
 .profilecontent{
     background-color: #FFCFCF;
@@ -77,7 +78,9 @@
       <hr style="width:100%;text-align:left;margin-left:0">
       <h3>การอนุมัติคำร้อง</h3>
 <form method="get" action="">
+<input type="text" name="requestID" value="<?php echo "$requestform->requestID";?>"/>
 <input type="text" name="approverID" value="T9043000001"/>
+<input type="text" name="ID" value="<?php echo "$requestform->id";?>"/>
 <input type="hidden" name="controller" value="petition" class="form-control">
 <button type="submit" class="btn btn-danger" value="approveReject" name="action">Reject</button>
 <button type="submit" class="btn btn-success" value="approveApprove" name="action">Approve</button>
@@ -114,5 +117,5 @@
   </tbody>
 </table>
 </div>
-<a href="?controller=petition&action=index" class="btn btn-outline-dark">Back</a>
+<a href="?controller=petition&action=approvePetition" class="btn btn-outline-dark">Back</a>
 <?php require_once("menuDown.php") ?>

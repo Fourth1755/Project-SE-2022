@@ -27,6 +27,7 @@
                         $controller = new AnnounceController();
                         break;
             case "company": 
+                        require_once("models/companyModel.php");
                         $controller = new CompanyController();
                         break; 
             case "uploadreport": 

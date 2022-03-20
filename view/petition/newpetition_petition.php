@@ -1,4 +1,5 @@
 <?php require_once("menuTop.php") ?>
+<title>ยื่นคำร้องฝึกงาน</title>
 <style>
 .content{
       width:100%;

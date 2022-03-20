@@ -1,4 +1,5 @@
 <?php require_once("menuTop.php") ?>
+<title>เสนอสถานประกอบการใหม่</title>
 <style>
 .content{
       width:100%;

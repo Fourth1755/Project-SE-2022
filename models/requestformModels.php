@@ -216,7 +216,7 @@ class Requestform
     public static function approve($id, $requestID, $approverID, $statusName)
     {
         require("connection_connect.php");
-        $sql = "UPDATE anime SET requestID='$requestID',approverID='$approverID',statusName='$statusName' WHERE ID='$id' ";
+        $sql = "UPDATE requestform SET requestID='$requestID',approverID='$approverID',statusName='$statusName' WHERE ID='$id' ";
         $result = $conn->query($sql);
         require("connection_close.php");
         return "Update success $result rows";

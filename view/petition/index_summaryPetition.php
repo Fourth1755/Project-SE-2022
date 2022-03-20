@@ -1,4 +1,4 @@
-
+<title>รายการสรุปการอนุมัติฝึกงาน</title>
 <?php require_once("menuTop.php") ?>
 <style>
 .search{
