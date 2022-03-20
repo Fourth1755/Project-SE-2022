@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 17, 2022 at 05:14 PM
+-- Generation Time: Mar 20, 2022 at 02:28 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -52,9 +52,9 @@ CREATE TABLE `company` (
 --
 
 INSERT INTO `company` (`ID`, `name`, `address`, `type`, `phoneNumber`, `faxNumber`, `agentName`, `agentPosition`, `HR_Name`, `HR_Position`, `HR_PhoneNamber`, `requestPosition`, `jobDescription`, `amountPerson`, `requiredSkill`, `startDate`, `endDate`) VALUES
-(1, 'บริษัท โกไฟว์ จำกัด', '30/88 หมู่ที่ 1 ถ.เจษฎาวิถี ตำบลโคกขาม อำเภอเมืองสมุทรสาคร จังหวัดสมุทรสาคร 74000', 'บริษัทจำกัด', '027845855', '4562369876', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(2, 'บริษัท บิท โซลูชั่น จำกัด', '454 ถ.รัชดาภิเษก\r\nแขวงสามเสนนอก เขตห้วยขวาง กรุงเทพมหานคร 10310', 'บริษัทจำกัด', '029381602', '029381618', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(3, 'Drone Academy Thailand', '58/64 เมืองทองธานี ต. คลองเกลือ อ.ปากเกร็ด จ.นนทบุรี 11120\r\n', 'บริษัทจำกัด', '020000199', '1239567894', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(1, 'บริษัท โกไฟว์ จำกัด', '30/88 หมู่ที่ 1 ถ.เจษฎาวิถี ตำบลโคกขาม อำเภอเมืองสมุทรสาคร จังหวัดสมุทรสาคร 74000', 'บริษัทจำกัด', '027845855', '4562369876', 'อดิศร จรัสโยธินนุวัฒน์', 'Human Resources Department Manager', 'Supanida Ouamprathum', 'HR', '0836516795', 'Developer, System Analyst', 'เขียนโปรแกรม ศึกษางานตามโปรเจคที่ได้รับมอบหมำย', 5, 'ทักษะการใช้คอมพิวเตอร์ภาษา C,C#,JAVA,HTML และอื่นๆ', '2022-04-18', '2022-06-10'),
+(2, 'บริษัท บิท โซลูชั่น จำกัด', '454 ถ.รัชดาภิเษก\r\nแขวงสามเสนนอก เขตห้วยขวาง กรุงเทพมหานคร 10310', 'บริษัทจำกัด', '029381602', '029381618', 'อดิศักดิ์ วิชชุปัญญาพาณิชย์', 'Head of Engineer', 'อรชพร กอหามะ', '็HR', '0856498531', 'Network Engineer', 'ช่วยงานฝ่าย Engineer', 3, 'Network', '2022-04-20', '2022-06-15'),
+(3, 'Drone Academy Thailand', '58/64 เมืองทองธานี ต. คลองเกลือ อ.ปากเกร็ด จ.นนทบุรี 11120\r\n', 'บริษัทจำกัด', '020000199', '1239567894', '0984561237', '0984561237', 'ภูผา อธิษฐ์โภคิน', 'HR', '0984561237', 'Computer Programmer, Flying Robot, Internet of Things, AI Flying Robot', 'Internet of Thing, Hardware, Electronic, Flying Robot, Drone , RaspberryPi, Nvidia Jetson TX', 7, 'ไม่จำเป็นต้องรู้มาก่อนมาศึกษาภายหลังได้ Python, C/C++, PHP, Golang', '2022-04-19', '2022-06-24');
 
 -- --------------------------------------------------------
 
@@ -79,17 +79,18 @@ CREATE TABLE `requestform` (
   `endDate` date NOT NULL,
   `approverID` varchar(11) COLLATE utf8_unicode_ci DEFAULT NULL,
   `companyID` int(3) NOT NULL,
-  `reasonReject` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL
+  `reasonReject` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `academicYear` varchar(4) COLLATE utf8_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `requestform`
 --
 
-INSERT INTO `requestform` (`ID`, `requestID`, `statusName`, `createDate`, `phoneNumber`, `facebookName`, `positionRequest`, `agentName`, `agentPosition`, `HR_Name`, `HR_PhoneNamber`, `HR_Email`, `startDate`, `endDate`, `approverID`, `companyID`, `reasonReject`) VALUES
-(10001, 'b6220503201', 'waiting', '2022-03-07', '0321234567', 'Bie Juntawong', 'Network Engineer', 'อดิศักดิ์ วิชชุปัญญาพาณิชย์', 'Head of Engineer', 'อรชพร กอหามะ', '0856498531', 'bitsolution@gmail.com', '2022-04-18', '2022-06-10', NULL, 2, NULL),
-(10002, 'b6220504666', 'waiting', '2022-03-07', '0321234567', 'Dream Wongtungjaroensuk', 'Mobile Developer', 'อดิศร จรัสโยธินนุวัฒน์', 'Human Resources Department Manager', 'Supanida Ouamprathum', '0836516795', 'internship@gofive.co.th', '2022-04-18', '2022-06-10', NULL, 1, NULL),
-(10003, 'b6220504771', 'waiting', '2022-03-07', '0891684952', 'Meaw Apirakausanee', 'Data Engineer', 'ชัยวัฒน์ ประสิทธิพิพัฒน์', 'senior data engineer', 'ภูผา อธิษฐ์โภคิน', '0984561237', 'droneacademy@gmail.com', '2022-04-18', '2022-06-10', NULL, 3, NULL);
+INSERT INTO `requestform` (`ID`, `requestID`, `statusName`, `createDate`, `phoneNumber`, `facebookName`, `positionRequest`, `agentName`, `agentPosition`, `HR_Name`, `HR_PhoneNamber`, `HR_Email`, `startDate`, `endDate`, `approverID`, `companyID`, `reasonReject`, `academicYear`) VALUES
+(10001, 'b6220503201', 'waiting', '2022-03-07', '0321234567', 'Bie Juntawong', 'Network Engineer', 'อดิศักดิ์ วิชชุปัญญาพาณิชย์', 'Head of Engineer', 'อรชพร กอหามะ', '0856498531', 'bitsolution@gmail.com', '2022-04-18', '2022-06-10', NULL, 2, NULL, NULL),
+(10002, 'b6220504666', 'waiting', '2022-03-07', '0321234567', 'Dream Wongtungjaroensuk', 'Mobile Developer', 'อดิศร จรัสโยธินนุวัฒน์', 'Human Resources Department Manager', 'Supanida Ouamprathum', '0836516795', 'internship@gofive.co.th', '2022-04-18', '2022-06-10', NULL, 1, NULL, NULL),
+(10003, 'b6220504771', 'waiting', '2022-03-07', '0891684952', 'Meaw Apirakausanee', 'Data Engineer', 'ชัยวัฒน์ ประสิทธิพิพัฒน์', 'senior data engineer', 'ภูผา อธิษฐ์โภคิน', '0984561237', 'droneacademy@gmail.com', '2022-04-18', '2022-06-10', NULL, 3, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -112,13 +113,13 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`username`, `password`, `position`, `firstName`, `lastName`, `academicYear`, `imagePath`) VALUES
-('A7527000001', 'sasitorn7527', 'admin', 'ศศิธร', 'ชลรัตน์อมฤต', NULL, NULL),
-('b6220503201', 'bie0503201', 'student', 'ณัฐวรรธน์', 'จันทวงศ์', NULL, NULL),
-('b6220504631', 'ploy0504631', 'student', 'ชัชชญา', 'พรมรินทร์', NULL, NULL),
-('b6220504666', 'dream0504666', 'student', 'ธนพัฒน์', 'วงษ์ตั้งเจริญสุข', NULL, NULL),
-('b6220504755', 'fourth0504755', 'student', 'ภูริวัฒน์', 'ภูลับ', NULL, NULL),
-('b6220504771', 'meaw0504771', 'student', 'ลลิตา', 'อภิรักษ์อุษณีย์', NULL, NULL),
-('T9043000001', 'boonyaratE9043', 'lecturer', 'อ.ดร.บุญรัตน์', 'เผดิมรอด', NULL, NULL);
+('A7527000001', 'sasitorn7527', 'admin', 'ศศิธร', 'ชลรัตน์อมฤต', NULL, 'https://cdn.discordapp.com/attachments/955087275593715734/955093635769172059/263630914_10227121019517783_1051386037829441816_n.jpg'),
+('b6220503201', 'bie0503201', 'student', 'ณัฐวรรธน์', 'จันทวงศ์', '2562', 'https://cdn.discordapp.com/attachments/955087275593715734/955087694365601802/IMG_0495.JPG'),
+('b6220504631', 'ploy0504631', 'student', 'ชัชชญา', 'พรมรินทร์', '2562', 'https://cdn.discordapp.com/attachments/955087275593715734/955088060389928990/IMG_0215.JPG'),
+('b6220504666', 'dream0504666', 'student', 'ธนพัฒน์', 'วงษ์ตั้งเจริญสุข', '2562', 'https://cdn.discordapp.com/attachments/955087275593715734/955087476899340359/IMG_0811.JPG'),
+('b6220504755', 'fourth0504755', 'student', 'ภูริวัฒน์', 'ภูลับ', '2562', 'https://cdn.discordapp.com/attachments/955087275593715734/955087535678296134/IMG_0763.JPG'),
+('b6220504771', 'meaw0504771', 'student', 'ลลิตา', 'อภิรักษ์อุษณีย์', '2562', 'https://cdn.discordapp.com/attachments/955087275593715734/955087839295594537/IMG_0219.JPG'),
+('T9043000001', 'boonyaratE9043', 'lecturer', 'อ.ดร.บุญรัตน์', 'เผดิมรอด', NULL, 'https://cdn.discordapp.com/attachments/955087275593715734/955094017949978624/unknown.png');
 
 --
 -- Indexes for dumped tables
