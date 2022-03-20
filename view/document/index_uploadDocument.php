@@ -37,7 +37,7 @@
             <div>
                 <label style="font-size:25px; margin-left: 100px;">แนบเอกสาร:</label>
                 <a type="button" class="btn" style="margin-left: 40px; background-color: #171738; border-radius: 35px; color: #FFFFFF;  width:130px; font-size:20px;">เลือกไฟล์</a><br><br><br><br><br><br>
-                <a type="button" class="btn" style="margin-left: 700px; background-color: #171738; border-radius: 35px; color: #FFFFFF; width:150px; font-size:20px;">อัพโหลด</a>
+                <a type="button" class="btn" style="margin-left: 500px; background-color: #171738; border-radius: 35px; color: #FFFFFF; width:150px; font-size:20px;">อัพโหลด</a>
             </div>
 
 
