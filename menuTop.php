@@ -143,7 +143,7 @@ body{
         if (isset($_SESSION['firstname'])) {
           
         ?>
-          <a class="btn" href="?controller=login&action=login">LOGOUT</a>
+          <a class="btn" href="?controller=login&action=index">LOGOUT</a>
         <?php
         } else {
           echo "<a class='btn' href='?controller=login&action=index'>LOGIN</a>";
