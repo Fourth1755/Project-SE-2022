@@ -16,7 +16,7 @@
                 if ($token == 1) {
                     $_SESSION['firstname'] = $account->firstname;
                     $_SESSION['token'] = "1";
-                    $_SESSION['accountId'] = $account->id;
+                    $_SESSION['accountId'] = $account->username;
                 }
                 header("Location: index.php");
             }
