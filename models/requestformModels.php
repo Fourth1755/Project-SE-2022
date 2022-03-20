@@ -76,7 +76,7 @@ class Requestform
         $sql = "SELECT requestform.ID AS ID,requestID,statusName,createDate,requestform.phoneNumber AS phoneNumber,facebookName,positionRequest,
         requestform.agentName AS agentName,requestform.agentPosition AS agentPosition,requestform.HR_Name AS 
         HR_Name,requestform.HR_PhoneNamber AS HR_PhoneNamber,requestform.HR_Email AS HR_Email,requestform.startDate AS 
-        startDate,requestform.endDate AS endDate,approverID,companyID,reasonReject,firstName,lastName,position,academicYear,imagePath,company.name 
+        startDate,requestform.endDate AS endDate,approverID,companyID,reasonReject,firstName,lastName,position,user.academicYear AS userAcademicYear,requestform.academicYear AS academicYear,imagePath,company.name 
         AS companyName FROM requestform LEFT JOIN user ON user.username=requestform.requestID LEFT JOIN company ON companyID=company.ID WHERE requestform.ID='$id'";
         $result = $conn->query($sql);
         $my_row = $result->fetch_assoc();
@@ -135,7 +135,7 @@ class Requestform
         $sql = "SELECT requestform.ID AS ID,requestID,statusName,createDate,requestform.phoneNumber AS phoneNumber,facebookName,positionRequest,
         requestform.agentName AS agentName,requestform.agentPosition AS agentPosition,requestform.HR_Name AS 
         HR_Name,requestform.HR_PhoneNamber AS HR_PhoneNamber,requestform.HR_Email AS HR_Email,requestform.startDate AS 
-        startDate,requestform.endDate AS endDate,approverID,companyID,reasonReject,firstName,lastName,position,academicYear,imagePath,company.name 
+        startDate,requestform.endDate AS endDate,approverID,companyID,reasonReject,firstName,lastName,position,user.academicYear AS userAcademicYear,requestform.academicYear AS academicYear,imagePath,company.name 
         AS companyName FROM requestform LEFT JOIN user ON user.username=requestform.requestID LEFT JOIN company ON companyID=company.ID;";
         $result = $conn->query($sql);
         while ($my_row = $result->fetch_assoc()) {
@@ -229,7 +229,7 @@ class Requestform
         $sql = "SELECT requestform.ID AS ID,requestID,statusName,createDate,requestform.phoneNumber AS phoneNumber,facebookName,positionRequest,
         requestform.agentName AS agentName,requestform.agentPosition AS agentPosition,requestform.HR_Name AS 
         HR_Name,requestform.HR_PhoneNamber AS HR_PhoneNamber,requestform.HR_Email AS HR_Email,requestform.startDate AS 
-        startDate,requestform.endDate AS endDate,approverID,companyID,reasonReject,firstName,lastName,position,academicYear,imagePath,company.name 
+        startDate,requestform.endDate AS endDate,approverID,companyID,reasonReject,firstName,lastName,position,user.academicYear AS userAcademicYear,requestform.academicYear AS academicYear,imagePath,company.name 
         AS companyName FROM requestform LEFT JOIN user ON user.username=requestform.requestID LEFT JOIN company ON companyID=company.ID 
         WHERE requestform.requestID=user.username AND (requestform.createDate LIKE '%$key%' OR requestform.requestID LIKE '%$key%' 
         OR user.firstName LIKE '%$key%' OR user.lastName LIKE '%$key%' OR requestform.statusName LIKE '%$key%'OR user.academicYear LIKE '%$key%'
@@ -293,7 +293,7 @@ class Requestform
         $sql = "SELECT requestform.ID AS ID,requestID,statusName,createDate,requestform.phoneNumber AS phoneNumber,facebookName,positionRequest,
         requestform.agentName AS agentName,requestform.agentPosition AS agentPosition,requestform.HR_Name AS 
         HR_Name,requestform.HR_PhoneNamber AS HR_PhoneNamber,requestform.HR_Email AS HR_Email,requestform.startDate AS 
-        startDate,requestform.endDate AS endDate,approverID,companyID,reasonReject,firstName,lastName,position,academicYear,imagePath,company.name 
+        startDate,requestform.endDate AS endDate,approverID,companyID,reasonReject,firstName,lastName,position,user.academicYear AS userAcademicYear,requestform.academicYear AS academicYear,imagePath,company.name 
         AS companyName FROM requestform LEFT JOIN user ON user.username=requestform.requestID LEFT JOIN company ON companyID=company.ID 
         WHERE requestform.requestID=user.username ORDER BY requestform.createDate DESC";
         $result = $conn->query($sql);
@@ -357,7 +357,7 @@ class Requestform
         $sql = "SELECT requestform.ID AS ID,requestID,statusName,createDate,requestform.phoneNumber AS phoneNumber,facebookName,positionRequest,
         requestform.agentName AS agentName,requestform.agentPosition AS agentPosition,requestform.HR_Name AS 
         HR_Name,requestform.HR_PhoneNamber AS HR_PhoneNamber,requestform.HR_Email AS HR_Email,requestform.startDate AS 
-        startDate,requestform.endDate AS endDate,approverID,companyID,reasonReject,firstName,lastName,position,academicYear,imagePath,company.name 
+        startDate,requestform.endDate AS endDate,approverID,companyID,reasonReject,firstName,lastName,position,user.academicYear AS userAcademicYear,requestform.academicYear AS academicYear,imagePath,company.name 
         AS companyName FROM requestform LEFT JOIN user ON user.username=requestform.requestID LEFT JOIN company ON companyID=company.ID 
         WHERE requestform.requestID=user.username ORDER BY requestform.createDate DESC";
         $result = $conn->query($sql);
@@ -421,7 +421,7 @@ class Requestform
         $sql = "SELECT requestform.ID AS ID,requestID,statusName,createDate,requestform.phoneNumber AS phoneNumber,facebookName,positionRequest,
         requestform.agentName AS agentName,requestform.agentPosition AS agentPosition,requestform.HR_Name AS 
         HR_Name,requestform.HR_PhoneNamber AS HR_PhoneNamber,requestform.HR_Email AS HR_Email,requestform.startDate AS 
-        startDate,requestform.endDate AS endDate,approverID,companyID,reasonReject,firstName,lastName,position,academicYear,imagePath,company.name 
+        startDate,requestform.endDate AS endDate,approverID,companyID,reasonReject,firstName,lastName,position,user.academicYear AS userAcademicYear,requestform.academicYear AS academicYear,imagePath,company.name 
         AS companyName FROM requestform LEFT JOIN user ON user.username=requestform.requestID LEFT JOIN company ON companyID=company.ID 
         WHERE requestform.requestID=user.username AND (requestform.createDate LIKE '%$key%' OR requestform.requestID LIKE '%$key%' 
         OR user.firstName LIKE '%$key%' OR user.lastName LIKE '%$key%' OR requestform.statusName LIKE '%$key%'OR user.academicYear LIKE '%$key%' 
