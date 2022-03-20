@@ -72,22 +72,6 @@
             ?>
           </ul>
         </div>
-        <div class="dropdown" style="padding-left: 40px;">
-          <button class="btn dropdown-toggle" style="background-color:#171738;color: #FFF;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            Select ปีการศึกษา
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <?php
-            foreach ($company_list as $company) {
-              echo "<li>"; ?>
-              <a class="dropdown-item" href="?key=<?php echo "$company->name"; ?>&controller=petition&action=searchPetition"><?php echo "$company->name"; ?></a></li>
-            <?php
-            }
-            ?>
-          </ul>
-        </div>
-
-
       </div>
     </form>
     <table class="table" id="table-header">
