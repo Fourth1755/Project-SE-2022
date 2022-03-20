@@ -167,7 +167,7 @@ input[type=submit]{
     <form form method="get" action="">
     <label for="uname"><b>บัญชีผู้ใช้เครือข่ายนนทรี</b></label>
     <div class="login-input">
-      <input type="email" placeholder="เช่น b63xxxxxxxx หรือ regxxx" name="uname" required>
+      <input type="text" placeholder="เช่น b63xxxxxxxx หรือ regxxx" name="uname" required>
     </div>
     <br>
     
