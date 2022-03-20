@@ -6,12 +6,12 @@
                 require_once('views/login.php');
             }
         
-            public function signIn()
+            public function login()
             {
                 $baseUsername = $_GET['username'];
                 $basePassword = $_GET['password'];
         
-                $account = Account::signIn($baseUsername, $basePassword);
+                $account = Account::login($baseUsername, $basePassword);
                 $token = $account->token;
                 if ($token == 1) {
                     $_SESSION['firstname'] = $account->firstname;
@@ -21,7 +21,7 @@
                 header("Location: index.php");
             }
         
-            public function signOut()
+            public function logout()
             {
                 session_destroy();
                 header("Location: login.php");

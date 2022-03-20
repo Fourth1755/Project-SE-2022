@@ -167,13 +167,13 @@ input[type=submit]{
     <form form method="get" action="">
     <label for="uname"><b>บัญชีผู้ใช้เครือข่ายนนทรี</b></label>
     <div class="login-input">
-      <input type="text" placeholder="เช่น b63xxxxxxxx หรือ regxxx" name="uname" required>
+      <input type="text" placeholder="เช่น b63xxxxxxxx หรือ regxxx" name="username" required>
     </div>
     <br>
     
     <label for="psw"><b>รหัสผ่าน</b></label>
     <div class="login-input">
-      <input type="password" id="myInput" placeholder="Enter Password" name="psw" required>
+      <input type="password" id="myInput" placeholder="Enter Password" name="password" required>
       <button type="button" class="btn" onclick="myFunctionPass()">
       <i class="fas fa-eye-slash" id="togglePassword"></i></button>
     </div>

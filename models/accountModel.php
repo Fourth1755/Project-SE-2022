@@ -17,7 +17,7 @@ class Account
         $this->lastName = $lastName;
     }
 
-    public static function signIn($baseUsername, $basePassword)
+    public static function login($baseUsername, $basePassword)
     {
         require("connection_connect.php");
         $sql = "SELECT * FROM account WHERE username = '$baseUsername'";
