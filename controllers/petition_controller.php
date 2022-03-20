@@ -24,9 +24,27 @@
             $startDate=$_GET['startDate'];
             $endDate=$_GET['endDate'];
             $companyID=$_GET['companyID'];
-            Requestform::add($requestID,$phoneNumber,$facebookName,$positionRequest,
-            $agentName,$agentPosition,$HR_Name,$HR_PhoneNamber,$HR_Email,$startDate,$endDate,$companyID);
-            PetitionController::index();
+
+            $today = date("Y-m-d");
+            $strtoday = substr($today,5,2);
+            $inttoday = (int)$strtoday;
+            if($inttoday <= 5){
+                $today = (int)$today;
+                $inttoday = $today + 542;
+                $academicYear = (string)$inttoday;
+                Requestform::add($requestID,$phoneNumber,$facebookName,$positionRequest,
+                $agentName,$agentPosition,$HR_Name,$HR_PhoneNamber,$HR_Email,$startDate,$endDate,$companyID,$academicYear);
+                PetitionController::index();
+            }
+            else{
+                $today = (int)$today;
+                $inttoday = $today + 543;
+                $academicYear = (string)$inttoday;
+                Requestform::add($requestID,$phoneNumber,$facebookName,$positionRequest,
+                $agentName,$agentPosition,$HR_Name,$HR_PhoneNamber,$HR_Email,$startDate,$endDate,$companyID,$academicYear);
+                PetitionController::index();
+            }
+            
         }
 
         public function searchPetition(){
@@ -82,4 +100,3 @@
         }
         
     }
-?>
