@@ -18,7 +18,7 @@
                     $_SESSION['lastname'] = $account->lastName;
                     $_SESSION['token'] = "1";
                     $_SESSION['username'] = $account->username;
-        
+                    $_SESSION['position'] =$account->position;
                     require_once('view/home.php');
                 }
                 else{

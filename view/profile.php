@@ -46,12 +46,12 @@
       <hr style="width:100%;text-align:left;margin-left:0">
       <div class="profilecontent">
             <div class="image-big">
-                <img src="https://i.pinimg.com/564x/bd/12/97/bd1297fcc9c4b9921ea235ba219821eb.jpg"/>
+                <img src="<?php echo $account->imagePath;?>"/>
             </div>
             <div class="content">
                 <ul class="content-title">
                     <li>
-                        ชื่อนางสาวมาริน คิตะกาวะ
+                        ชื่อ:  <?php echo $account->firstName;?> <?php echo $account->lastName;?>
                     </li>
                     <li>
                         รหัสนิสิต:  622xxxxxxx
@@ -65,6 +65,28 @@
                 </ul>
                     
             </div>
+      </div>
+      <div>
+          <h3>ประวัติการส่งคำร้อง</h3>
+          <table class="table" id="table-header">
+      <tr>
+        <th>วันที่ยื่นขอ</th>
+        <th>ปีการศึกษา</th>
+        <th>บริษัทที่ยื่น</th>
+        <th>สถานะ</th>
+      </tr>
+      <?php
+      foreach ($requestUser as $request) {
+        $timestamp = strtotime($request->createDate);
+        $new_dateformat = date("d-m-Y", $timestamp);
+        echo "<tr><td>$new_dateformat</td>
+                  <td>$request->academicYear</td>
+                  <td>$request->companyName</td>
+                  <td>$request->statusName</td>" ?>
+      <?php
+      };
+      ?>
+    </table>
       </div>
       <hr style="width:100%;text-align:left;margin-left:0">
 <?php require_once("menuDown.php") ?>

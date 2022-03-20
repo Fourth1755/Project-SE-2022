@@ -22,6 +22,8 @@
                         $controller = new AnimeController();
                         break;
             case "profile" : 
+                        require_once("models/requestformModels.php");
+                        require_once("models/accountModel.php");
                         $controller =new ProfileController();
                         break;
             case "announce": 
