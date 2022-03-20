@@ -9,7 +9,7 @@
         <ul class="navbar-nav">
           <?php
           if (isset($_SESSION['token'])) {
-            if ($_SESSION['token'] == "0") {
+            if ($_SESSION['token'] == "1") {
               echo "
                 <li class='nav-item'>
                   <a class='nav-link px-lg-3 py-lg-4' href='?controller=login&action=index' </a>
@@ -35,7 +35,7 @@
           <a class="btn btn-light ms-lg-auto ps-4 pe-4 rounded-pill" href="?controller=login&action=signOut">Log Out</a>
         <?php
         } else {
-          echo "<a class='btn btn-light ms-lg-auto ps-4 pe-4 rounded-pill' href='?controller=login&action=index'>Admin</a>";
+          echo "<a class='btn btn-light ms-lg-auto ps-4 pe-4 rounded-pill' href='?controller=login&action=index'>LOGIN</a>";
         }
         ?>
       </div>
