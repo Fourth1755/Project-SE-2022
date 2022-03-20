@@ -74,13 +74,13 @@ input[type=submit]{
 }
 .content-login{
   display: flex;
-  justify-content: space-between;
 }
 #button-black{
   color : #FFF;
   background-color: #171738;
-  border-radius: 15px;
-  padding: 12px 15px 12px 15px;
+  border-radius: 12px;
+  width: 100%;
+  padding: 8px 15px 8px 15px;
 }
 #button-black:hover{
   color : #FFCFCF;
@@ -164,7 +164,7 @@ input[type=submit]{
     <div class="logo-img">
     <img src="https://upload.wikimedia.org/wikipedia/th/a/a4/%E0%B8%84%E0%B8%93%E0%B8%B0%E0%B8%A7%E0%B8%B4%E0%B8%A8%E0%B8%A7%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C_%E0%B8%81%E0%B8%B3%E0%B9%81%E0%B8%9E%E0%B8%87%E0%B9%81%E0%B8%AA%E0%B8%99_%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B9%80%E0%B8%81%E0%B8%A9%E0%B8%95%E0%B8%A3%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C.png" alt="Cinque Terre" width="400" height="300">
     </div>
-    <form form method="get" action="">
+    <form method="get" action="">
     <label for="uname"><b>บัญชีผู้ใช้เครือข่ายนนทรี</b></label>
     <div class="login-input">
       <input type="text" placeholder="เช่น b63xxxxxxxx หรือ regxxx" name="username" required>
@@ -180,9 +180,9 @@ input[type=submit]{
     <div style="padding: 20px;display: flex;justify-content: space-between;">
       <div><input type="checkbox" checked="checked" name="remember"> Remember me</div>
     </div>
-    <div style="padding: 5px;display: flex;justify-content: space-around;">
-      <div><a class="btn" href="?controller=announce&action=index" id="button-black">กลับหน้าหลัก</a></div>
-      <div><button class="btn" type="submit" href="?controller=announce&action=index" id="button-black">เข้าสู่ระบบ</button></div>
+    <div style="padding: 5px;">
+      <input type="hidden" name="controller" value="login"/>
+      <div><button class="btn" type="submit" name="action" value="login" id="button-black">เข้าสู่ระบบ</button></div>
     </div>
     </form>
   </div>

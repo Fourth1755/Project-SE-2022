@@ -1,5 +1,6 @@
 <?php
     $controllers =array('pages'=>['home','error','login'],
+    'login'=>['index','login','logout'],
     'anime'=>['index','newAnime','addAnime','search','updateForm','update'],
     'profile'=>['index'],
     'announce'=>['index','addAnnounce'],
@@ -44,7 +45,10 @@
                         break;  
             case "document":
                         $controller = new DocumentController();
-                        break;        
+                        break;     
+            case "login":
+                        require_once("models/accountModel.php");
+                        $controller =new LoginController();   
         
         }
         $controller->{$action}();

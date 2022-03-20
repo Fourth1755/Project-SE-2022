@@ -1,9 +1,9 @@
 <?php
-    class PagesController
+    class LoginController
         {
             public function index()
             {
-                require_once('views/login.php');
+                require_once('view/login.php');
             }
         
             public function login()
@@ -14,11 +14,20 @@
                 $account = Account::login($baseUsername, $basePassword);
                 $token = $account->token;
                 if ($token == 1) {
-                    $_SESSION['firstname'] = $account->firstname;
+                    
+                    $_SESSION['firstname'] = $account->firstName;
+                    $_SESSION['lastname'] = $account->lastName;
                     $_SESSION['token'] = "1";
                     $_SESSION['accountId'] = $account->username;
+        
+                    require_once('view/home.php');
                 }
-                header("Location: index.php");
+                else{
+                    echo "<script>";
+                    echo "alert(\" user หรือ  password ไม่ถูกต้อง\");"; 
+                    echo "</script>";
+                    LoginController::index();
+                }
             }
         
             public function logout()

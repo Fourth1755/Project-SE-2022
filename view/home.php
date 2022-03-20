@@ -11,7 +11,8 @@
     <h3>ยินดีต้อนรับเข้าสู่ระบบลงทะเบียนนิสิต</h3>
       <p>วันพฤหัสบดี, 14 ตุลาคม 2564</p>
       <hr style="width:100%;text-align:left;margin-left:0">
-    <p>Wellcome to our homepage</p>
+    <p>Wellcome to our homepage </p><?php echo $_SESSION['firstname'];?>
+    <?php echo $_SESSION['lastname'];?>
     <?php require_once("menuDown.php") ?>
 </body>
 </html>

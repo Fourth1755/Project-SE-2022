@@ -20,10 +20,10 @@ class Account
     public static function login($baseUsername, $basePassword)
     {
         require("connection_connect.php");
-        $sql = "SELECT * FROM account WHERE username = '$baseUsername'";
+        $sql = "SELECT * FROM user WHERE username = '$baseUsername'";
         $result = $conn->query($sql);
         $my_row = $result->fetch_assoc();
-        if (isset($my_row["id"])) {
+        if (isset($my_row["username"])) {
             $username = $my_row["username"];
             $password = $my_row["password"];
             $position = $my_row["position"];
@@ -53,7 +53,7 @@ class Account
     public static function get($username)
     {
         require("connection_connect.php");
-        $sql = "SELECT * FROM account WHERE username = '$username'";
+        $sql = "SELECT * FROM user WHERE username = '$username'";
         $result = $conn->query($sql);
         $my_row = $result->fetch_assoc();
         $username = $my_row["username"];

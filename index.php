@@ -4,11 +4,14 @@
         $controller = $_GET['controller'];
         $action =$_GET['action'];
     }
+    //else{
+      //  $controller='pages';
+        //$action='home';
+    //}
     else{
-        $controller='pages';
-        $action='home';
+        $controller='login';
+        $action='index';
     }
-    session_start();
     ?>
         <!-- <a href="?controller=pages&action=home">Home</a>
         <a href="?controller=anime&action=index">Anime</a> -->

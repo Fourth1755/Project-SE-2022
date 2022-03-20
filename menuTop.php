@@ -144,7 +144,7 @@ body{
     <div class="sidenav">
         <a href="?controller=profile&action=index">
             <img src="https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2021/12/mydressupdarling_pv2screenshot.png"style="width:25px;border-radius:50%;">
-            <span style="padding-left: 20px;">Fname Lname</span></a>
+            <span style="padding-left: 20px;"><?php echo $_SESSION['firstname'];?> <?php echo $_SESSION['lastname'];?></span></a>
         <hr style="width:100%;text-align:left;margin-left:0">
         <a href="?controller=announce&action=index"><i class="fas fa-bullhorn"></i><span style="padding-left: 26px;">ดูประกาศ</span></a>
         <a href="?controller=company&action=index"><i class="far fa-building"></i><span style="padding-left: 26px;">สถานประกอบการ</span></a>   
