@@ -143,7 +143,6 @@ input[type=submit]{
 ::-webkit-scrollbar-thumb:hover {
   background: DarkGrey; 
 }
-
 </style>
 </head>
 <body>

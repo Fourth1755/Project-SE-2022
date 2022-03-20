@@ -1,12 +1,5 @@
 <!-- navbar -->
 <header>
-  <nav class="bg-primary border-bottom navbar navbar-dark navbar-expand-lg py-lg-1" style="top: 0; width: 100%; position: fixed;">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown-4" aria-controls="navbarNavDropdown-4" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div id="navbarNavDropdown-4" class="collapse navbar-collapse" style="width: 32px;">
-        <ul class="navbar-nav">
           <?php
           if (isset($_SESSION['token'])) {
             if ($_SESSION['token'] == "1") {
@@ -17,29 +10,21 @@
                 ";
             }
           }
+    
+          if (isset($_SESSION['firstname'])) {
+            echo "<b class='text-white' style='margin-left: 48%;'>";
+            echo $_SESSION['firstname'];
+            echo " ";
+            echo $_SESSION['lastname'];
+            echo "</b>";
           ?>
-          <li class="nav-item">
-          </li>
-
-          <li class="nav-item">
-          </li>
-          <li class="nav-item">
-          </li>
-        </ul>
-        <?php
-        if (isset($_SESSION['firstName'])) {
-          echo "<b class='text-white' style='margin-left: 48%;'>";
-          echo $_SESSION['firstName'];
-          echo "</b>";
-        ?>
-          <a class="btn btn-light ms-lg-auto ps-4 pe-4 rounded-pill" href="?controller=login&action=signOut">Log Out</a>
-        <?php
-        } else {
-          echo "<a class='btn btn-light ms-lg-auto ps-4 pe-4 rounded-pill' href='?controller=login&action=index'>LOGIN</a>";
-        }
-        ?>
-      </div>
-    </div>
-  </nav>
-  <br><br><br>
-</header>
+            <a class="btn" href="?controller=pages&action=login">LOGOUT</a>
+          <?php
+          } else {
+            echo "<a class='btn' href='?controller=pages&action=login'>LOGIN</a>";
+          }
+          ?>
+          </div>
+        </div>
+      <br><br><br>
+    </header>

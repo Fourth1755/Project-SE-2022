@@ -32,6 +32,8 @@
         
             public function logout()
             {
+                unset($_SESSSION['firstname']); // clear session
+                unset($_SESSION['accountId']);
                 session_destroy();
                 header("Location: login.php");
             }

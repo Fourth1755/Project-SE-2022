@@ -139,12 +139,21 @@ body{
     <div class="navbar">
         <div><p></p></div>
         <div><p>ระบบบริหารจัดการการฝึกงาน</p></div>
-        <a class="btn" href="?controller=pages&action=login">LOGIN</a>
+        <?php
+        if (isset($_SESSION['firstname'])) {
+          
+        ?>
+          <a class="btn" href="?controller=login&action=index">LOGOUT</a>
+        <?php
+        } else {
+          echo "<a class='btn' href='?controller=login&action=index'>LOGIN</a>";
+        }
+        ?>
     </div>
     <div class="sidenav">
         <a href="?controller=profile&action=index">
             <img src="https://i0.wp.com/anitrendz.net/news/wp-content/uploads/2021/12/mydressupdarling_pv2screenshot.png"style="width:25px;border-radius:50%;">
-            <span style="padding-left: 20px;"><?php echo $_SESSION['firstname'];?> <?php echo $_SESSION['lastname'];?></span></a>
+        <span style="padding-left: 20px;"><?php echo $_SESSION['firstname'];?> <?php echo $_SESSION['lastname'];?></span></a>
         <hr style="width:100%;text-align:left;margin-left:0">
         <a href="?controller=announce&action=index"><i class="fas fa-bullhorn"></i><span style="padding-left: 26px;">ดูประกาศ</span></a>
         <a href="?controller=company&action=index"><i class="far fa-building"></i><span style="padding-left: 26px;">สถานประกอบการ</span></a>   
