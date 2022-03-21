@@ -57,6 +57,8 @@
                 $type=$my_row["type"];
                 $phoneNumber=$my_row["phoneNumber"];
                 $faxNumber=$my_row["faxNumber"];
+                $department=$my_row["department"];
+                $payPerDay=$my_row["payPerDay"];
                 $agentName=$my_row["agentName"];
                 $agentPosition=$my_row["agentPosition"];
                 $HR_Name=$my_row["HR_Name"];
