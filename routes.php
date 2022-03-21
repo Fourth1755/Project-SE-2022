@@ -4,7 +4,7 @@
     'anime'=>['index','newAnime','addAnime','search','updateForm','update'],
     'profile'=>['index'],
     'announce'=>['index','addAnnounce'],
-    'company'=>['index','newCompany','addCompany','indexcompanyDetail','updatecompanyDetailPage1','updatecompanyDetailPage2','updatecompanyDetailPage3'],
+    'company'=>['index','newCompany','addCompany','viewCompany','indexcompanyDetail','updatecompanyDetailPage1','updatecompanyDetailPage2','updatecompanyDetailPage3'],
     'uploadreport'=>['index'],
     'internshiphistory'=>['index','detailInternshiphistory'],
     'petition'=>['index','newPetition','addPetition','indexSummaryPetition','approvePetition','approveView','approveApprove','approveReject','searchPetition','SortDate','searchApprove'],

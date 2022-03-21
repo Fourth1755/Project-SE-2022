@@ -103,5 +103,34 @@
             require("connection_close.php");
             return "Add success $result rows";
         }
+        public static function get($id){
+            require("connection_connect.php");
+            $sql="SELECT * FROM company WHERE ID='$id'";
+            $result=$conn->query($sql);
+            $my_row = $result->fetch_assoc();
+            $id=$my_row["ID"];
+            $name=$my_row["name"];
+            $address=$my_row["address"];
+            $type=$my_row["type"];
+            $phoneNumber=$my_row["phoneNumber"];
+            $faxNumber=$my_row["faxNumber"];
+            $department=$my_row["department"];
+            $payPerDay=$my_row["payPerDay"];
+            $agentName=$my_row["agentName"];
+            $agentPosition=$my_row["agentPosition"];
+            $HR_Name=$my_row["HR_Name"];
+            $HR_Position=$my_row["HR_Position"];
+            $HR_PhoneNamber=$my_row["HR_PhoneNamber"];
+            $requestPosition=$my_row["requestPosition"];
+            $jobDescription=$my_row["jobDescription"];
+            $amountPerson=$my_row["amountPerson"];
+            $requiredSkill=$my_row["requiredSkill"];
+            $startDate=$my_row["startDate"];
+            $endDate=$my_row["endDate"];
+            $company=new Company($id,$name,$address,$type,$phoneNumber,$faxNumber,$department,$payPerDay,$agentName,$agentPosition,$HR_Name,$HR_Position,$HR_PhoneNamber,
+                $requestPosition,$jobDescription,$amountPerson,$requiredSkill,$startDate,$endDate);
+            require("connection_close.php");
+            return $company;
+        }
     }
 ?>
