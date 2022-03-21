@@ -4,10 +4,10 @@
     'anime'=>['index','newAnime','addAnime','search','updateForm','update'],
     'profile'=>['index'],
     'announce'=>['index','addAnnounce'],
-    'company'=>['index','newCompany','addCompany','indexcompanyDetail','updatecompanyDetailPage1','updatecompanyDetailPage2','updatecompanyDetailPage3'],
+    'company'=>['index','newCompany','addCompany','viewCompany','indexcompanyDetail','updatecompanyDetailPage1','updatecompanyDetailPage2','updatecompanyDetailPage3'],
     'uploadreport'=>['index'],
     'internshiphistory'=>['index','detailInternshiphistory'],
-    'petition'=>['index','newPetition','addPetition','indexSummaryPetition','approvePetition','approveView','approveApprove','searchPetition','SortDate','searchApprove'],
+    'petition'=>['index','newPetition','addPetition','indexSummaryPetition','approvePetition','approveView','approveApprove','approveReject','searchPetition','SortDate','searchApprove'],
     'document'=>['IndexdownloadRequestInternship','IndexdownloadDocument','IndexuploadDocument']);
     function call($controller,$action){
         //echo "routes to".$controller."-".$action."<br>";

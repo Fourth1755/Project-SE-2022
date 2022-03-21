@@ -78,13 +78,18 @@
       <hr style="width:100%;text-align:left;margin-left:0">
       <h3>การอนุมัติคำร้อง</h3>
 <form method="get" action="">
-<input type="text" name="requestID" value="<?php echo "$requestform->requestID";?>"/>
+<input type="hidden" name="requestID" value="<?php echo "$requestform->requestID";?>"/>
 <input type="text" name="approverID" value="T9043000001"/>
-<input type="text" name="ID" value="<?php echo "$requestform->id";?>"/>
+<input type="hidden" name="ID" value="<?php echo "$requestform->id";?>"/>
 <input type="hidden" name="controller" value="petition" class="form-control">
+<div class="form-group pb-4 col-md-4">
+    <label>เหตุผล</label>
+    <input type="tel" class="form-control" name="reasonReject" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="กรอกเหตุผลสำหรับการไม่อนุมัติ" required>
+</div>
 <button type="submit" class="btn btn-danger" value="approveReject" name="action">Reject</button>
-<button type="submit" class="btn btn-success" value="approveApprove" name="action">Approve</button>
+
      </form>
+     <a href="?requestID=<?php echo "$requestform->requestID";?>&approverID=T9043000001&ID=<?php echo "$requestform->id";?>&controller=petition&action=approveApprove" class="btn btn-success">Approve</a>
      <hr style="width:100%;text-align:left;margin-left:0">
       <h3>รายละเอียด</h3>
       <div class="content-detail">

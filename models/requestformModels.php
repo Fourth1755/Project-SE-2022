@@ -214,10 +214,10 @@ class Requestform
         require("connection_close.php");
         return "Add success $result rows";
     }
-    public static function approve($id, $requestID, $approverID, $statusName)
+    public static function approve($id, $requestID, $approverID, $statusName,$reasonReject)
     {
         require("connection_connect.php");
-        $sql = "UPDATE requestform SET requestID='$requestID',approverID='$approverID',statusName='$statusName' WHERE ID='$id' ";
+        $sql = "UPDATE requestform SET requestID='$requestID',approverID='$approverID',statusName='$statusName',reasonReject='$reasonReject' WHERE ID='$id' ";
         $result = $conn->query($sql);
         require("connection_close.php");
         return "Update success $result rows";
