@@ -33,7 +33,7 @@
     <div class="search">
       <input type="search" placeholder="ค้นหาสถานประกอบการ" style="background-color: #E5E5E5;" />
       <a href=''><img src=https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/500px-Search_Icon.svg.png width=35 /></a>
-      <a type="button" class="btn" style="float: right; margin-right: 108px; background-color: FFAFB0; border-radius: 35px; color: #000000;" href=""> <i class="fa fa-plus"></i> เพิ่มสถานประกอบการ</a>
+      <a type="button" class="btn" style="float: right; margin-right: 108px; background-color: FFAFB0; border-radius: 35px; color: #000000;" href="?controller=company&action=newCompany"> <i class="fa fa-plus"></i> เพิ่มสถานประกอบการ</a>
     </div>
     <table class="table" id="table-header">
       <tr>

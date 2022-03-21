@@ -17,37 +17,37 @@
             <form method="get" action="">
                   <div class="form-group pb-4 col-md-4">
                   <label>ชื่อสถานประกอบการ</label>
-                  <input type="tel" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="กรอกเบอร์โทร">
+                  <input type="tel" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="กรอกชื่อสถานประกอบการ">
                   </div>
                   <div class="form-group pb-4 col-md-4">
                   <label>ประเภทธุรกิจ</label>
-                  <input type="text" class="form-control" name="type" id="exampleInputPassword1" placeholder="กรอกชื่อ facebook">
+                  <input type="text" class="form-control" name="type" id="exampleInputPassword1" placeholder="กรอกประเภทธุรกิจ">
                   </div>
                   <div class="form-group pb-4 col-md-4">
                   <label>ที่อยู่ของสถานประกอบการ</label>
-                  <input type="text" class="form-control" name="address" id="exampleInputPassword1" placeholder="กรอกตำแหน่ง">
+                  <input type="text" class="form-control" name="address" id="exampleInputPassword1" placeholder="กรอกที่อยู่">
                   </div>
                   <div class="form-group pb-4 col-md-4">
                   <label>เบอร์โทรศัพท์ของสถานประกอบการ</label>
-                  <input type="text" class="form-control" name="phoneNumber" id="exampleInputPassword1" placeholder="กรอกชื่อ">
+                  <input type="text" class="form-control" name="phoneNumber" id="exampleInputPassword1" placeholder="กรอกเบอร์โทร">
                   </div>
                   <div class="form-group pb-4 col-md-4">
                   <label>เบอร์โทรสารของสถานประกอบการ</label>
-                  <input type="text" class="form-control" name="faxNumber" id="exampleInputPassword1" placeholder="กรอกตำแหน่ง">
+                  <input type="text" class="form-control" name="faxNumber" id="exampleInputPassword1" placeholder="กรอกเบอร์โทรสาร">
                   </div>
                   <hr style="width:100%;text-align:left;margin-left:0;">
-                  <h4>ข้อมูลทั่วไปของสถานประกอบการ</h4>
+                  <h4>ข้อมูลผู้ติดต่อของสถานประกอบการ</h4>
                   <div class="form-group pb-4 col-md-4">
-                  <label>ข้อมูลทั่วไปของหัวหน้างาน/ผู้ประสานงาน</label>
-                  <input type="text" class="form-control" name="agentName" id="exampleInputPassword1" placeholder="กรอกตำแหน่ง">
+                  <label>ชื่อหัวหน้างาน/ผู้อนุมัติการฝึกงาน</label>
+                  <input type="text" class="form-control" name="agentName" id="exampleInputPassword1" placeholder="กรอกชื่อ">
                   </div>
                   <div class="form-group pb-4 col-md-4">
-                  <label>ตำแหน่งของผู้จัดการ/หัวหน้าหน่วยงาน</label>
+                  <label>ตำแหน่งของหัวหน้างาน/ผู้อนุมัติการฝึกงาน</label>
                   <input type="text" class="form-control" name="agentPosition" id="exampleInputPassword1" placeholder="กรอกตำแหน่ง">
                   </div>
                   <div class="form-group pb-4 col-md-4">
                   <label>ชื่อผู้ประสานงานของสถานประกอบการ/หน่วยงาน</label>
-                  <input type="text" class="form-control" name="HR_Name" id="exampleInputPassword1" placeholder="กรอกตำแหน่ง">
+                  <input type="text" class="form-control" name="HR_Name" id="exampleInputPassword1" placeholder="กรอกชื่อ">
                   </div>
                   <div class="form-group pb-4 col-md-4">
                   <label>ตำแหน่งของผู้ประสานงาน</label>
@@ -55,25 +55,25 @@
                   </div>
                   <div class="form-group pb-4 col-md-4">
                   <label>เบอร์โทรศัพท์ของผู้ประสานงาน</label>
-                  <input type="text" class="form-control" name="HR_PhoneNamber" id="exampleInputPassword1" placeholder="กรอกตำแหน่ง">
+                  <input type="text" class="form-control" name="HR_PhoneNamber" id="exampleInputPassword1" placeholder="กรอกเบอร์โทร">
                   </div>
                   <hr style="width:100%;text-align:left;margin-left:0;">
                   <h4>ตำแหน่งงานที่ต้องการรับนิสิตฝึกงาน</h4>
                   <div class="form-group pb-4 col-md-4">
-                  <label>ตำแหน่งงาน</label>
-                  <input type="text" class="form-control" name="requestPosition" id="exampleInputPassword1" placeholder="กรอกตำแหน่ง">
+                  <label>ตำแหน่งงานที่ต้องการรับ</label>
+                  <input type="text" class="form-control" name="requestPosition" id="exampleInputPassword1" placeholder="กรอกตำแหน่งงาน">
                   </div>
                   <div class="form-group pb-4 col-md-4">
                   <label>ลักษณะงานที่นิสิตต้องปฏิบัติ (Job Description)</label>
-                  <input type="text" class="form-control" name="jobDescription" id="exampleInputPassword1" placeholder="กรอกตำแหน่ง">
+                  <input type="text" class="form-control" name="jobDescription" id="exampleInputPassword1" placeholder="กรอกลักษณะงาน">
                   </div>
                   <div class="form-group pb-4 col-md-4">
                   <label>จำนวน (คน)</label>
-                  <input type="text" class="form-control" name="amountPerson" id="exampleInputPassword1" placeholder="กรอกตำแหน่ง">
+                  <input type="text" class="form-control" name="amountPerson" id="exampleInputPassword1" placeholder="กรอกจำนวนคน">
                   </div>
                   <div class="form-group pb-4 col-md-4">
                   <label>ความสามารถทางวิชาการหรือทักษะที่นิสิตควรมี</label>
-                  <input type="text" class="form-control" name="requiredSkill" id="exampleInputPassword1" placeholder="กรอกตำแหน่ง">
+                  <input type="text" class="form-control" name="requiredSkill" id="exampleInputPassword1" placeholder="กรอกทักษะ/ความสามารถที่ควรมี">
                   </div>
                   <label>ระยะเวลาที่ต้องการให้นิสิตไปปฏิบัติงาน</label>
                   <div class="form-group pb-4 col-md-4" style="display: flex;">
