@@ -3,7 +3,7 @@
 <style>
   .search-box {
     margin: 10px 0px 30px 0px;
-    background-color: #E5E5E5;
+    
     display: flex;
     align-items: center;
     border-radius: 10px;

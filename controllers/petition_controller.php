@@ -88,7 +88,7 @@
             $requestID=$_GET['requestID'];
             $statusName="approve";
             $approverID=$_GET['approverID'];
-            Requestform::approve($id, $requestID, $approverID, $statusName);
+            Requestform::approve($id, $requestID, $approverID, $statusName,NULL);
             PetitionController::approvePetition();
         }
         public function approveReject(){
@@ -96,7 +96,8 @@
             $requestID=$_GET['requestID'];
             $statusName="reject";
             $approverID=$_GET['approverID'];
-            Requestform::approve($id, $requestID, $approverID, $statusName);
+            $reasonReject=$_GET['reasonReject'];
+            Requestform::approve($id, $requestID, $approverID, $statusName,$reasonReject);
             PetitionController::approvePetition();
         }
         

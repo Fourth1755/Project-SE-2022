@@ -3,7 +3,6 @@
 <style>
   .search-box {
     margin: 10px 0px 30px 0px;
-    background-color: #E5E5E5;
     display: flex;
     align-items: center;
     border-radius: 10px;
@@ -52,7 +51,7 @@
         </div>
 
         <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <button class="btn dropdown-toggle" style="background-color:#171738;color: #FFF;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             Select Status
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -63,7 +62,7 @@
         </div>
 
         <div class="dropdown" style="padding-left: 40px;">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <button class="btn dropdown-toggle" style="background-color:#171738;color: #FFF;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             ปีการศึกษา
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">

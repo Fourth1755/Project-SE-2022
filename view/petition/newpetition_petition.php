@@ -16,7 +16,7 @@
       <div class="content">
             <h5>ส่วนของการฝึกงาน</h5>
             <form method="get" action="">
-                  <input name="requestID" >
+                  <input type="hidden" name="requestID" value="<?php echo $_SESSION['username'];?>">
                   <div class="form-group pb-4 col-md-4">
                   <label>เบอร์โทร</label>
                   <input type="tel" class="form-control" name="phoneNumber" id="exampleInputEmail1" aria-describedby="emailHelp" pattern="[0-9]{10}" placeholder="กรอกเบอร์โทร" required>
