@@ -1,7 +1,7 @@
 <?php
     class Company{
         public $id,$name,$address,$type,$phoneNumber,$faxNumber,$department,$payPerDay,$agentName,$agentPosition,$HR_Name,$HR_Position,$HR_PhoneNamber,
-        $requestPosition,$jobDescription,$amountPerson,$getPerson,$requiredSkill,$startDate,$endDate;
+        $requestPosition,$jobDescription,$amountPerson,$requiredSkill,$startDate,$endDate;
         public function __construct(
             $id,
             $name,
@@ -19,7 +19,6 @@
             $requestPosition,
             $jobDescription,
             $amountPerson,
-            $getPerson,
             $requiredSkill,
             $startDate,
             $endDate)
@@ -40,7 +39,6 @@
             $this->requestPosition=$requestPosition;
             $this->jobDescription=$jobDescription;
             $this->amountPerson=$amountPerson;
-            $this->getPerson=$getPerson;
             $this->requiredSkill=$requiredSkill;
             $this->startDate=$startDate;
             $this->endDate=$endDate;
@@ -67,12 +65,11 @@
                 $requestPosition=$my_row["requestPosition"];
                 $jobDescription=$my_row["jobDescription"];
                 $amountPerson=$my_row["amountPerson"];
-                $getPerson=$my_row["getPerson"];
                 $requiredSkill=$my_row["requiredSkill"];
                 $startDate=$my_row["startDate"];
                 $endDate=$my_row["endDate"];
                 $companyList[]=new Company($id,$name,$address,$type,$phoneNumber,$faxNumber,$department,$payPerDay,$agentName,$agentPosition,$HR_Name,$HR_Position,$HR_PhoneNamber,
-                $requestPosition,$jobDescription,$amountPerson,$getPerson,$requiredSkill,$startDate,$endDate);
+                $requestPosition,$jobDescription,$amountPerson,$requiredSkill,$startDate,$endDate);
             }
             require("connection_close.php");
             return $companyList;
@@ -99,9 +96,9 @@
         ) {
             require("connection_connect.php");
             $sql = "INSERT INTO company (name,address,type,phoneNumber,faxNumber,department,payPerDay,agentName,agentPosition,HR_Name,
-                HR_Position,HR_PhoneNamber,requestPosition,jobDescription,amountPerson,getPerson,requiredSkill,startDate,endDate)
+                HR_Position,HR_PhoneNamber,requestPosition,jobDescription,amountPerson,requiredSkill,startDate,endDate)
                 VALUES('$name','$address','$type','$phoneNumber','$faxNumber','$department','$payPerDay','$agentName','$agentPosition','$HR_Name',
-                '$HR_Position','$HR_PhoneNamber','$requestPosition','$jobDescription','$amountPerson','0','$requiredSkill','$startDate','$endDate')";
+                '$HR_Position','$HR_PhoneNamber','$requestPosition','$jobDescription','$amountPerson','$requiredSkill','$startDate','$endDate')";
             $result = $conn->query($sql);
             require("connection_close.php");
             return "Add success $result rows";
