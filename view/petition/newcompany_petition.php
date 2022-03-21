@@ -47,8 +47,8 @@
                         </label>
                   </div>
                   <div class="form-group pb-4 col-md-4">
-                  <label>ค่าตอบแทน</label>
-                  <input type="number" class="form-control" name="payPerDay" id="exampleInputPassword1" placeholder="กรอกค่าตอบแทน (ถ้าไม่มีใส่ 0)" required>
+                  <label>ค่าตอบแทนรายวัน</label>
+                  <input type="number" class="form-control" name="payPerDay" id="exampleInputPassword1" placeholder="กรอกค่าตอบแทนรายวัน (ถ้าไม่มีใส่ 0)" required>
                   </div>
                   <hr style="width:100%;text-align:left;margin-left:0;">
                   <h4>ข้อมูลผู้ติดต่อของสถานประกอบการ</h4>
