@@ -28,6 +28,7 @@
             Company::add($name,$address,$type,$phoneNumber,$faxNumber,$agentName,$agentPosition,$HR_Name,
             $HR_Position,$HR_PhoneNamber,$requestPosition,$jobDescription,$amountPerson,$requiredSkill,$startDate,$endDate);
             CompanyController::index();
+            header('location: http://localhost:8081/Project-SE-2022/?controller=company&action=index');
         }
         public function indexcompanyDetail(){
             require_once("./view/company/index_companyDetail.php");

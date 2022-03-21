@@ -51,7 +51,17 @@
                 $type=$my_row["type"];
                 $phoneNumber=$my_row["phoneNumber"];
                 $faxNumber=$my_row["faxNumber"];
+                $agentName=$my_row["agentName"];
+                $agentPosition=$my_row["agentPosition"];
+                $HR_Name=$my_row["HR_Name"];
+                $HR_Position=$my_row["HR_Position"];
+                $HR_PhoneNamber=$my_row["HR_PhoneNamber"];
+                $requestPosition=$my_row["requestPosition"];
+                $jobDescription=$my_row["jobDescription"];
+                $amountPerson=$my_row["amountPerson"];
                 $requiredSkill=$my_row["requiredSkill"];
+                $startDate=$my_row["startDate"];
+                $endDate=$my_row["endDate"];
                 $companyList[]=new Company($id,$name,$address,$type,$phoneNumber,$faxNumber,$agentName,$agentPosition,$HR_Name,$HR_Position,$HR_PhoneNamber,
                 $requestPosition,$jobDescription,$amountPerson,$requiredSkill,$startDate,$endDate);
             }
@@ -77,7 +87,7 @@
             $endDate
         ) {
             require("connection_connect.php");
-            $sql = "INSERT INTO company (name,address,type,phoneNumber,faxNumber,agentName,agentPosition,HR_Name
+            $sql = "INSERT INTO company (name,address,type,phoneNumber,faxNumber,agentName,agentPosition,HR_Name,
                 HR_Position,HR_PhoneNamber,requestPosition,jobDescription,amountPerson,requiredSkill,startDate,endDate)
                 VALUES('$name','$address','$type','$phoneNumber','$faxNumber','$agentName','$agentPosition','$HR_Name',
                 '$HR_Position','$HR_PhoneNamber','$requestPosition','$jobDescription','$amountPerson','$requiredSkill','$startDate','$endDate')";
