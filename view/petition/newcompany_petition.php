@@ -83,7 +83,6 @@
                   </div>
                   <input name="controller" value="company" type="hidden"/>
                   <br>
-                  <button type="submit" class="btn btn-light" name="action" value="index">Back</button>
                   <button type="submit" class="btn" style="background-color: #171738;color: #FFF;" value="addCompany" name="action">Add new</button>
             </form>
       </div>
