@@ -14,6 +14,8 @@
             $type=$_GET['type'];
             $phoneNumber=$_GET['phoneNumber'];
             $faxNumber=$_GET['faxNumber'];
+            $department=$_GET['department'];
+            $payPerDay=$_GET['payPerDay'];
             $agentName=$_GET['agentName'];
             $agentPosition=$_GET['agentPosition'];
             $HR_Name=$_GET['HR_Name'];
@@ -25,7 +27,7 @@
             $requiredSkill=$_GET['requiredSkill'];
             $startDate=$_GET['startDate'];
             $endDate=$_GET['endDate'];
-            Company::add($name,$address,$type,$phoneNumber,$faxNumber,$agentName,$agentPosition,$HR_Name,
+            Company::add($name,$address,$type,$phoneNumber,$faxNumber,$department,$payPerDay,$agentName,$agentPosition,$HR_Name,
             $HR_Position,$HR_PhoneNamber,$requestPosition,$jobDescription,$amountPerson,$requiredSkill,$startDate,$endDate);
             //CompanyController::index();
             header('location: http://localhost:/Project-SE-2022/?controller=company&action=index');
