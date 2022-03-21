@@ -6,7 +6,7 @@
       background-color: #FFCFCF;
       border-radius: 20px;
       padding: 60px;
-}     
+}
 </style>
 <body>
     <div>
@@ -34,6 +34,21 @@
                   <div class="form-group pb-4 col-md-4">
                   <label>เบอร์โทรสารของสถานประกอบการ</label>
                   <input type="text" class="form-control" name="faxNumber" id="exampleInputPassword1" pattern="[0-9]{10}" placeholder="กรอกเบอร์โทรสาร" required>
+                  </div>
+                  <label>สวัสดิการที่พัก</label>
+                  <div class="form-group pb-4 col-md-4" style="display: flex;">
+                        <label class="container">มีที่พัก
+                        <input type="radio" checked="checked" name="department" value="มี">
+                        <span class="checkmark"></span>
+                        </label>
+                        <label class="container">ไม่มีที่พัก
+                        <input type="radio" name="department" value="ไม่มี">
+                        <span class="checkmark"></span>
+                        </label>
+                  </div>
+                  <div class="form-group pb-4 col-md-4">
+                  <label>ค่าตอบแทน</label>
+                  <input type="text" class="form-control" name="payPerDay" id="exampleInputPassword1" placeholder="กรอกค่าตอบแทน (ถ้าไม่มีใส่ 0)" required>
                   </div>
                   <hr style="width:100%;text-align:left;margin-left:0;">
                   <h4>ข้อมูลผู้ติดต่อของสถานประกอบการ</h4>
