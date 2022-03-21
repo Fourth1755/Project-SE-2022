@@ -33,7 +33,8 @@
                 $academicYear = (string)$inttoday;
                 Requestform::add($requestID,$phoneNumber,$facebookName,$positionRequest,
                 $agentName,$agentPosition,$HR_Name,$HR_PhoneNamber,$HR_Email,$startDate,$endDate,$companyID,$academicYear);
-                PetitionController::index();
+                //PetitionController::index();
+                header('location: http://localhost:/Project-SE-2022/?controller=petition&action=index');
             }
             else{
                 $today = (int)$today;
@@ -41,7 +42,8 @@
                 $academicYear = (string)$inttoday;
                 Requestform::add($requestID,$phoneNumber,$facebookName,$positionRequest,
                 $agentName,$agentPosition,$HR_Name,$HR_PhoneNamber,$HR_Email,$startDate,$endDate,$companyID,$academicYear);
-                PetitionController::index();
+                //PetitionController::index();
+                header('location: http://localhost:/Project-SE-2022/?controller=petition&action=index');
             }
             
         }
