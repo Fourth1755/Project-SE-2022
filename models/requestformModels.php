@@ -210,7 +210,11 @@ class Requestform
             VALUES('$requestID','$phoneNumber','$facebookName','$positionRequest','$agentName','$agentPosition','$HR_Name','$HR_PhoneNamber',
             '$HR_Email','$startDate','$endDate','$companyID','$academicYear')";
         //$sql="INSERT INTO `requestform` (ID, requestID, `status`, `createDate`, `phoneNumber`, `facebookName`, `positionRequest`, `agentName`, `agentPosition`, `HR_Name`, `HR_PhoneNamber`, `HR_Email`, `startDate`, `endDate`, `approverID`, `companyID`) VALUES (NULL, 'b6220503201', 'waiting', current_timestamp(), '0922525835', 'wretew', 'wert', 'wey', 'wef', 'ew', 'wef', 'wef', '2022-03-23', '2022-03-16', NULL, '3');";
+        $sql2 = "UPDATE company
+        SET  company.amountPerson = company.amountPerson + 1
+        WHERE company.ID = $companyID";
         $result = $conn->query($sql);
+        $result = $conn->query($sql2);
         require("connection_close.php");
         return "Add success $result rows";
     }
