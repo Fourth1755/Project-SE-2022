@@ -9,7 +9,25 @@
             require_once('./view/petition/newcompany_petition.php');
         }
         public function addCompany(){
-
+            $name=$_GET['name'];
+            $address=$_GET['address'];
+            $type=$_GET['type'];
+            $phoneNumber=$_GET['phoneNumber'];
+            $faxNumber=$_GET['faxNumber'];
+            $agentName=$_GET['agentName'];
+            $agentPosition=$_GET['agentPosition'];
+            $HR_Name=$_GET['HR_Name'];
+            $HR_Position=$_GET['HR_Position'];
+            $HR_PhoneNamber=$_GET['HR_PhoneNamber'];
+            $requestPosition=$_GET['requestPosition'];
+            $jobDescription=$_GET['jobDescription'];
+            $amountPerson=$_GET['amountPerson'];
+            $requiredSkill=$_GET['requiredSkill'];
+            $startDate=$_GET['startDate'];
+            $endDate=$_GET['endDate'];
+            Company::add($name,$address,$type,$phoneNumber,$faxNumber,$agentName,$agentPosition,$HR_Name,
+            $HR_Position,$HR_PhoneNamber,$requestPosition,$jobDescription,$amountPerson,$requiredSkill,$startDate,$endDate);
+            CompanyController::index();
         }
         public function indexcompanyDetail(){
             require_once("./view/company/index_companyDetail.php");
