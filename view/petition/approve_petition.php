@@ -76,8 +76,8 @@
     </form>
 
     <table class="table" id="table-header">
-      <tr>
-        <th><a href="?controller=petition&action=SortDate"><?php echo "วันที่"; ?></th>
+      <tr method="get" action="">
+        <th><a href="?controller=petition&action=SortDate&key1=2"><?php echo "วันที่"; ?></th>
         <th>ปีการศึกษา</th>
         <th>รหัสนิสิต</th>
         <th>ชื่อ</th>

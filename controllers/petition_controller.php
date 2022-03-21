@@ -56,10 +56,16 @@
             require_once("./view/petition/index_petition.php");
         }
         public function SortDate(){
+            $key = $_GET['key1'];
             $company_list=Company::getAll();
             $requestform_List = Requestform::SortDate();
-            //echo "search:".$key;
-            require_once("./view/petition/index_petition.php");
+            if($key == "1"){
+                require_once("./view/petition/index_petition.php");
+            }
+            else{
+                require_once("./view/petition/approve_petition.php");
+            }
+            
         }
 
         public function searchApprove(){
