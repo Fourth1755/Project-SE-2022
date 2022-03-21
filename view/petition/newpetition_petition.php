@@ -8,6 +8,7 @@
       padding: 60px;
 }     
 </style>
+
 <body>
     <div>
       <h3>ยื่นคำร้องฝึกงาน</h3>
@@ -18,7 +19,7 @@
                   <input name="requestID" >
                   <div class="form-group pb-4 col-md-4">
                   <label>เบอร์โทร</label>
-                  <input type="tel" class="form-control" name="phoneNumber" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="กรอกเบอร์โทร" required>
+                  <input type="tel" class="form-control" name="phoneNumber" id="exampleInputEmail1" aria-describedby="emailHelp" pattern="[0-9]{10}" placeholder="กรอกเบอร์โทร" required>
                   </div>
                   <div class="form-group pb-4 col-md-4">
                   <label>ชื่อ Facebook</label>
@@ -53,9 +54,9 @@
                   <br>
                   <label>ระยะเวลาการฝึกงาน</label>
                   <div class="form-group pb-4 col-md-4" style="display: flex;">
-                        <input type="date" name="startDate" class="form-control" required>
+                        <input type="date" name="startDate" class="form-control" required min="<?php echo date('Y-m-d');?>">
                         <label style="padding: 8px;">ถึง</label>
-                        <input type="date" name="endDate" class="form-control" required>
+                        <input type="date" name="endDate" class="form-control" required min="<?php echo date('Y-m-d');?>">
                   </div>
                   <h5>ส่วนของผู้ประสานงาน</h5>
                   <div class="form-group pb-4 col-md-4">
@@ -64,7 +65,7 @@
                   </div>
                   <div class="form-group pb-4 col-md-4">
                   <label>เบอร์โทรศัทพ์ผู้ประสานงาน</label>
-                  <input type="tel" name="HR_PhoneNamber" class="form-control" id="exampleInputPassword1" placeholder="กรอกเบอร์โทรศัทพ์" required>
+                  <input type="tel" name="HR_PhoneNamber" class="form-control" id="exampleInputPassword1" pattern="[0-9]{10}" placeholder="กรอกเบอร์โทรศัทพ์" required>
                   </div>
                   <div class="form-group pb-4 col-md-4">
                   <label>อีเมลผู้ประสานงาน</label>
