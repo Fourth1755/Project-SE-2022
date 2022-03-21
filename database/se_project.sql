@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2022 at 02:28 PM
+-- Generation Time: Mar 21, 2022 at 02:15 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -34,6 +34,8 @@ CREATE TABLE `company` (
   `type` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `phoneNumber` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `faxNumber` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `department` enum('มี','ไม่มี') COLLATE utf8_unicode_ci DEFAULT NULL,
+  `payPerDay` int(3) DEFAULT 0,
   `agentName` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   `agentPosition` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
   `HR_Name` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -42,6 +44,7 @@ CREATE TABLE `company` (
   `requestPosition` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
   `jobDescription` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
   `amountPerson` int(2) DEFAULT NULL,
+  `getPerson` int(2) DEFAULT NULL,
   `requiredSkill` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
   `startDate` date DEFAULT NULL,
   `endDate` date DEFAULT NULL
@@ -51,10 +54,10 @@ CREATE TABLE `company` (
 -- Dumping data for table `company`
 --
 
-INSERT INTO `company` (`ID`, `name`, `address`, `type`, `phoneNumber`, `faxNumber`, `agentName`, `agentPosition`, `HR_Name`, `HR_Position`, `HR_PhoneNamber`, `requestPosition`, `jobDescription`, `amountPerson`, `requiredSkill`, `startDate`, `endDate`) VALUES
-(1, 'บริษัท โกไฟว์ จำกัด', '30/88 หมู่ที่ 1 ถ.เจษฎาวิถี ตำบลโคกขาม อำเภอเมืองสมุทรสาคร จังหวัดสมุทรสาคร 74000', 'บริษัทจำกัด', '027845855', '4562369876', 'อดิศร จรัสโยธินนุวัฒน์', 'Human Resources Department Manager', 'Supanida Ouamprathum', 'HR', '0836516795', 'Developer, System Analyst', 'เขียนโปรแกรม ศึกษางานตามโปรเจคที่ได้รับมอบหมำย', 5, 'ทักษะการใช้คอมพิวเตอร์ภาษา C,C#,JAVA,HTML และอื่นๆ', '2022-04-18', '2022-06-10'),
-(2, 'บริษัท บิท โซลูชั่น จำกัด', '454 ถ.รัชดาภิเษก\r\nแขวงสามเสนนอก เขตห้วยขวาง กรุงเทพมหานคร 10310', 'บริษัทจำกัด', '029381602', '029381618', 'อดิศักดิ์ วิชชุปัญญาพาณิชย์', 'Head of Engineer', 'อรชพร กอหามะ', '็HR', '0856498531', 'Network Engineer', 'ช่วยงานฝ่าย Engineer', 3, 'Network', '2022-04-20', '2022-06-15'),
-(3, 'Drone Academy Thailand', '58/64 เมืองทองธานี ต. คลองเกลือ อ.ปากเกร็ด จ.นนทบุรี 11120\r\n', 'บริษัทจำกัด', '020000199', '1239567894', '0984561237', '0984561237', 'ภูผา อธิษฐ์โภคิน', 'HR', '0984561237', 'Computer Programmer, Flying Robot, Internet of Things, AI Flying Robot', 'Internet of Thing, Hardware, Electronic, Flying Robot, Drone , RaspberryPi, Nvidia Jetson TX', 7, 'ไม่จำเป็นต้องรู้มาก่อนมาศึกษาภายหลังได้ Python, C/C++, PHP, Golang', '2022-04-19', '2022-06-24');
+INSERT INTO `company` (`ID`, `name`, `address`, `type`, `phoneNumber`, `faxNumber`, `department`, `payPerDay`, `agentName`, `agentPosition`, `HR_Name`, `HR_Position`, `HR_PhoneNamber`, `requestPosition`, `jobDescription`, `amountPerson`, `getPerson`, `requiredSkill`, `startDate`, `endDate`) VALUES
+(1, 'บริษัท โกไฟว์ จำกัด', '30/88 หมู่ที่ 1 ถ.เจษฎาวิถี ตำบลโคกขาม อำเภอเมืองสมุทรสาคร จังหวัดสมุทรสาคร 74000', 'บริษัทจำกัด', '027845855', '4562369876', 'มี', 300, 'อดิศร จรัสโยธินนุวัฒน์', 'Human Resources Department Manager', 'Supanida Ouamprathum', 'HR', '0836516795', 'Developer, System Analyst', 'เขียนโปรแกรม ศึกษางานตามโปรเจคที่ได้รับมอบหมำย', 5, 0, 'ทักษะการใช้คอมพิวเตอร์ภาษา C,C#,JAVA,HTML และอื่นๆ', '2022-04-18', '2022-06-10'),
+(2, 'บริษัท บิท โซลูชั่น จำกัด', '454 ถ.รัชดาภิเษก\r\nแขวงสามเสนนอก เขตห้วยขวาง กรุงเทพมหานคร 10310', 'บริษัทจำกัด', '029381602', '029381618', 'ไม่มี', 350, 'อดิศักดิ์ วิชชุปัญญาพาณิชย์', 'Head of Engineer', 'อรชพร กอหามะ', '็HR', '0856498531', 'Network Engineer', 'ช่วยงานฝ่าย Engineer', 3, 0, 'Network', '2022-04-20', '2022-06-15'),
+(3, 'Drone Academy Thailand', '58/64 เมืองทองธานี ต. คลองเกลือ อ.ปากเกร็ด จ.นนทบุรี 11120\r\n', 'บริษัทจำกัด', '020000199', '1239567894', 'ไม่มี', 0, '0984561237', '0984561237', 'ภูผา อธิษฐ์โภคิน', 'HR', '0984561237', 'Computer Programmer, Flying Robot, Internet of Things, AI Flying Robot', 'Internet of Thing, Hardware, Electronic, Flying Robot, Drone , RaspberryPi, Nvidia Jetson TX', 7, 0, 'ไม่จำเป็นต้องรู้มาก่อนมาศึกษาภายหลังได้ Python, C/C++, PHP, Golang', '2022-04-19', '2022-06-24');
 
 -- --------------------------------------------------------
 
@@ -154,13 +157,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `company`
 --
 ALTER TABLE `company`
-  MODIFY `ID` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `requestform`
 --
 ALTER TABLE `requestform`
-  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10008;
+  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10017;
 
 --
 -- Constraints for dumped tables
