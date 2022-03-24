@@ -6,12 +6,12 @@
         }
         public function newCompany(){
 
-            require_once('./view/petition/newcompany_petition.php');
+            require_once('./view/company/newcompany_petition.php');
         }
         public function viewCompany(){
             $id=$_GET['ID'];
             $company=Company::get($id);
-            require_once('./view/petition/view_company.php');
+            require_once('./view/company/view_company.php');
         }
         public function addCompany(){
             $name=$_GET['name'];

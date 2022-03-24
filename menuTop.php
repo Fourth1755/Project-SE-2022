@@ -178,7 +178,6 @@ body{
         </div>
         <a href="?controller=uploadreport&action=index"><i class="fas fa-upload"></i><span style="padding-left: 26px;">อัพโหลดรายงาน</span></a>
         <a href="?controller=internshiphistory&action=index"><i class="fas fa-history"></i><span style="padding-left: 26px;">ประวัติการฝึกงาน</span></a>
-        <a href="#"><i class="fas fa-poll"></i><span style="padding-left: 26px;">ผลการฝึกงาน</span></a>
         <div class="dropdown"><a href="#"><i class="fas fa-paste"></i><span style="padding: 0px 40px 0px 26px;">เอกสารการฝึกงาน</span><i class="fa fa-caret-down"></i></a>
             <div class="dropdown-content">
             <a href="?controller=document&action=IndexdownloadDocument"><span style="padding: 0px 70px 0px 18px;">โหลดเอกสารการฝึกงาน</span></a>

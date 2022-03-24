@@ -176,9 +176,7 @@ input[type=submit]{
       <button type="button" class="btn" onclick="myFunctionPass()">
       <i class="fas fa-eye-slash" id="togglePassword"></i></button>
     </div>
-    <div style="padding: 20px;display: flex;justify-content: space-between;">
-      <div><input type="checkbox" checked="checked" name="remember"> Remember me</div>
-    </div>
+    <br>
     <div style="padding: 5px;">
       <input type="hidden" name="controller" value="login"/>
       <div><button class="btn" type="submit" name="action" value="login" id="button-black">เข้าสู่ระบบ</button></div>
