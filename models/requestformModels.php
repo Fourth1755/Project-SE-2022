@@ -23,6 +23,7 @@ class Requestform
     public $academicYear;
     public $imagePath;
     public $companyName;
+    public $reasonReject;
     public function __construct(
         $id,
         $requestID,
@@ -45,7 +46,8 @@ class Requestform
         $position,
         $academicYear,
         $imagePath,
-        $companyName
+        $companyName,
+        $reasonReject
     ) {
         $this->id = $id;
         $this->requestID = $requestID;
@@ -69,6 +71,7 @@ class Requestform
         $this->academicYear = $academicYear;
         $this->imagePath=$imagePath;
         $this->companyName=$companyName;
+        $this->reasonReject=$reasonReject;
     }
     public static function get($id)
     {
@@ -102,6 +105,7 @@ class Requestform
         $academicYear= $my_row["academicYear"];
         $imagePath=$my_row["imagePath"];
         $companyName=$my_row["companyName"];
+        $reasonReject=$my_row["reasonReject"];
         require("connection_close.php");
         return new Requestform(
             $id,
@@ -125,7 +129,8 @@ class Requestform
             $position,
             $academicYear,
             $imagePath,
-            $companyName
+            $companyName,
+            $reasonReject
         );
     }
     public static function getAll()
@@ -161,6 +166,7 @@ class Requestform
             $academicYear = $my_row["academicYear"];
             $imagePath=$my_row["imagePath"];
             $companyName=$my_row["companyName"];
+            $reasonReject=$my_row["reasonReject"];
             $requestformList[] = new Requestform(
                 $id,
                 $requestID,
@@ -183,7 +189,8 @@ class Requestform
                 $position,
                 $academicYear,
                 $imagePath,
-                $companyName
+                $companyName,
+                $reasonReject
             );
         }
         require("connection_close.php");
@@ -259,6 +266,7 @@ class Requestform
             $academicYear = $my_row["academicYear"];
             $imagePath=$my_row["imagePath"];
             $companyName=$my_row["companyName"];
+            $reasonReject=$my_row["reasonReject"];
             $requestformList[] = new Requestform(
                 $id,
                 $requestID,
@@ -281,7 +289,8 @@ class Requestform
                 $position,
                 $academicYear,
                 $imagePath,
-                $companyName
+                $companyName,
+                $reasonReject
             );
         }
         require("connection_close.php");
@@ -321,6 +330,7 @@ class Requestform
             $academicYear = $my_row["academicYear"];
             $imagePath=$my_row["imagePath"];
             $companyName=$my_row["companyName"];
+            $reasonReject=$my_row["reasonReject"];
             $requestformList[] = new Requestform(
                 $id,
                 $requestID,
@@ -343,7 +353,8 @@ class Requestform
                 $position,
                 $academicYear,
                 $imagePath,
-                $companyName
+                $companyName,
+                $reasonReject
                 
             );
         }
@@ -387,6 +398,7 @@ class Requestform
             $academicYear = $my_row["academicYear"];
             $imagePath=$my_row["imagePath"];
             $companyName=$my_row["companyName"];
+            $reasonReject=$my_row["reasonReject"];
             $requestformList[] = new Requestform(
                 $id,
                 $requestID,
@@ -409,7 +421,8 @@ class Requestform
                 $position,
                 $academicYear,
                 $imagePath,
-                $companyName
+                $companyName,
+                $reasonReject
             );
         }
         require("connection_close.php");

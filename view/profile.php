@@ -60,13 +60,11 @@
                         รหัสนิสิต:  <?php echo $_SESSION['username'];?>
                     </li>
                     <li>
-                        สถานะล่าสุด: <?php  foreach ($requestUser as $request){
+                         <?php  foreach ($requestUser as $request){
                             if($request->statusName=="approve"){
-                                echo "$request->statusName";
+                                echo "สถานะ: $request->statusName";
                                 break;
                             }
-                            echo "$request->statusName";
-                            break;
                         }?>
                     </li>
                     <li>
@@ -97,7 +95,11 @@
         echo "<tr><td>$new_dateformat</td>
                   <td>$request->academicYear</td>
                   <td>$request->companyName</td>
-                  <td>$request->statusName</td>" ?>
+                  <td>$request->statusName<br>";
+            if($request->statusName=="reject"){
+                echo "เหตุผลที่ไม่อนุมัติ: $request->reasonReject";
+            }
+               echo "</td>" ?>
       <?php
       };
       ?>
