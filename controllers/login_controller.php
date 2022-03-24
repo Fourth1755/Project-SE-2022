@@ -22,11 +22,8 @@
                     require_once("./view/announce/index_announce.php");
                 }
                 else{
-                    LoginController::index();
-                   // echo "<script>";
-                   // echo "alert(\" user หรือ  password ไม่ถูกต้อง\");"; 
-                   // echo "</script>";
-                    
+                    //LoginController::index();
+                    require_once('alertLogin.php');
                 }
             }
         
