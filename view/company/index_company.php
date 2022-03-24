@@ -6,7 +6,7 @@
   }
 
   .search input {
-    border-radius: 20px;
+    border-radius: 10px;
     width: 300px;
     padding: 7px;
   }
@@ -30,11 +30,17 @@
   <div>
     <h3>สถานประกอบการ</h3>
     <hr style="width:100%;text-align:left;margin-left:0;">
-    <div class="search">
-      <input type="search" placeholder="ค้นหาสถานประกอบการ" style="background-color: #E5E5E5;" />
-      <a href=''><img src=https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Search_Icon.svg/500px-Search_Icon.svg.png width=35 /></a>
-      <a type="button" class="btn" style="float: right; margin-right: 108px; background-color: FFAFB0; border-radius: 35px; color: #000000;" href="?controller=company&action=newCompany"> <i class="fa fa-plus"></i> เพิ่มสถานประกอบการ</a>
+    <div class="search-box">
+      <div>
+        <div class="search">
+          <button class="btn" type="submit" name="action" value=""><i class="fas fa-search"></i></button>
+          <input type="text" name="key" placeholder="ค้นหา" />
+          <input type="hidden" name="controller" value="">
+          <a type="button" class="btn" style="float: right; margin-right: 108px; background-color: FFAFB0; border-radius: 35px; color: #000000;" href="?controller=company&action=newCompany"> <i class="fa fa-plus"></i> เพิ่มสถานประกอบการ</a>
+        </div>
+      </div>
     </div>
+
     <table class="table" id="table-header">
       <tr>
         <th>ลำดับ</th>
@@ -50,7 +56,7 @@
             <td> $company->name</td>
             <td>$company->amountPerson</td>
             <td>$company->requiredSkill</td>"; ?>
-            <td><a class="btn btn-primary" href='?controller=company&action=indexcompanyDetail'>Detail</a></td>
+        <td><a class="btn btn-primary" href='?controller=company&action=indexcompanyDetail'>Detail</a></td>
       <?php
         echo "</tr>";
       }
