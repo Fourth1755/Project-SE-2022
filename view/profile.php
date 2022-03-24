@@ -80,6 +80,7 @@
                     
             </div>
       </div>
+      <br>
       <div>
           <h3>ประวัติการส่งคำร้อง</h3>
           <table class="table" id="table-header">
@@ -102,5 +103,4 @@
       ?>
     </table>
       </div>
-      <hr style="width:100%;text-align:left;margin-left:0">
 <?php require_once("menuDown.php") ?>

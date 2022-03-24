@@ -56,9 +56,10 @@
         <th>เพิ่มเติม</th>
       </tr>
       <?php
-      foreach ($company_list as $company) {
+      foreach ($company_list as $key =>$company) {
+        $key++;
         echo "<tr>
-            <td>1</td>
+            <td>$key</td>
             <td>$company->name</td>
             <td>$company->amountPerson</td>
             <td>$company->requiredSkill</td>"; ?>
