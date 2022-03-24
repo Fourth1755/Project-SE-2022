@@ -42,7 +42,7 @@
                   <label for="formGroupExampleInput2" class="form-label">
                   <select name="companyID" class="form-select" aria-label="Default select example" required>
                         <!-- <option selected disabled hidden>Open this select Company</option> -->
-                        <option value="">Open this select Company</option>
+                        <option value="" disabled>Open this select Company</option>
                               <?php
                                     foreach($company_list as $com){
                                           echo"<option value=$com->id>$com->name</option>";

@@ -53,7 +53,7 @@
       foreach ($company_list as $company) {
         echo "<tr>
             <td>1</td>
-            <td> $company->name</td>
+            <td>$company->name</td>
             <td>$company->amountPerson</td>
             <td>$company->requiredSkill</td>"; ?>
         <td><a class="btn btn-primary" href='?controller=company&action=indexcompanyDetail'>Detail</a></td>

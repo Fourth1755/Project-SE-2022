@@ -4,7 +4,7 @@
         background-color: #FFCFCF;
         border-radius: 20px;
         height: 700px;
-        padding: 20px;
+        padding: 40px;
     }
 </style>
 <?php require_once("menuTop.php") ?>
@@ -15,13 +15,13 @@
         <form>
             <br>
             <div class="form-group pb-4 col-md-4">
-            <label style="font-size:25px; margin-left: 60px;">ชื่อประกาศ:</label>
-            <input class="form-control"  placeholder="กรอกชื่อประกาศ" type="tel" style="margin-left: 275px;"/><br><br>
+            <label style="font-size:25px;">ชื่อประกาศ:<input class="form-control"  placeholder="กรอกชื่อประกาศ" type="text"/></label>
+            <br><br>
             </div>
 
-            <label style="font-size:25px; margin-left: 60px;">เนื้อหาประกาศ:</label><br>
+            <label style="font-size:25px;">เนื้อหาประกาศ:</label><br>
             <div class="mb-3">
-                <textarea class="form-control" placeholder="กรอกเนื้อหาประกาศ" name="Condition" type="tel" rows="3" style="width: 1000px; height: 238px; margin-left: 275px;"></textarea>
+                <textarea class="form-control" placeholder="กรอกเนื้อหาประกาศ" name="Condition" type="tel" rows="3" style="width: 100%; height: 238px;"></textarea>
             </div><br><br>
             <label style="font-size:25px; margin-left: 60px;">แนบเอกสาร:</label>
             <a type="button" class="btn" style="margin-left: 80px; background-color: #171738; border-radius: 35px; color: #FFFFFF;  width:130px; font-size:20px;" >เลือกไฟล์</a><br><br>

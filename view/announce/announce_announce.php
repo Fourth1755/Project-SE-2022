@@ -10,7 +10,13 @@
 <div>
    <h3>ประกาศการฝึกงาน</h3>
       <hr style="width:100%;text-align:left;margin-left:0">
-      <a type="button" class="btn" style="float: right; margin-right: 108px; background-color: FFAFB0; border-radius: 35px; color: #000000;" href="?controller=announce&action=addAnnounce"> <i class="fa fa-plus"></i> เพิ่มประกาศการฝึกงาน</a>
+      <?php
+      if($_SESSION['position']=="admin"){
+            ?>
+            <a type="button" class="btn" style="float: right; margin-right: 108px; background-color: FFAFB0; border-radius: 35px; color: #000000;" href="?controller=announce&action=addAnnounce"> <i class="fa fa-plus"></i> เพิ่มประกาศการฝึกงาน</a>
+      <?php
+      }
+      ?>
       <br><br>
       <div class="content">
                   <section class="bg-light pb-5 pt-5 text-secondary">

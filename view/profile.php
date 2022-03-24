@@ -51,16 +51,30 @@
             <div class="content">
                 <ul class="content-title">
                     <li>
+                        
+                    </li>
+                    <li>
                         ชื่อ:  <?php echo $account->firstName;?> <?php echo $account->lastName;?>
                     </li>
                     <li>
-                        รหัสนิสิต:  622xxxxxxx
+                        รหัสนิสิต:  <?php echo $_SESSION['username'];?>
                     </li>
                     <li>
-                        ตำแหน่งที่ไปฝึกงาน: Computer Programmer
+                        สถานะล่าสุด: <?php  foreach ($requestUser as $request){
+                            if($request->statusName=="approve"){
+                                echo "$request->statusName";
+                                break;
+                            }
+                            echo "$request->statusName";
+                            break;
+                        }?>
                     </li>
                     <li>
-                        สถานที่ไปฝึกงาน: Drone Academy Thailand
+                        <?php  foreach ($requestUser as $request){
+                            if($request->statusName=="approve")
+                                echo "สถานที่ไปฝึกงาน: $request->companyName";
+                            break;
+                        }?>
                     </li>
                 </ul>
                     
