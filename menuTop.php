@@ -72,7 +72,7 @@ body{
     text-decoration: none;
     color: #f1f1f1;
     font-size: 18px;
-    background-color: #171738;
+
 }
 .navbar a:hover{
     background-color: #000000;
