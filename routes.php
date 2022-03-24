@@ -1,7 +1,6 @@
 <?php
     $controllers =array('pages'=>['home','error','login'],
     'login'=>['index','login','logout'],
-    'anime'=>['index','newAnime','addAnime','search','updateForm','update'],
     'profile'=>['index',"profile2"],
     'announce'=>['index','addAnnounce'],
     'company'=>['index','newCompany','addCompany','viewCompany','indexcompanyDetail','updatecompanyDetailPage1','updatecompanyDetailPage2','updatecompanyDetailPage3'],
@@ -15,11 +14,6 @@
         switch($controller){
             case "pages": 
                         $controller = new PagesController();
-                        break;
-            case "anime": 
-                        require_once("models/animeModels.php");
-                        require_once("models/studioModels.php");
-                        $controller = new AnimeController();
                         break;
             case "profile" : 
                         require_once("models/requestformModels.php");
