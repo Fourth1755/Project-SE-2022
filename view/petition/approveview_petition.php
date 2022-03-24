@@ -79,7 +79,7 @@
       <h3>การอนุมัติคำร้อง</h3>
 <form method="get" action="">
 <input type="hidden" name="requestID" value="<?php echo "$requestform->requestID";?>"/>
-<input type="text" name="approverID" value="T9043000001"/>
+<input type="text" name="approverID" value="<?php echo $_SESSION['username'];?>"/>
 <input type="hidden" name="ID" value="<?php echo "$requestform->id";?>"/>
 <input type="hidden" name="controller" value="petition" class="form-control">
 <div class="form-group pb-4 col-md-4">

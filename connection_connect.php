@@ -9,14 +9,8 @@
     if($conn->connect_error){
         die("Connection failed: ".$conn->connect_error);
     }
-    else{
-        echo "Successfully connected to server";
-    }
     if(!$conn->select_db($dbname)){
         echo $conn->connect_error;
-    }
-    else{
-        echo "Successfully connected to databse <br>";
     }
     //เลือกฐานข้อมูลมาแสดงผล
 

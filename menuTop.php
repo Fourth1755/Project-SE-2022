@@ -151,8 +151,12 @@ body{
         ?>
     </div>
     <div class="sidenav">
-        <a href="?controller=profile&action=index">
-        <i class="fas fa-user" style="color: #C97B84;"></i>
+        <a href="?controller=profile&action=<?php if($_SESSION['position']=="student"){ 
+          echo "index";
+        }else{
+          echo "profile2";
+        }?>">
+        <i class="fas fa-user"></i>
         <span style="padding: 0px 70px 0px 26px;"><?php echo $_SESSION['firstname'];?> <?php echo $_SESSION['lastname'];?></span></a>
         <hr style="width:100%;text-align:left;margin-left:0">
         <a href="?controller=announce&action=index"><i class="fas fa-bullhorn"></i><span style="padding-left: 26px;">ดูประกาศ</span></a>
@@ -161,7 +165,13 @@ body{
             <div class="dropdown-content">
             <a href="?controller=petition&action=index"><span style="padding: 0px 70px 0px 26px;">ผลการอนุมัติฝึกงาน</span></a>
             <a href="?controller=petition&action=newPetition"><span style="padding: 0px 70px 0px 26px;">ยื่นคำร้องฝึกงาน</span></a>
-            <a href="?controller=petition&action=approvePetition"><span style="padding: 0px 70px 0px 26px;">อนุมัติคำร้องขอฝึกงาน</span></a>
+            <?php
+            if($_SESSION['position']!="student"){
+              ?>
+              <a href="?controller=petition&action=approvePetition"><span style="padding: 0px 70px 0px 26px;">อนุมัติคำร้องขอฝึกงาน</span></a>
+              <?php
+            }
+            ?>
             <a href="?controller=company&action=newCompany"><span style="padding: 0px 70px 0px 26px;">เสนอสถานที่ฝึกงานใหม่</span></a>
             <a href="?controller=petition&action=indexSummaryPetition"><span style="padding: 0px 70px 0px 26px;">รายงานสรุปการอนุมัติฝึกงาน</span></a>
             </div>
