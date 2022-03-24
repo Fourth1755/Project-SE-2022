@@ -11,5 +11,9 @@
             <br>
             <button type="submit" name="action" value="login" class="btn btn-success">Login</button>
         </form> -->   
+        <footer>
+                    <hr className="line"/>
+                    <p style="padding-left: 180px;">2022 ©ภาควิชาวิศวกรรมคอมพิวเตอร์ Kasetsart University © Version : 1.0</p>
+        </footer>
 </body>
 </html>

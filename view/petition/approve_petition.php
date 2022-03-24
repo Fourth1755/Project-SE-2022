@@ -93,9 +93,9 @@
           echo "<tr><td>$new_dateformat</td>
                   <td>$requestform->academicYear</td>
                   <td>$requestform->requestID</td>
-                  <td>$requestform->firstName  $requestform->lastName</td>
-                  <td>$requestform->companyName</td>
-                  <td>$requestform->statusName</td>" ?>
+                  <td>$requestform->firstName  $requestform->lastName</td>"?>
+                  <td><a style="text-decoration: none;color: #171738;" href='?controller=company&action=viewCompany&ID=<?php echo "$requestform->companyID"; ?>'><?php echo "$requestform->companyName"; ?></a></td>
+                  <td><?php echo "$requestform->statusName"; ?></td>
           <td><a type="button" class="btn btn-primary" href=?controller=petition&action=approveView&<?php echo "ID=$requestform->id"; ?>><i class="fas fa-angle-double-right"></i></a></td>
       <?php
         }

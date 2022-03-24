@@ -30,31 +30,31 @@
             <ul class="content-title">
                 <li>
                     <label style="font-size: 20px; ">ชื่อสถานประกอบการ: </label>
-                    <label style="font-size: 20px; "><?php echo"$company->name";?></label>
+                    <label style="font-size: 20px; font-weight: 900;"><?php echo"$company->name";?></label>
                 </li>
                 <li>
                     <label style="font-size: 20px; ">ประเภทธุรกิจ: </label>
-                    <label style="font-size: 20px; "><?php echo"$company->type";?></label>
+                    <label style="font-size: 20px; font-weight: 900;"><?php echo"$company->type";?></label>
                 </li>
                 <li>
                     <label style="font-size: 20px; ">ที่อยู่ของสถานประกอบการ: </label>
-                    <label style="font-size: 20px; "><?php echo"$company->address";?></label>
+                    <label style="font-size: 20px; font-weight: 900;"><?php echo"$company->address";?></label>
                 </li>
                 <li>
                     <label style="font-size: 20px; ">เบอร์โทรศัพท์ของสถานประกอบการ: </label>
-                    <label style="font-size: 20px; "><?php echo"$company->phoneNumber";?></label>
+                    <label style="font-size: 20px; font-weight: 900;"><?php echo"$company->phoneNumber";?></label>
                 </li>
                 <li>
                     <label style="font-size: 20px; ">เบอร์โทรสารของสถานประกอบการ: </label>
-                    <label style="font-size: 20px; "><?php echo"$company->faxNumber";?></label>
+                    <label style="font-size: 20px; font-weight: 900;"><?php echo"$company->faxNumber";?></label>
                 </li>
                 <li>
                     <label style="font-size: 20px; ">สวัสดิการที่พัก: </label>
-                    <label style="font-size: 20px; "><?php echo"$company->department";?>ที่พักให้</label>
+                    <label style="font-size: 20px; font-weight: 900;"><?php echo"$company->department";?>ที่พักให้</label>
                 </li>
                 <li>
                     <label style="font-size: 20px; ">ค่าตอบแทนรายวัน: </label>
-                    <label style="font-size: 20px; "><?php echo"$company->payPerDay";?></label>
+                    <label style="font-size: 20px; font-weight: 900;"><?php echo"$company->payPerDay";?></label>
                 </li>
             </ul>
         </div>
@@ -63,23 +63,23 @@
             <ul class="content-title">
                 <li>
                     <label style="font-size: 20px; ">ชื่อหัวหน้างาน/ผู้อนุมัติการฝึกงาน: </label>
-                    <label style="font-size: 20px; "><?php echo"$company->agentName";?></label>
+                    <label style="font-size: 20px; font-weight: 900;"><?php echo"$company->agentName";?></label>
                 </li>
                 <li>
                     <label style="font-size: 20px; ">ตำแหน่งของหัวหน้างาน/ผู้อนุมัติการฝึกงาน: </label>
-                    <label style="font-size: 20px; "><?php echo"$company->agentPosition";?></label>
+                    <label style="font-size: 20px; font-weight: 900;"><?php echo"$company->agentPosition";?></label>
                 </li>
                 <li>
                     <label style="font-size: 20px; ">ชื่อผู้ประสานงานของสถานประกอบการ/หน่วยงาน: </label>
-                    <label style="font-size: 20px; "><?php echo"$company->HR_Name";?></label>
+                    <label style="font-size: 20px; font-weight: 900;"><?php echo"$company->HR_Name";?></label>
                 </li>
                 <li>
                     <label style="font-size: 20px; ">ตำแหน่งของผู้ประสานงาน: </label>
-                    <label style="font-size: 20px; "><?php echo"$company->HR_Position";?></label>
+                    <label style="font-size: 20px; font-weight: 900;"><?php echo"$company->HR_Position";?></label>
                 </li>
                 <li>
                     <label style="font-size: 20px; ">เบอร์โทรศัพท์ของผู้ประสานงาน: </label>
-                    <label style="font-size: 20px; "><?php echo"$company->HR_PhoneNamber";?></label>
+                    <label style="font-size: 20px; font-weight: 900;"><?php echo"$company->HR_PhoneNamber";?></label>
                 </li>
                 <hr style="width:100%;text-align:left;margin-left:0;">
                 <br>
@@ -87,26 +87,26 @@
                 <label style="font-size: 25px; margin-left: 100px;">ตำแหน่งงานที่ต้องการรับนิสิตฝึกงาน</label>
                 <li>
                     <label style="font-size: 20px; ">ตำแหน่งงานที่ต้องการรับ: </label>
-                    <label style="font-size: 20px; "><?php echo"$company->requestPosition";?></label>
+                    <label style="font-size: 20px; font-weight: 900;"><?php echo"$company->requestPosition";?></label>
                 </li>
                 <li>
                     <label style="font-size: 20px; ">ลักษณะงานที่นิสิตต้องปฏิบัติ (Job Description): </label>
-                    <label style="font-size: 20px; "><?php echo"$company->jobDescription";?></label>
+                    <label style="font-size: 20px; font-weight: 900;"><?php echo"$company->jobDescription";?></label>
                 </li>
                 <li>
                     <label style="font-size: 20px; ">จำนวน (คน): </label>
-                    <label style="font-size: 20px; "><?php echo"$company->amountPerson";?></label>
+                    <label style="font-size: 20px; font-weight: 900;"><?php echo"$company->amountPerson";?></label>
                 </li>
                 <li>
                     <label style="font-size: 20px; ">ความสามารถทางวิชาการหรือทักษะที่นิสิตควรมี: </label>
-                    <label style="font-size: 20px; "><?php echo"$company->requiredSkill";?></label>
+                    <label style="font-size: 20px; font-weight: 900;"><?php echo"$company->requiredSkill";?></label>
                 </li>
                 <li>
                     <label style="font-size: 20px; ">ระยะเวลาที่ต้องการให้นิสิตไปปฏิบัติงาน: </label>
-                    <label style="font-size: 20px; "><?php echo"$company->startDate";?> ถึง <?php echo"$company->endDate";?></label>
+                    <label style="font-size: 20px; font-weight: 900;"><?php echo"$company->startDate";?> ถึง <?php echo"$company->endDate";?></label>
                 </li>
             </ul>
-            <hr style="width:100%;text-align:left;margin-left:0;">
+            
 
 
     </div>

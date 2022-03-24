@@ -36,7 +36,13 @@
           <button class="btn" type="submit" name="action" value=""><i class="fas fa-search"></i></button>
           <input type="text" name="key" placeholder="ค้นหา" />
           <input type="hidden" name="controller" value="">
+          <?php
+      if($_SESSION['position']=="admin"){
+            ?>
           <a type="button" class="btn" style="float: right; margin-right: 108px; background-color: FFAFB0; border-radius: 35px; color: #000000;" href="?controller=company&action=newCompany"> <i class="fa fa-plus"></i> เพิ่มสถานประกอบการ</a>
+          <?php
+      }
+      ?>
         </div>
       </div>
     </div>

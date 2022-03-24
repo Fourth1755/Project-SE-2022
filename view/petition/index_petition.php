@@ -90,14 +90,14 @@
         echo "<tr><td>$new_dateformat</td>
                   <td>$requestform->academicYear</td>
                   <td>$requestform->requestID</td>
-                  <td>$requestform->firstName  $requestform->lastName</td>
-                  <td>$requestform->companyName</td>
-                  <td>$requestform->statusName</td>" ?>
+                  <td>$requestform->firstName  $requestform->lastName</td>";?>
+                  <td><a style="text-decoration: none;color: #171738;" href='?controller=company&action=viewCompany&ID=<?php echo "$requestform->companyID"; ?>'><?php echo "$requestform->companyName"; ?></a></td>
+                  <td><?php echo "$requestform->statusName"; ?></td>
       <?php
       };
       ?>
     </table>
-
+      <br>
   </div>
 </body>
 

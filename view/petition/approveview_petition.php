@@ -73,7 +73,7 @@
                 ตำแหน่งที่ไปฝึกงาน: <?php echo "$requestform->positionRequest"; ?>
             </li>
             <li>
-                สถานที่ไปฝึกงาน: <?php echo "$requestform->requestID"; ?>
+                สถานที่ไปฝึกงาน: <a style="text-decoration: none;color: #171738;" href='?controller=company&action=viewCompany&ID=<?php echo "$requestform->companyID"; ?>'><?php echo "$requestform->companyName"; ?></a><?php echo "$requestform->companyName"; ?>
             </li>
             <li>
                 ระยะเวลาการฝึกงาน: <?php echo "$requestform->startDate"; ?> ถึง <?php echo "$requestform->endDate"; ?>
@@ -87,18 +87,21 @@
 <form method="get" action="">
     <label></label>
     <input type="hidden" name="requestID" value="<?php echo "$requestform->requestID"; ?>" />
-    <?php echo "รหัสผู้อนุมัติ : ".$_SESSION['username'];?>
     <input type="hidden" name="approverID" value="<?php echo $_SESSION['username']; ?>" />
     <input type="hidden" name="ID" value="<?php echo "$requestform->id"; ?>" />
     <input type="hidden" name="controller" value="petition" class="form-control">
-    <div class="form-group pb-4 col-md-4">
+    <div style="padding: 0px 20px 0px 0px;">
+        <button type="submit" class="btn btn-danger" value="approveReject" name="action">Reject</button>
+        <a href="?requestID=<?php echo "$requestform->requestID"; ?>&approverID=T9043000001&ID=<?php echo "$requestform->id"; ?>&controller=petition&action=approveApprove" class="btn btn-success">Approve</a>
+        <br>
+        <br>
+        <div class="form-group pb-4 col-md-4">
         <label>เหตุผล</label>
         <input type="tel" class="form-control" name="reasonReject" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="กรอกเหตุผลสำหรับการไม่อนุมัติ" required>
     </div>
-    <button type="submit" class="btn btn-danger" value="approveReject" name="action">Reject</button>
-
+    </div>
 </form>
-<a href="?requestID=<?php echo "$requestform->requestID"; ?>&approverID=T9043000001&ID=<?php echo "$requestform->id"; ?>&controller=petition&action=approveApprove" class="btn btn-success">Approve</a>
+<br>
 <hr style="width:100%;text-align:left;margin-left:0">
 <h3>รายละเอียด</h3>
 <div class="content-detail">
