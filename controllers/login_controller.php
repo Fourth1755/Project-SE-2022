@@ -19,13 +19,14 @@
                     $_SESSION['token'] = "1";
                     $_SESSION['username'] = $account->username;
                     $_SESSION['position'] =$account->position;
-                    require_once('view/home.php');
+                    require_once("./view/announce/index_announce.php");
                 }
                 else{
+                    LoginController::index();
                    // echo "<script>";
                    // echo "alert(\" user หรือ  password ไม่ถูกต้อง\");"; 
                    // echo "</script>";
-                    LoginController::index();
+                    
                 }
             }
         

@@ -8,7 +8,10 @@
       }
 </style>
 <div>
-   <h3>ประกาศการฝึกงาน</h3>
+      <br>
+      <h3>ยินดีต้อนรับเข้าสู่ระบบบริหารจัดการการฝึกงาน</h3>
+      <?php echo "Today is " . date("d/m/Y") . "<br>";?>
+      <br>
       <hr style="width:100%;text-align:left;margin-left:0">
       <?php
       if($_SESSION['position']=="admin"){
@@ -17,8 +20,9 @@
       <?php
       }
       ?>
-      <br><br>
+      <br>
       <div class="content">
+      <h4>ประกาศเกี่ยวกับการฝึกงาน</h4>
                   <section class="bg-light pb-5 pt-5 text-secondary">
                         <div class="container">
                               <div class="bg-white mb-4 p-3">
