@@ -76,7 +76,7 @@
     </form>
     <table class="table" id="table-header">
       <tr method="get" action="">
-        <th><a href="?controller=petition&action=SortDate&key1=1"><?php echo "วันที่ยื่นขอ"; ?></th>
+        <th><a href="?controller=petition&action=SortDate&key1=1" style="color: #000; text-decoration: none;"><i class="fas fa-chevron-down"></i><?php echo " วันที่ยื่นขอ"; ?></th>
         <th>ปีการศึกษา</th>
         <th>รหัสนิสิต</th>
         <th>ชื่อ</th>
