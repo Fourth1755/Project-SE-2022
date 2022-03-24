@@ -49,7 +49,7 @@
                               <label>รายงาน_622*******</label>
                         </div>
                         <div style="margin-left: 50px; ">
-                              <img src="https://www.pngrepo.com/png/352755/512/file-word.png" style="width: 60px;"><br>
+                              <img src="https://cdn-icons-png.flaticon.com/512/32/32745.png" style="width: 60px;"><br>
                               <label>นำเสนอการฝึึกงาน_622*******</label>
                         </div>
                         <div style="margin-left: 50px; ">
