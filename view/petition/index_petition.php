@@ -72,6 +72,15 @@
             ?>
           </ul>
         </div>
+        <div class="dropdown" style="padding-left: 40px;">
+          <button class="btn dropdown-toggle" style="background-color:#171738;color: #FFF;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            ปีการศึกษา
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="?key=2564&controller=petition&action=searchPetition">2564</a></li>
+            <li><a class="dropdown-item" href="?key=2563&controller=petition&action=searchPetition">2563</a></li>
+          </ul>
+        </div>
       </div>
     </form>
     <table class="table" id="table-header">

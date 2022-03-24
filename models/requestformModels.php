@@ -241,7 +241,7 @@ class Requestform
         AS companyName FROM requestform LEFT JOIN user ON user.username=requestform.requestID LEFT JOIN company ON companyID=company.ID 
         WHERE requestform.requestID=user.username AND (requestform.createDate LIKE '%$key%' OR requestform.requestID LIKE '%$key%' 
         OR user.firstName LIKE '%$key%' OR user.lastName LIKE '%$key%' OR requestform.statusName LIKE '%$key%'OR user.academicYear LIKE '%$key%'
-        OR company.name LIKE '%$key%')";
+        OR company.name LIKE '%$key%' OR requestform.academicYear LIKE '%$key%')";
         $result = $conn->query($sql);
         while ($my_row = $result->fetch_assoc()) {
             $id = $my_row["ID"];
