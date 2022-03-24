@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 21, 2022 at 02:44 PM
+-- Generation Time: Mar 24, 2022 at 07:57 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -34,19 +34,19 @@ CREATE TABLE `company` (
   `type` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `phoneNumber` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `faxNumber` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
-  `department` enum('มี','ไม่มี') COLLATE utf8_unicode_ci DEFAULT NULL,
+  `department` enum('มี','ไม่มี') COLLATE utf8_unicode_ci NOT NULL,
   `payPerDay` int(3) DEFAULT 0,
-  `agentName` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `agentPosition` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `HR_Name` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `HR_Position` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `HR_PhoneNamber` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `requestPosition` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `jobDescription` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `amountPerson` int(2) DEFAULT NULL,
-  `requiredSkill` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `startDate` date DEFAULT NULL,
-  `endDate` date DEFAULT NULL
+  `agentName` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `agentPosition` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `HR_Name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `HR_Position` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `HR_PhoneNamber` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `requestPosition` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `jobDescription` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `amountPerson` int(2) NOT NULL,
+  `requiredSkill` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `startDate` date NOT NULL,
+  `endDate` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -81,8 +81,8 @@ CREATE TABLE `requestform` (
   `endDate` date NOT NULL,
   `approverID` varchar(11) COLLATE utf8_unicode_ci DEFAULT NULL,
   `companyID` int(3) NOT NULL,
-  `reasonReject` varchar(300) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `academicYear` varchar(4) COLLATE utf8_unicode_ci DEFAULT NULL
+  `reasonReject` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
+  `academicYear` varchar(4) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -90,9 +90,10 @@ CREATE TABLE `requestform` (
 --
 
 INSERT INTO `requestform` (`ID`, `requestID`, `statusName`, `createDate`, `phoneNumber`, `facebookName`, `positionRequest`, `agentName`, `agentPosition`, `HR_Name`, `HR_PhoneNamber`, `HR_Email`, `startDate`, `endDate`, `approverID`, `companyID`, `reasonReject`, `academicYear`) VALUES
-(10001, 'b6220503201', 'waiting', '2022-03-07', '0321234567', 'Bie Juntawong', 'Network Engineer', 'อดิศักดิ์ วิชชุปัญญาพาณิชย์', 'Head of Engineer', 'อรชพร กอหามะ', '0856498531', 'bitsolution@gmail.com', '2022-04-18', '2022-06-10', NULL, 2, NULL, NULL),
-(10002, 'b6220504666', 'waiting', '2022-03-07', '0321234567', 'Dream Wongtungjaroensuk', 'Mobile Developer', 'อดิศร จรัสโยธินนุวัฒน์', 'Human Resources Department Manager', 'Supanida Ouamprathum', '0836516795', 'internship@gofive.co.th', '2022-04-18', '2022-06-10', NULL, 1, NULL, NULL),
-(10003, 'b6220504771', 'waiting', '2022-03-07', '0891684952', 'Meaw Apirakausanee', 'Data Engineer', 'ชัยวัฒน์ ประสิทธิพิพัฒน์', 'senior data engineer', 'ภูผา อธิษฐ์โภคิน', '0984561237', 'droneacademy@gmail.com', '2022-04-18', '2022-06-10', NULL, 3, NULL, NULL);
+(10001, 'b6220503201', 'waiting', '2022-03-07', '0321234567', 'Bie Juntawong', 'Network Engineer', 'อดิศักดิ์ วิชชุปัญญาพาณิชย์', 'Head of Engineer', 'อรชพร กอหามะ', '0856498531', 'bitsolution@gmail.com', '2022-04-18', '2022-06-10', '', 2, '', ''),
+(10002, 'b6220504666', 'reject', '2022-03-07', '0321234567', 'Dream Wongtungjaroensuk', 'Mobile Developer', 'อดิศร จรัสโยธินนุวัฒน์', 'Human Resources Department Manager', 'Supanida Ouamprathum', '0836516795', 'internship@gofive.co.th', '2022-04-18', '2022-06-10', 'reg00000002', 1, '789', ''),
+(10003, 'b6220504771', 'waiting', '2022-03-07', '0891684952', 'Meaw Apirakausanee', 'Data Engineer', 'ชัยวัฒน์ ประสิทธิพิพัฒน์', 'senior data engineer', 'ภูผา อธิษฐ์โภคิน', '0984561237', 'droneacademy@gmail.com', '2022-04-18', '2022-06-10', '', 3, '', ''),
+(10025, 'reg00000002', 'waiting', '2022-03-25', '0897456321', 'dream', 'moblie', 'ฟหก', 'asdfsd', 'fasdf', '0326549875', 'facebook@gmail.com', '2022-03-31', '2022-03-28', NULL, 2, '', '2564');
 
 -- --------------------------------------------------------
 
@@ -107,7 +108,7 @@ CREATE TABLE `user` (
   `firstName` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `lastName` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `academicYear` varchar(4) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `imagePath` varchar(500) COLLATE utf8_unicode_ci DEFAULT NULL
+  `imagePath` varchar(500) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -115,13 +116,13 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`username`, `password`, `position`, `firstName`, `lastName`, `academicYear`, `imagePath`) VALUES
-('A7527000001', 'sasitorn7527', 'admin', 'ศศิธร', 'ชลรัตน์อมฤต', NULL, 'https://cdn.discordapp.com/attachments/955087275593715734/955093635769172059/263630914_10227121019517783_1051386037829441816_n.jpg'),
 ('b6220503201', 'bie0503201', 'student', 'ณัฐวรรธน์', 'จันทวงศ์', '2562', 'https://cdn.discordapp.com/attachments/955087275593715734/955087694365601802/IMG_0495.JPG'),
 ('b6220504631', 'ploy0504631', 'student', 'ชัชชญา', 'พรมรินทร์', '2562', 'https://cdn.discordapp.com/attachments/955087275593715734/955088060389928990/IMG_0215.JPG'),
 ('b6220504666', 'dream0504666', 'student', 'ธนพัฒน์', 'วงษ์ตั้งเจริญสุข', '2562', 'https://cdn.discordapp.com/attachments/955087275593715734/955087476899340359/IMG_0811.JPG'),
 ('b6220504755', 'fourth0504755', 'student', 'ภูริวัฒน์', 'ภูลับ', '2562', 'https://cdn.discordapp.com/attachments/955087275593715734/955087535678296134/IMG_0763.JPG'),
 ('b6220504771', 'meaw0504771', 'student', 'ลลิตา', 'อภิรักษ์อุษณีย์', '2562', 'https://cdn.discordapp.com/attachments/955087275593715734/955087839295594537/IMG_0219.JPG'),
-('T9043000001', 'boonyaratE9043', 'lecturer', 'อ.ดร.บุญรัตน์', 'เผดิมรอด', NULL, 'https://cdn.discordapp.com/attachments/955087275593715734/955094017949978624/unknown.png');
+('reg00000001', 'sasitorn001', 'admin', 'ศศิธร', 'ชลรัตน์อมฤต', NULL, 'https://cdn.discordapp.com/attachments/955087275593715734/955093635769172059/263630914_10227121019517783_1051386037829441816_n.jpg'),
+('reg00000002', 'boonyarat002', 'lecturer', 'อ.ดร.บุญรัตน์', 'เผดิมรอด', NULL, 'https://cdn.discordapp.com/attachments/955087275593715734/955094017949978624/unknown.png');
 
 --
 -- Indexes for dumped tables
@@ -156,13 +157,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `company`
 --
 ALTER TABLE `company`
-  MODIFY `ID` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `ID` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `requestform`
 --
 ALTER TABLE `requestform`
-  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10017;
+  MODIFY `ID` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10026;
 
 --
 -- Constraints for dumped tables
