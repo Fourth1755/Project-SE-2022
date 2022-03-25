@@ -240,7 +240,7 @@ class Requestform
         startDate,requestform.endDate AS endDate,approverID,companyID,reasonReject,firstName,lastName,position,user.academicYear AS userAcademicYear,requestform.academicYear AS academicYear,imagePath,company.name 
         AS companyName FROM requestform LEFT JOIN user ON user.username=requestform.requestID LEFT JOIN company ON companyID=company.ID 
         WHERE requestform.requestID=user.username AND (requestform.createDate LIKE '%$key%' OR requestform.requestID LIKE '%$key%' 
-        OR user.firstName LIKE '%$key%' OR user.lastName LIKE '%$key%' OR requestform.statusName LIKE '%$key%'OR user.academicYear LIKE '%$key%'
+        OR user.firstName LIKE '%$key%' OR user.lastName LIKE '%$key%' OR requestform.statusName LIKE '%$key%'
         OR company.name LIKE '%$key%' OR requestform.academicYear LIKE '%$key%')";
         $result = $conn->query($sql);
         while ($my_row = $result->fetch_assoc()) {
@@ -372,7 +372,7 @@ class Requestform
         startDate,requestform.endDate AS endDate,approverID,companyID,reasonReject,firstName,lastName,position,user.academicYear AS userAcademicYear,requestform.academicYear AS academicYear,imagePath,company.name 
         AS companyName FROM requestform LEFT JOIN user ON user.username=requestform.requestID LEFT JOIN company ON companyID=company.ID 
         WHERE requestform.requestID=user.username AND (requestform.createDate LIKE '%$key%' OR requestform.requestID LIKE '%$key%' 
-        OR user.firstName LIKE '%$key%' OR user.lastName LIKE '%$key%' OR requestform.statusName LIKE '%$key%'OR user.academicYear LIKE '%$key%' 
+        OR user.firstName LIKE '%$key%' OR user.lastName LIKE '%$key%' OR requestform.statusName LIKE '%$key%'
         OR company.name LIKE '%$key%' OR requestform.academicYear LIKE '%$key%')";
         $result = $conn->query($sql);
         while ($my_row = $result->fetch_assoc()) {
