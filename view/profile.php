@@ -51,7 +51,7 @@
             <div class="content">
                 <ul class="content-title">
                     <li>
-                            <?php echo $_SESSION['statusName'];?>
+                            
                     </li>
                     <li>
                         ชื่อ:  <?php echo $account->firstName;?> <?php echo $account->lastName;?>
@@ -87,6 +87,7 @@
         <th>ปีการศึกษา</th>
         <th>บริษัทที่ยื่น</th>
         <th>สถานะ</th>
+        <th>รายละเอียด</th>
       </tr>
       <?php
       foreach ($requestUser as $request) {
@@ -100,6 +101,7 @@
                 echo "เหตุผลที่ไม่อนุมัติ: $request->reasonReject";
             }
                echo "</td>" ?>
+               <td><a type="button" class="btn btn-primary" href=?controller=profile&action=viewRequest&<?php echo "ID=$request->id"; ?>><i class="fas fa-angle-double-right"></i></a></td>
       <?php
       };
       ?>

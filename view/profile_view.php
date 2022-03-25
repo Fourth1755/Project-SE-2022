@@ -1,4 +1,4 @@
-<title>อนุมัติคำร้องการฝึกงาน</title>
+<title>รายละเอียดคำร้องการฝึกงาน</title>
 <style>
     .profilecontent {
         background-color: #FFCFCF;
@@ -59,7 +59,6 @@
     <div class="content">
         <h4>คำร้องฝึกงาน</h4>
         <ul class="content-title">
-
             <li>
                 ชื่อ <?php echo "$requestform->firstName"; ?> <?php echo "$requestform->lastName"; ?>
             </li>
@@ -82,25 +81,6 @@
 
     </div>
 </div>
-<hr style="width:100%;text-align:left;margin-left:0">
-<h3>การอนุมัติคำร้อง</h3>
-<form method="get" action="">
-    <label></label>
-    <input type="hidden" name="requestID" value="<?php echo "$requestform->requestID"; ?>" />
-    <input type="hidden" name="approverID" value="<?php echo $_SESSION['username']; ?>" />
-    <input type="hidden" name="ID" value="<?php echo "$requestform->id"; ?>" />
-    <input type="hidden" name="controller" value="petition" class="form-control">
-    <div style="padding: 0px 20px 0px 0px;">
-        <button type="submit" class="btn btn-danger" value="approveReject" name="action">Reject</button>
-        <a href="?requestID=<?php echo "$requestform->requestID"; ?>&approverID=T9043000001&ID=<?php echo "$requestform->id"; ?>&controller=petition&action=approveApprove" class="btn btn-success">Approve</a>
-        <br>
-        <br>
-        <div class="form-group pb-4 col-md-4">
-        <label>เหตุผล</label>
-        <input type="tel" class="form-control" name="reasonReject" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="กรอกเหตุผลสำหรับการไม่อนุมัติ" required>
-    </div>
-    </div>
-</form>
 <br>
 <hr style="width:100%;text-align:left;margin-left:0">
 <h3>รายละเอียด</h3>
@@ -134,5 +114,5 @@
         </tbody>
     </table>
 </div>
-<a href="?controller=petition&action=approvePetition" class="btn btn-outline-dark">Back</a>
+<a href="?controller=profile&action=index" class="btn btn-outline-dark">Back</a>
 <?php require_once("menuDown.php") ?>

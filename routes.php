@@ -1,7 +1,7 @@
 <?php
     $controllers =array('pages'=>['home','error','login'],
     'login'=>['index','login','logout'],
-    'profile'=>['index',"profile2"],
+    'profile'=>['index',"profile2",'viewRequest'],
     'announce'=>['index','addAnnounce'],
     'company'=>['index','newCompany','addCompany','viewCompany','indexcompanyDetail','updatecompanyDetailPage1','updatecompanyDetailPage2','updatecompanyDetailPage3'],
     'uploadreport'=>['index'],
