@@ -51,7 +51,7 @@
             <div class="content">
                 <ul class="content-title">
                     <li>
-                        
+                            <?php echo $_SESSION['statusName'];?>
                     </li>
                     <li>
                         ชื่อ:  <?php echo $account->firstName;?> <?php echo $account->lastName;?>

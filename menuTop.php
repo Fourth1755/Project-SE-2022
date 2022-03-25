@@ -166,9 +166,12 @@ body{
             <a href="?controller=petition&action=index"><span style="padding: 0px 70px 0px 26px;">ผลการอนุมัติฝึกงาน</span></a>
             <?php
             if($_SESSION['position']=="student"){
+              if($_SESSION['statusName']!="approve"){
               ?>
-            <a href="?controller=petition&action=newPetition"><span style="padding: 0px 70px 0px 26px;">ยื่นคำร้องฝึกงาน</span></a>
+              
+              <a href="?controller=petition&action=newPetition"><span style="padding: 0px 70px 0px 26px;">ยื่นคำร้องฝึกงาน</span></a>
             <?php
+            }
             }
             ?>
             <?php
