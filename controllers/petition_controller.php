@@ -74,6 +74,7 @@
 
         public function searchApprove(){
             $key = $_GET['key'];
+            $company_list=Company::getAll();
             $requestform_List = Requestform::searchApprove($key);
             //echo "search:".$key;
             require_once("./view/petition/approve_petition.php");
@@ -98,7 +99,7 @@
             $requestID=$_GET['requestID'];
             $statusName="approve";
             $approverID=$_GET['approverID'];
-            Requestform::approve($id, $requestID, $approverID, $statusName,NULL);
+            Requestform::approve($id, $requestID, $approverID, $statusName,"no");
             PetitionController::approvePetition();
         }
         public function approveReject(){

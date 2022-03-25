@@ -92,7 +92,7 @@
     <input type="hidden" name="controller" value="petition" class="form-control">
     <div style="padding: 0px 20px 0px 0px;">
         <button type="submit" class="btn btn-danger" value="approveReject" name="action">Reject</button>
-        <a href="?requestID=<?php echo "$requestform->requestID"; ?>&approverID=T9043000001&ID=<?php echo "$requestform->id"; ?>&controller=petition&action=approveApprove" class="btn btn-success">Approve</a>
+        <a href="?requestID=<?php echo "$requestform->requestID"; ?>&approverID=<?php echo $_SESSION['username']; ?>&ID=<?php echo "$requestform->id"; ?>&controller=petition&action=approveApprove" class="btn btn-success">Approve</a>
         <br>
         <br>
         <div class="form-group pb-4 col-md-4">

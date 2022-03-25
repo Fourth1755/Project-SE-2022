@@ -49,17 +49,22 @@
           </div>
 
         </div>
-
-        <div class="dropdown">
+        
+        <div class="dropdown" style="padding-left: 40px;">
           <button class="btn dropdown-toggle" style="background-color:#171738;color: #FFF;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            Select Status
+            Select Company
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="?key=waiting&controller=petition&action=searchApprove">waiting</a></li>
-            <li><a class="dropdown-item" href="?key=approve&controller=petition&action=searchApprove">approve</a></li>
-            <li><a class="dropdown-item" href="?key=reject&controller=petition&action=searchApprove">reject</a></li>
+            <?php
+            foreach ($company_list as $company) {
+              echo "<li>"; ?>
+              <a class="dropdown-item" href="?key=<?php echo "$company->name"; ?>&controller=petition&action=searchApprove"><?php echo "$company->name"; ?></a></li>
+            <?php
+            }
+            ?>
           </ul>
         </div>
+        
 
         <div class="dropdown" style="padding-left: 40px;">
           <button class="btn dropdown-toggle" style="background-color:#171738;color: #FFF;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
