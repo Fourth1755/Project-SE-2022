@@ -62,7 +62,7 @@
             <td>$key</td>
             <td>$company->name</td>
             <td>$company->amountPerson</td>
-            <td>$company->requiredSkill</td>"; ?>
+            <td>$company->requestPosition</td>"; ?>
         <td><a class="btn btn-primary" href='?controller=company&action=viewCompany&<?php echo "ID=$company->id"; ?>'>Detail</a></td>
       <?php
         echo "</tr>";
