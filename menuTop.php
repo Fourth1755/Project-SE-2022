@@ -164,9 +164,15 @@ body{
         <div class="dropdown"><a href="#"><i class="fas fa-file-alt"></i><span style="padding: 0px 70px 0px 26px;">คำร้องฝึกงาน</span><i class="fa fa-caret-down"></i></a>
             <div class="dropdown-content">
             <a href="?controller=petition&action=index"><span style="padding: 0px 70px 0px 26px;">ผลการอนุมัติฝึกงาน</span></a>
+            <?php
+            if($_SESSION['position']=="student"){
+              ?>
             <a href="?controller=petition&action=newPetition"><span style="padding: 0px 70px 0px 26px;">ยื่นคำร้องฝึกงาน</span></a>
             <?php
-            if($_SESSION['position']!="student"){
+            }
+            ?>
+            <?php
+            if($_SESSION['position']=="lecturer"){
               ?>
               <a href="?controller=petition&action=approvePetition"><span style="padding: 0px 70px 0px 26px;">อนุมัติคำร้องขอฝึกงาน</span></a>
               <?php

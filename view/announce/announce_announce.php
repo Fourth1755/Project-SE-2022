@@ -12,7 +12,6 @@
       <h3>ยินดีต้อนรับเข้าสู่ระบบบริหารจัดการการฝึกงาน</h3>
       <?php echo "Today is " . date("d/m/Y") . "<br>";?>
       <br>
-      <hr style="width:100%;text-align:left;margin-left:0">
       <?php
       if($_SESSION['position']=="admin"){
             ?>
@@ -21,6 +20,8 @@
       }
       ?>
       <br>
+      <br>
+      <hr style="width:100%;text-align:left;margin-left:0">
       <div class="content">
       <h4>ประกาศเกี่ยวกับการฝึกงาน</h4>
                   <section class="bg-light pb-5 pt-5 text-secondary">
