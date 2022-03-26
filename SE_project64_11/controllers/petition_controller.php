@@ -33,10 +33,10 @@
                 $academicYear = (string)$inttoday;
                 Requestform::add($requestID,$phoneNumber,$facebookName,$positionRequest,
                 $agentName,$agentPosition,$HR_Name,$HR_PhoneNamber,$HR_Email,$startDate,$endDate,$companyID,$academicYear);
-                PetitionController::index();
+                //PetitionController::index();
                 //บรรทัดที่ 38 ห้ามลบ ดรีมต้องใช้
                 //header('location: http://localhost:8081/Project-SE-2022/?controller=petition&action=index');
-                //header('location: http://localhost:/Project-SE-2022/?controller=petition&action=index');
+                header('location: http://localhost:/Project-SE-2022/?controller=petition&action=index');
             }
             else{
                 $today = (int)$today;
@@ -44,10 +44,10 @@
                 $academicYear = (string)$inttoday;
                 Requestform::add($requestID,$phoneNumber,$facebookName,$positionRequest,
                 $agentName,$agentPosition,$HR_Name,$HR_PhoneNamber,$HR_Email,$startDate,$endDate,$companyID,$academicYear);
-                PetitionController::index();
+                //PetitionController::index();
                 //บรรทัดที่ 49 ห้ามลบ ดรีมต้องใช้
                 //header('location: http://localhost:8081/Project-SE-2022/?controller=petition&action=index');
-                //header('location: http://localhost:/Project-SE-2022/?controller=petition&action=index');
+                header('location: http://localhost:/Project-SE-2022/?controller=petition&action=index');
             }
             
         }
