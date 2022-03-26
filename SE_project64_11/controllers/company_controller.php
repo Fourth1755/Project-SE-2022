@@ -34,10 +34,10 @@
             $endDate=$_GET['endDate'];
             Company::add($name,$address,$type,$phoneNumber,$faxNumber,$department,$payPerDay,$agentName,$agentPosition,$HR_Name,
             $HR_Position,$HR_PhoneNamber,$requestPosition,$jobDescription,$amountPerson,$requiredSkill,$startDate,$endDate);
-            //CompanyController::index();
+            CompanyController::index();
             //บรรทัดที่ 39 ห้ามลบ ดรีมต้องใช้
             //header('location: http://localhost:8081/Project-SE-2022/?controller=company&action=index');
-            header('location: http://localhost:/Project-SE-2022/?controller=company&action=index');
+            //header('location: http://localhost:/Project-SE-2022/?controller=company&action=index');
         }
         public function indexcompanyDetail(){
             require_once("./view/company/index_companyDetail.php");
